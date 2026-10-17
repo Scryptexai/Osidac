@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "title": "OSIDAC — Own a business that runs 24/7 from your phone",
+    "description": "OSIDAC is a virtual franchise & rewards platform. Buy a digital franchise package, earn from your store, paid missions and your network, then withdraw to e-wallet or bank."
+  },
+  "nav": {
+    "how": "How it works",
+    "packages": "Packages",
+    "earn": "Earn",
+    "network": "Network",
+    "transparency": "Transparency",
+    "login": "Log in",
+    "register": "Get started",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "Virtual Franchise · Rewards · Real withdrawals",
+    "title": "Own a business that runs 24/7 — right from your phone.",
+    "subtitle": "OSIDAC turns your phone into a little business: claim daily store revenue, complete paid missions, grow your branches, and cash out to e-wallet or bank. No crypto. No empty promises.",
+    "ctaPrimary": "Start free — open your store",
+    "ctaSecondary": "See how it works",
+    "stat1": "Free to start",
+    "stat2": "Withdraw from $2.50",
+    "stat3": "Payouts funded by real ad & game budgets"
+  },
+  "how": {
+    "title": "Simple: Buy → Get → Withdraw",
+    "subtitle": "Every coin in your wallet comes from real revenue — advertiser budgets, game studio budgets and package margin. Never from other members' money.",
+    "buyTitle": "1. Buy",
+    "buyText": "Get a Digital Franchise package (from $3.49) with real value: store level-up, earning multipliers, vouchers and merch.",
+    "getTitle": "2. Get",
+    "getText": "Your store produces coins around the clock. Add paid missions, playtime games and team bonuses to earn more.",
+    "wdTitle": "3. Withdraw",
+    "wdText": "Convert coins to cash and withdraw to e-wallet or bank — fast, with a low minimum threshold."
+  },
+  "packages": {
+    "title": "Franchise packages",
+    "subtitle": "The package price already pays for itself through vouchers, merch and multipliers. Any coins you earn are a bonus — never a promised return.",
+    "mostPopular": "Most popular",
+    "buy": "Choose package",
+    "tiers": {
+      "starter": { "name": "Starter Booth", "price": "$3.49", "desc": "Store Lv.2 · 1.2× mission multiplier · 30-day check-in bonus · $2.50 voucher" },
+      "kios": { "name": "Kios Pro", "price": "$9.99", "desc": "Store Lv.4 · 1.4× multiplier · higher withdraw limit · $7.50 voucher · exclusive skin" },
+      "gold": { "name": "Warung Gold", "price": "$34.99", "desc": "Store Lv.6 · 1.6× multiplier · physical merch · $25 voucher" },
+      "elite": { "name": "Franchise Elite", "price": "$99.99", "desc": "Store Lv.8 · 1.8× multiplier · deeper network commissions · premium merch · priority withdrawals" },
+      "master": { "name": "Empire Master", "price": "$349.99", "desc": "Store Lv.10 · 2.0× multiplier · Leader status · full merch bundle · community coaching" }
+    }
+  },
+  "earn": {
+    "title": "Four real earning engines",
+    "subtitle": "OSIDAC pays you from revenue it actually earns. Here is where the money comes from.",
+    "storeTitle": "Store revenue",
+    "storeText": "Claim your store's coins every 8 hours. Rate follows real revenue — published transparently.",
+    "missionTitle": "Paid missions",
+    "missionText": "Install apps, reach game levels, complete surveys. Advertisers pay — you keep 60–70%.",
+    "playTitle": "Play & earn",
+    "playText": "Play partner games and earn per minute & milestone, funded by game studios.",
+    "teamTitle": "Team & rank bonuses",
+    "teamText": "Build branches and earn from package margin and mission margin share — capped and sustainable."
+  },
+  "network": {
+    "title": "Build branches, earn together",
+    "subtitle": "Invite friends to open their own stores. You earn 3 levels deep from real margins — your team keeps 100% of what they earn.",
+    "l1": "Level 1 — direct branch",
+    "l2": "Level 2",
+    "l3": "Level 3",
+    "note": "Total network payouts are hard-capped at 40%. Free members can earn too — buying a package is never required to join."
+  },
+  "transparency": {
+    "title": "How we can pay you (no secrets)",
+    "subtitle": "Every month we publish our revenue sources and distribution ratio. When revenue dips, rates dip — we never pay old members with new members' money.",
+    "formula": "Distribution to members ≤ 70% of actual revenue (ads + playtime + missions + package margin)",
+    "disclaimer": "OSIDAC is a rewards platform, not an investment. Earnings are not guaranteed and depend on your activity. No crypto is involved."
+  },
+  "footer": {
+    "tagline": "Virtual franchise & rewards platform",
+    "legal": "OSIDAC is not an investment product. There are no fixed returns. Purchases are digital franchise products with real benefits (vouchers, merch, multipliers).",
+    "rights": "All rights reserved."
+  },
+  "auth": {
+    "loginTitle": "Welcome back",
+    "loginSubtitle": "Log in to your store",
+    "registerTitle": "Open your store",
+    "registerSubtitle": "Free to join. No package required.",
+    "email": "Email",
+    "password": "Password",
+    "loginButton": "Log in",
+    "registerButton": "Create free account",
+    "haveAccount": "Already have an account?",
+    "noAccount": "No account yet?",
+    "referral": "Referral code (optional)"
+  },
+  "app": {
+    "sidebar": {
+      "store": "My Store",
+      "missions": "Missions",
+      "wallet": "Wallet",
+      "network": "My Network",
+      "withdraw": "Withdraw",
+      "logout": "Log out"
+    },
+    "store": {
+      "title": "My Store",
+      "level": "Store level",
+      "producing": "Your store is producing",
+      "claimIn": "Next claim in",
+      "claim": "Claim revenue",
+      "claimed": "Claimed! Coins added to your wallet.",
+      "streak": "Daily streak",
+      "league": "League",
+      "upgrade": "Upgrade store",
+      "soon": "Coming soon — Fase 1"
+    },
+    "missions": {
+      "title": "Paid missions",
+      "subtitle": "Complete offers from our partners. Advertisers pay, you earn.",
+      "soon": "Offerwall integration arrives in Fase 2"
+    },
+    "wallet": {
+      "title": "Wallet",
+      "coins": "Coins",
+      "cash": "Cash balance",
+      "history": "Transaction history",
+      "soon": "Ledger UI arrives in Fase 1"
+    },
+    "network": {
+      "title": "My Network",
+      "branches": "Branches",
+      "commission": "Commissions",
+      "rank": "Your rank",
+      "invite": "Your invite link",
+      "soon": "Genealogy tree arrives in Fase 1"
+    },
+    "withdraw": {
+      "title": "Withdraw",
+      "subtitle": "Cash out to e-wallet or bank",
+      "methods": "DANA · GoPay · OVO · PayPal · Bank transfer",
+      "min": "Minimum withdrawal: $2.50 (member) / $5 (free)",
+      "soon": "Withdrawal pipeline arrives in Fase 2"
+    }
+  }
+}

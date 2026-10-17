@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "title": "OSIDAC — Punya bisnis yang jalan 24 jam dari HP-mu",
+    "description": "OSIDAC adalah platform virtual waralaba & rewards. Beli paket waralaba digital, dapatkan omzet toko, misi berbayar, dan bonus jaringan — tarik ke e-wallet atau bank."
+  },
+  "nav": {
+    "how": "Cara kerja",
+    "packages": "Paket",
+    "earn": "Cara dapat",
+    "network": "Jaringan",
+    "transparency": "Transparansi",
+    "login": "Masuk",
+    "register": "Mulai",
+    "language": "Bahasa"
+  },
+  "hero": {
+    "badge": "Virtual Waralaba · Rewards · WD sungguhan",
+    "title": "Punya bisnis yang jalan 24 jam — langsung dari HP-mu.",
+    "subtitle": "OSIDAC mengubah HP-mu jadi bisnis kecil: ambil omzet toko harian, kerjakan misi berbayar, kembangkan cabang, lalu tarik cuannya ke e-wallet atau bank. Tanpa kripto. Tanpa janji muluk.",
+    "ctaPrimary": "Mulai gratis — buka tokomu",
+    "ctaSecondary": "Lihat cara kerjanya",
+    "stat1": "Gratis mulai",
+    "stat2": "WD mulai Rp10.000",
+    "stat3": "Dana imbalan dari budget iklan & game nyata"
+  },
+  "how": {
+    "title": "Gampang: Beli → Dapat → Tarik",
+    "subtitle": "Setiap koin di dompetmu berasal dari pendapatan nyata — budget advertiser, budget studio game, dan margin paket. Bukan dari uang member lain.",
+    "buyTitle": "1. Beli",
+    "buyText": "Ambil paket Waralaba Digital (mulai Rp49.000) dengan nilai nyata: level toko, multiplier, voucher, dan merch.",
+    "getTitle": "2. Dapat",
+    "getText": "Tokomu menghasilkan koin 24 jam. Tambah cuan dari misi berbayar, main game, dan bonus tim.",
+    "wdTitle": "3. Tarik",
+    "wdText": "Tukar koin jadi rupiah, tarik ke e-wallet atau bank — cepat, dengan ambang minimum rendah."
+  },
+  "packages": {
+    "title": "Paket waralaba",
+    "subtitle": "Harga paket sudah terbayar lewat voucher, merch, dan multiplier. Koin yang kamu hasilkan = bonus — bukan janji imbal hasil.",
+    "mostPopular": "Paling populer",
+    "buy": "Pilih paket",
+    "tiers": {
+      "starter": { "name": "Starter Booth", "price": "Rp49.000", "desc": "Toko Lv.2 · multiplier misi 1,2× · bonus check-in 30 hari · e-voucher Rp25rb" },
+      "kios": { "name": "Kios Pro", "price": "Rp149.000", "desc": "Toko Lv.4 · multiplier 1,4× · limit WD naik · e-voucher Rp75rb · skin eksklusif" },
+      "gold": { "name": "Warung Gold", "price": "Rp499.000", "desc": "Toko Lv.6 · multiplier 1,6× · merch fisik · e-voucher Rp250rb" },
+      "elite": { "name": "Franchise Elite", "price": "Rp1.490.000", "desc": "Toko Lv.8 · multiplier 1,8× · hak komisi lebih dalam · merch premium · prioritas WD" },
+      "master": { "name": "Empire Master", "price": "Rp4.900.000", "desc": "Toko Lv.10 · multiplier 2,0× · status Leader · paket merch lengkap · coaching komunitas" }
+    }
+  },
+  "earn": {
+    "title": "Empat mesin cuan yang nyata",
+    "subtitle": "OSIDAC membayarmu dari pendapatan yang benar-benar kami hasilkan. Ini sumber uangnya.",
+    "storeTitle": "Omzet toko",
+    "storeText": "Ambil omzet tokomu tiap 8 jam. Rate mengikuti pendapatan nyata — dipublikasikan transparan.",
+    "missionTitle": "Misi berbayar",
+    "missionText": "Install app, capai level game, isi survei. Advertiser yang bayar — kamu dapat 60–70%.",
+    "playTitle": "Play & earn",
+    "playText": "Main game partner, dapat koin per menit & milestone — dibiayai studio game.",
+    "teamTitle": "Bonus tim & rank",
+    "teamText": "Bangun cabang, dapat dari margin paket dan share margin misi — ter-capping & berkelanjutan."
+  },
+  "network": {
+    "title": "Bangun cabang, cuan bareng",
+    "subtitle": "Ajak kawan buka tokonya sendiri. Kamu dapat 3 level dari margin nyata — timmu tetap dapat 100% haknya.",
+    "l1": "Level 1 — cabang langsung",
+    "l2": "Level 2",
+    "l3": "Level 3",
+    "note": "Total payout jaringan di-hard-cap 40%. Member gratis tetap bisa cuan — membeli paket tidak pernah diwajibkan."
+  },
+  "transparency": {
+    "title": "Kenapa kami bisa bayar kamu (tanpa rahasia)",
+    "subtitle": "Setiap bulan kami publikasikan sumber pendapatan dan rasio distribusi. Saat revenue turun, rate ikut turun — kami tidak pernah membayar member lama dengan uang member baru.",
+    "formula": "Distribusi ke member ≤ 70% dari pendapatan aktual (iklan + playtime + misi + margin paket)",
+    "disclaimer": "OSIDAC adalah platform rewards, bukan investasi. Penghasilan tidak dijamin dan tergantung aktivitasmu. Tidak ada kripto di sistem ini."
+  },
+  "footer": {
+    "tagline": "Platform virtual waralaba & rewards",
+    "legal": "OSIDAC bukan produk investasi. Tidak ada imbal hasil tetap. Pembelian paket adalah produk digital waralaba dengan manfaat nyata (voucher, merch, multiplier).",
+    "rights": "Seluruh hak cipta dilindungi."
+  },
+  "auth": {
+    "loginTitle": "Selamat datang kembali",
+    "loginSubtitle": "Masuk ke tokomu",
+    "registerTitle": "Buka tokomu",
+    "registerSubtitle": "Gratis gabung. Tanpa wajib beli paket.",
+    "email": "Email",
+    "password": "Kata sandi",
+    "loginButton": "Masuk",
+    "registerButton": "Buat akun gratis",
+    "haveAccount": "Sudah punya akun?",
+    "noAccount": "Belum punya akun?",
+    "referral": "Kode referral (opsional)"
+  },
+  "app": {
+    "sidebar": {
+      "store": "Toko Saya",
+      "missions": "Misi",
+      "wallet": "Dompet",
+      "network": "Jaringan Saya",
+      "withdraw": "Tarik Dana",
+      "logout": "Keluar"
+    },
+    "store": {
+      "title": "Toko Saya",
+      "level": "Level toko",
+      "producing": "Tokomu sedang berproduksi",
+      "claimIn": "Claim berikutnya dalam",
+      "claim": "Ambil omzet",
+      "claimed": "Berhasil! Koin masuk ke dompetmu.",
+      "streak": "Streak harian",
+      "league": "Liga",
+      "upgrade": "Upgrade toko",
+      "soon": "Segera hadir — Fase 1"
+    },
+    "missions": {
+      "title": "Misi berbayar",
+      "subtitle": "Kerjakan tawaran dari partner kami. Advertiser yang bayar, kamu yang dapat.",
+      "soon": "Integrasi offerwall tiba di Fase 2"
+    },
+    "wallet": {
+      "title": "Dompet",
+      "coins": "Koin",
+      "cash": "Saldo rupiah",
+      "history": "Riwayat transaksi",
+      "soon": "UI ledger tiba di Fase 1"
+    },
+    "network": {
+      "title": "Jaringan Saya",
+      "branches": "Cabang",
+      "commission": "Komisi",
+      "rank": "Rank kamu",
+      "invite": "Link undanganmu",
+      "soon": "Pohon genealogy tiba di Fase 1"
+    },
+    "withdraw": {
+      "title": "Tarik Dana",
+      "subtitle": "Cairkan ke e-wallet atau bank",
+      "methods": "DANA · GoPay · OVO · PayPal · Transfer bank",
+      "min": "Minimum penarikan: Rp10.000 (member) / Rp25.000 (gratis)",
+      "soon": "Pipeline penarikan tiba di Fase 2"
+    }
+  }
+}
