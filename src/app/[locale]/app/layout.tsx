@@ -3,6 +3,7 @@ import { getDictionary, type Dictionary } from "@/lib/i18n";
 import AuthGuard from "@/components/auth-guard";
 import LogoutButton from "@/components/logout-button";
 import AppBottomNav from "@/components/app-bottom-nav";
+import RealtimeLedgerNotification from "@/components/wallet/realtime-ledger-notification";
 
 const navItems = (dict: Dictionary, locale: string) => [
   { href: `/${locale}/app`, label: dict.app.sidebar.store, icon: "🏪" },
@@ -24,6 +25,7 @@ export default async function AppLayout({
 
   return (
     <AuthGuard loadingLabel={dict.app.loading}>
+      <RealtimeLedgerNotification labels={dict.app.notifications} />
       {/* Mobile app top bar */}
       <div className="sticky top-0 z-30 border-b border-zinc-200/70 bg-white/90 backdrop-blur-lg dark:border-zinc-800/70 dark:bg-zinc-950/90">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5">

@@ -2,7 +2,7 @@
 
 **Product vision: Virtual Franchise & Rewards** — an app-like, web2 BUY → GET → WD journey: start with a virtual store, earn through funded partner activities, and eventually withdraw through supported payment rails. No blockchain, no crypto, and no guaranteed returns.
 
-> **Status — Fase 1 MVP internal (18 Oct 2026):** Supabase auth/onboarding, the 8-hour virtual-store claim loop, store upgrades, append-only wallet ledger, referral attribution, daily in-app missions, EN/ID mobile-first UI, installable PWA shell, and an admin v1 are implemented. **Package checkout, paid partner offers/playtime, cash withdrawals, and network commission payouts are not live.** Phase 1 OSID Coins are internal-only, have no cash value, and cannot be withdrawn.
+> **Status — Fase 1 MVP internal (18 Oct 2026):** Supabase auth/onboarding, the 8-hour virtual-store claim loop, store upgrades, append-only wallet ledger, referral attribution, daily in-app missions, EN/ID mobile-first UI, installable PWA shell, admin v1, and real-time wallet-ledger notifications are implemented. **Package checkout, paid partner offers/playtime, cash withdrawals, and network commission payouts are not live.** Phase 1 OSID Coins are internal-only, have no cash value, and cannot be withdrawn.
 
 ---
 

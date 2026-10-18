@@ -38,7 +38,7 @@ brand)
 
 **Tujuan:** loop "buka → claim → upgrade → streak" terasa adiktif; referral terlacak; koin masih internal (belum bisa WD).
 
-> **Status implementasi 18 Okt 2026:** fondasi S1–S3, wallet/ledger dan PWA S4, serta sebagian admin v1 S5 sudah masuk MVP. Daily mission rewards adalah OSID Coins internal; tidak ada checkout paket, offerwall berbayar, payout komisi, atau WD uang nyata yang aktif. Notifikasi realtime, commission engine dari order, anti-sybil, beta cohort, dan seluruh exit criteria masih belum selesai. Fase 1 **belum dinyatakan lulus**.
+> **Status implementasi 18 Okt 2026:** fondasi S1–S3, wallet/ledger dan PWA S4, serta sebagian admin v1 S5 sudah masuk MVP. Daily mission rewards adalah OSID Coins internal; tidak ada checkout paket, offerwall berbayar, payout komisi, atau WD uang nyata yang aktif. Notifikasi realtime untuk ledger sudah berjalan; commission engine dari order, anti-sybil, beta cohort, dan seluruh exit criteria masih belum selesai. Fase 1 **belum dinyatakan lulus**.
 
 | Sprint | Fitur |
 |---|---|

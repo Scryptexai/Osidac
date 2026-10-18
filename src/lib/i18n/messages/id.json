@@ -285,6 +285,11 @@
       "featureStoreClaimsDescription": "Aktifkan atau jeda tindakan klaim omzet toko.",
       "featureStoreUpgradesDescription": "Aktifkan atau jeda upgrade level toko."
     },
-    "loading": "Memuat akunmu…"
+    "loading": "Memuat akunmu…",
+    "notifications": {
+      "credit": "Koin masuk",
+      "debit": "Koin terpakai",
+      "dismiss": "Tutup notifikasi dompet"
+    }
   }
 }

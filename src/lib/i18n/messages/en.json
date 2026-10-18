@@ -285,6 +285,11 @@
       "featureStoreClaimsDescription": "Allow or pause the store revenue claim action.",
       "featureStoreUpgradesDescription": "Allow or pause store level upgrades."
     },
-    "loading": "Loading your account…"
+    "loading": "Loading your account…",
+    "notifications": {
+      "credit": "Coins added",
+      "debit": "Coins spent",
+      "dismiss": "Dismiss wallet notification"
+    }
   }
 }
