@@ -109,6 +109,12 @@
       "streak": "Daily streak",
       "league": "League",
       "upgrade": "Upgrade store",
+      "upgradeDone": "Upgraded to",
+      "insufficient": "Not enough coins for this upgrade",
+      "coins": "OSID Coins",
+      "cost": "Cost",
+      "loading": "Loading your store…",
+      "error": "Error",
       "soon": "Coming soon — Fase 1"
     },
     "missions": {
@@ -120,15 +126,22 @@
       "title": "Wallet",
       "coins": "Coins",
       "cash": "Cash balance",
+      "usd": "USD balance",
       "history": "Transaction history",
+      "loading": "Loading wallet…",
+      "empty": "No transactions yet — claim your first store revenue!",
       "soon": "Ledger UI arrives in Fase 1"
     },
     "network": {
       "title": "My Network",
-      "branches": "Branches",
+      "branches": "Direct branches",
       "commission": "Commissions",
       "rank": "Your rank",
       "invite": "Your invite link",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "loading": "Loading network…",
+      "level": "Level",
       "soon": "Genealogy tree arrives in Fase 1"
     },
     "withdraw": {

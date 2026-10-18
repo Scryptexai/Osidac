@@ -109,6 +109,12 @@
       "streak": "Streak harian",
       "league": "Liga",
       "upgrade": "Upgrade toko",
+      "upgradeDone": "Berhasil upgrade ke",
+      "insufficient": "Koin belum cukup untuk upgrade ini",
+      "coins": "OSID Coins",
+      "cost": "Biaya",
+      "loading": "Memuat tokomu…",
+      "error": "Terjadi kesalahan",
       "soon": "Segera hadir — Fase 1"
     },
     "missions": {
@@ -120,15 +126,22 @@
       "title": "Dompet",
       "coins": "Koin",
       "cash": "Saldo rupiah",
+      "usd": "Saldo USD",
       "history": "Riwayat transaksi",
+      "loading": "Memuat dompet…",
+      "empty": "Belum ada transaksi — ambil omzet pertamamu!",
       "soon": "UI ledger tiba di Fase 1"
     },
     "network": {
       "title": "Jaringan Saya",
-      "branches": "Cabang",
+      "branches": "Cabang langsung",
       "commission": "Komisi",
       "rank": "Rank kamu",
       "invite": "Link undanganmu",
+      "copy": "Salin",
+      "copied": "Tersalin!",
+      "loading": "Memuat jaringan…",
+      "level": "Level",
       "soon": "Pohon genealogy tiba di Fase 1"
     },
     "withdraw": {

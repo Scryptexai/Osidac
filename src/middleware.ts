@@ -32,7 +32,12 @@ export async function middleware(request: NextRequest) {
     response = NextResponse.next();
   }
 
-  return updateSession(request, response);
+  try {
+    return await updateSession(request, response);
+  } catch {
+    // Supabase unreachable (offline/dev) — serve the page without session refresh.
+    return response;
+  }
 }
 
 export const config = {

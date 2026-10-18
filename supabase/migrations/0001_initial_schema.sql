@@ -57,7 +57,7 @@ create table public.ledger_entries (
   currency text not null check (currency in ('KOIN','IDR','USD')),
   reference_type text not null check (reference_type in (
     'claim_omzet','mission_reward','playtime_reward','ad_reward','package_purchase',
-    'commission','fast_start','rank_bonus','withdrawal','bonus','penalty','clawback','adjustment'
+    'commission','fast_start','rank_bonus','withdrawal','bonus','penalty','clawback','adjustment','store_upgrade'
   )),
   reference_id uuid,
   memo text,
@@ -85,6 +85,7 @@ create table public.virtual_stores (
   capacity numeric(20,2) not null default 1000,
   skin text not null default 'default',
   last_claim_at timestamptz,
+  last_claim_date date,
   streak_days int not null default 0,
   league text not null default 'bronze' check (league in ('bronze','silver','gold','platinum','diamond')),
   created_at timestamptz not null default now()

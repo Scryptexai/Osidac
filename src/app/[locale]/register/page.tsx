@@ -1,20 +1,26 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { Suspense, useEffect, useState } from "react";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 
-export default function RegisterPage() {
+function RegisterForm() {
   const params = useParams<{ locale: string }>();
   const locale = params?.locale ?? "en";
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [referral, setReferral] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
+
+  useEffect(() => {
+    const ref = searchParams?.get("ref");
+    if (ref) setReferral(ref.toUpperCase());
+  }, [searchParams]);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -95,5 +101,13 @@ export default function RegisterPage() {
         </Link>
       </p>
     </div>
+  );
+}
+
+export default function RegisterPage() {
+  return (
+    <Suspense fallback={<div className="py-32 text-center text-sm text-zinc-500">Loading…</div>}>
+      <RegisterForm />
+    </Suspense>
   );
 }
