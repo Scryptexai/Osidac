@@ -2,7 +2,13 @@
 
 **Product vision: Virtual Franchise & Rewards** — an app-like, web2 BUY → GET → WD journey: start with a virtual store, earn through funded partner activities, and eventually withdraw through supported payment rails. No blockchain, no crypto, and no guaranteed returns.
 
-> **Status — 18 Oct 2026:** Supabase auth/onboarding, the 8-hour virtual-store claim loop, store upgrades, append-only wallet ledger, referral attribution, daily in-app missions, EN/ID mobile-first UI, installable PWA shell, admin v1, and real-time wallet-ledger notifications are implemented. Midtrans is the sole selected provider for top-up and payout, but no integration or production transaction is active. **Package checkout, paid partner offers/playtime, cash withdrawals, and network commission payouts are not live.** OSID Coins are in-app points with no cash value and cannot be withdrawn.
+> **Status — 18 Oct 2026:** Supabase auth/onboarding, the 8-hour virtual-store claim loop, store upgrades, append-only wallet ledger, referral attribution, daily in-app missions, EN/ID mobile-first UI, installable PWA shell, admin v1, and real-time wallet-ledger notifications are implemented. Midtrans is the sole selected provider for top-up and payout, but no integration or production transaction is active. **Package checkout, paid partner offers/playtime, cash withdrawals, and network commission payouts are not live.** KOIN points are internal app points with no cash value and cannot be withdrawn.
+
+## Current product definition and ledger truth
+
+The five cards currently describe **digital virtual-store tiers inside the OSIDAC app**, not physical machines or hardware. There is no device SKU, inventory, shipping, or warranty flow. The displayed store level and partner-campaign multiplier are planned tier benefits; checkout is disabled, so no order or payment can be made. Historical concept documents mentioning vouchers or merchandise are proposals, not live package contents.
+
+The active account currency is KOIN points. KOIN is not OSID and is not withdrawable. The current database has no OSID ledger; its IDR row is not a cashout entitlement. A KOIN-to-OSID migration was selected for consideration, but its exact formula, effective date, eligible balances, and funding/finance approval are still required before implementation.
 
 ---
 

@@ -23,7 +23,7 @@ export default async function AppLayout({
       <div className="market-shell">
         <RealtimeLedgerNotification labels={app.notifications} />
         <header className="market-topbar sticky top-0 z-30">
-          <div className="mx-auto flex h-[4.4rem] max-w-[1480px] items-center justify-between gap-3 px-3 sm:px-5 lg:px-6">
+          <div className="mx-auto flex min-h-[4.4rem] max-w-[1480px] items-center justify-between gap-3 px-3 py-2 sm:px-5 lg:px-6">
             <Link
               href={`/${locale}/app`}
               aria-label="OSIDAC"
@@ -33,14 +33,14 @@ export default async function AppLayout({
               <img src="/images/osidac-mark.svg" alt="" className="h-9 w-9 shrink-0" />
               <span className="flex min-w-0 flex-col leading-none">
                 <span className="text-[1.1rem] font-black tracking-[-0.075em]">OSIDAC</span>
-                <span className="market-kicker mt-1 text-[0.48rem] text-[#716f63]">{app.chrome.subbrand}</span>
+                <span className="market-kicker mt-1 max-w-[8rem] truncate whitespace-nowrap text-[0.48rem] text-[#716f63]">{app.chrome.subbrand}</span>
               </span>
             </Link>
 
             <p className="market-kicker hidden text-[#716f63] xl:block">{app.chrome.workspace}</p>
 
             <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-              <span className="market-stamp hidden border-[#c8c3b5] text-[#716f63] md:inline-flex">
+              <span className="market-stamp hidden whitespace-nowrap border-[#c8c3b5] text-[#716f63] md:inline-flex">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#f37959]" />
                 {app.chrome.feedStatus}
               </span>
@@ -54,7 +54,7 @@ export default async function AppLayout({
 
         <div className="mx-auto grid max-w-[1480px] gap-4 px-3 py-4 sm:px-5 lg:grid-cols-[248px_minmax(0,1fr)] lg:gap-5 lg:px-6 lg:py-5">
           <AppSidebar locale={locale} labels={{ ...app.sidebar, ...app.chrome }} />
-          <main className="min-w-0 pb-28 lg:pb-8">{children}</main>
+          <main className="min-w-0 pb-[calc(7rem+env(safe-area-inset-bottom,0px))] lg:pb-8">{children}</main>
         </div>
 
         <AppBottomNav

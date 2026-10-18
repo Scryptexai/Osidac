@@ -13,29 +13,37 @@ export default function AuthGuard({
 }) {
   const [state, setState] = useState<"loading" | "ok" | "redirect">("loading");
   const params = useParams<{ locale: string }>();
+  const locale = params?.locale ?? "en";
   const router = useRouter();
 
   useEffect(() => {
-    const supabase = createClient();
-    supabase.auth
-      .getUser()
-      .then(({ data }) => {
-        if (data.user) {
-          setState("ok");
-        } else {
+    let active = true;
+
+    async function verifySession() {
+      try {
+        const supabase = createClient();
+        const { data, error } = await supabase.auth.getUser();
+        if (!active) return;
+        if (error || !data.user) {
           setState("redirect");
-          router.replace(`/${params?.locale ?? "en"}/login`);
+          router.replace(`/${locale}/login`);
+          return;
         }
-      })
-      .catch(() => {
+        setState("ok");
+      } catch {
+        if (!active) return;
         setState("redirect");
-        router.replace(`/${params?.locale ?? "en"}/login`);
-      });
-  }, [params, router]);
+        router.replace(`/${locale}/login`);
+      }
+    }
+
+    void verifySession();
+    return () => { active = false; };
+  }, [locale, router]);
 
   if (state !== "ok") {
     return (
-      <div className="flex items-center justify-center py-32 text-sm text-zinc-500">
+      <div role="status" className="flex items-center justify-center py-32 text-sm text-zinc-500">
         {loadingLabel}
       </div>
     );

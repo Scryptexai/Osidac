@@ -25,6 +25,8 @@ export default async function NetworkPage({
         direct: t.direct,
         shareNote: t.shareNote,
         commissionNote: t.commissionNote,
+        error: t.error,
+        retry: t.retry,
       }}
     />
   );

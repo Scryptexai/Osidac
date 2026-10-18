@@ -3,6 +3,8 @@
 > Dokumen konsep historis (17 Okt 2026); belum menjadi spesifikasi launch atau bukti fitur aktif.
 > **Update 18 Okt 2026:** Midtrans dipilih sebagai satu-satunya provider top-up dan payout. Integrasi, kanal, tarif kontrak, saldo tunai, dan cashout belum aktif/terkonfirmasi. Asumsi channel atau payout lama di dokumen ini tidak berlaku kecuali dikonfirmasi ulang. Lihat [07-PHASE-2-PAYOUT-STRATEGY.md](07-PHASE-2-PAYOUT-STRATEGY.md).
 
+> **Current implementation boundary:** the app catalog represents digital virtual-store tiers, not physical machines or hardware; there is no inventory, shipping, or warranty flow. The voucher/merch perks in §3.1 are historical concepts only and are not included in the active UI or fulfillment system. Tier checkout is disabled. KOIN is still a separate non-cash ledger; no OSID ledger or KOIN migration rule is implemented.
+
 ---
 
 ## 1. Positioning Produk

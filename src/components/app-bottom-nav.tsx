@@ -32,7 +32,7 @@ export default function AppBottomNav({
 
   return (
     <nav
-      className="fixed inset-x-2 bottom-2 z-40 mx-auto max-w-2xl rounded-[1.25rem] border border-white/10 bg-[#171d19]/[0.97] p-1.5 pb-[calc(0.375rem+env(safe-area-inset-bottom))] shadow-[0_12px_40px_rgb(0_0_0/0.25)] backdrop-blur-xl lg:hidden"
+      className="fixed inset-x-2 bottom-[calc(env(safe-area-inset-bottom,0px)+0.5rem)] z-40 mx-auto max-w-2xl rounded-[1.25rem] border border-white/10 bg-[#171d19]/[0.97] p-1.5 shadow-[0_12px_40px_rgb(0_0_0/0.25)] backdrop-blur-xl lg:hidden"
       aria-label={locale === "id" ? "Navigasi utama" : "Primary navigation"}
     >
       <div className="flex items-stretch gap-1">

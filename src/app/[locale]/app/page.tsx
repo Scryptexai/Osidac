@@ -59,6 +59,8 @@ export default async function StorePage({
           max: t.max,
           upgradeButton: t.upgradeButton,
           paused: t.paused,
+          balanceUnavailable: t.balanceUnavailable,
+          retry: t.retry,
         }}
       />
     </div>

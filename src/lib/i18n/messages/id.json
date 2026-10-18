@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "OSIDAC — Toko virtual, misi harian, dan komunitas",
-    "description": "Kelola toko virtual, ikuti misi harian, dan kumpulkan OSID Coins untuk penggunaan di aplikasi. Top-up saldo tunai dan penarikan belum tersedia."
+    "description": "Kelola toko virtual, selesaikan misi harian, dan kumpulkan poin KOIN untuk penggunaan di aplikasi. Top-up tunai dan penarikan belum tersedia."
   },
   "nav": {
     "how": "Cara kerja",
@@ -16,7 +16,7 @@
   "hero": {
     "badge": "Toko virtual · misi harian · progres bersama",
     "title": "Buka toko digitalmu. Bergerak maju setiap hari.",
-    "subtitle": "Kelola toko virtual, selesaikan misi harian, dan kumpulkan OSID Coins untuk digunakan di aplikasi. OSID Coins bukan uang tunai dan tidak dapat ditarik.",
+    "subtitle": "Kelola toko virtual, selesaikan misi harian, dan kumpulkan poin KOIN untuk digunakan di aplikasi. Poin KOIN bukan uang tunai dan tidak dapat ditarik.",
     "ctaPrimary": "Mulai gratis",
     "ctaSecondary": "Jelajahi fitur",
     "stat1": "Daftar gratis",
@@ -37,17 +37,17 @@
     "buyText": "Pendaftaran gratis. Tidak perlu membeli keanggotaan untuk menggunakan toko virtual dan misi harian yang tersedia.",
     "buyAlt": "Tampilan toko virtual di ponsel dengan saldo reward di aplikasi",
     "getHook": "Bangun rutinitas harian",
-    "getText": "Kumpulkan OSID Coins melalui aktivitas di aplikasi. Koin hanya berupa poin aplikasi; tidak memiliki nilai tunai dan tidak dapat dicairkan.",
+    "getText": "Kumpulkan poin KOIN melalui aktivitas di aplikasi. Poin ini hanya untuk aplikasi; tidak memiliki nilai tunai dan tidak dapat dicairkan.",
     "getAlt": "Pengguna memeriksa daftar tugas harian di ponsel",
     "wdHook": "Pantau aktivitas di dompet",
-    "wdText": "Lihat saldo OSID Coins dan riwayat aktivitasmu. Top-up tunai dan penarikan belum tersedia.",
+    "wdText": "Lihat saldo poin KOIN dan riwayat aktivitasmu. Top-up tunai dan penarikan belum tersedia.",
     "wdAlt": "Pemilik usaha memeriksa ponsel di tempat usahanya"
   },
   "earn": {
     "title": "Jelajahi fitur yang tersedia",
     "subtitle": "Mulai dari toko virtual, misi harian, dan pelacakan referral. Misi partner berbayar, reward game, komisi jaringan, dan penarikan tunai belum tersedia.",
     "storeHook": "Toko virtual",
-    "storeText": "Klaim toko virtual setiap delapan jam untuk memperoleh OSID Coins. Koin hanya dapat digunakan di aplikasi.",
+    "storeText": "Klaim toko virtual setiap delapan jam untuk memperoleh poin KOIN. Poin ini hanya digunakan di aplikasi.",
     "missionHook": "Misi harian",
     "missionText": "Selesaikan check-in dan aktivitas referral terverifikasi. Misi partner berbayar belum tersedia.",
     "playHook": "Reward game",
@@ -100,18 +100,18 @@
   },
   "transparency": {
     "title": "Pahami saldo dan reward-mu",
-    "subtitle": "OSID Coins adalah poin di dalam aplikasi, bukan uang. Top-up tunai dan penarikan belum tersedia. Ketentuan lengkap akan ditampilkan sebelum fitur keuangan diaktifkan.",
-    "formula": "OSID Coins tidak memiliki nilai tunai dan tidak dapat ditarik.",
+    "subtitle": "Poin KOIN adalah poin internal aplikasi, bukan uang. Top-up tunai dan penarikan belum tersedia. Ketentuan lengkap akan ditampilkan sebelum fitur keuangan diaktifkan.",
+    "formula": "Poin KOIN tidak memiliki nilai tunai dan tidak dapat ditarik.",
     "disclaimer": "OSIDAC bukan produk investasi dan tidak menjanjikan penghasilan. Tidak ada aset kripto yang digunakan."
   },
   "cta": {
     "title": "Mulai dari toko virtualmu.",
-    "subtitle": "Buat akun gratis dan coba fitur toko serta misi yang tersedia. OSID Coins tidak dapat ditukar menjadi uang tunai.",
+    "subtitle": "Buat akun gratis dan coba fitur toko serta misi yang tersedia. Poin KOIN tidak dapat ditukar menjadi uang tunai.",
     "button": "Buka toko — gratis"
   },
   "footer": {
     "tagline": "Toko virtual · misi harian · komunitas",
-    "legal": "OSIDAC bukan produk investasi dan tidak menjanjikan penghasilan. OSID Coins adalah poin aplikasi tanpa nilai tunai. Keanggotaan berbayar, misi partner, komisi jaringan, top-up tunai, dan penarikan belum tersedia.",
+    "legal": "OSIDAC bukan produk investasi dan tidak menjanjikan penghasilan. Poin KOIN adalah poin aplikasi tanpa nilai tunai. Tier berbayar, misi partner, komisi jaringan, top-up tunai, dan penarikan belum tersedia.",
     "rights": "Seluruh hak cipta dilindungi."
   },
   "auth": {
@@ -148,17 +148,17 @@
       "navTitle": "PETA OPERASI"
     },
     "store": {
-      "title": "Toko Saya",
+      "title": "Toko virtual saya",
       "level": "Level toko",
-      "producing": "Tokomu sedang berproduksi",
+      "producing": "Saldo KOIN aplikasi saat ini",
       "claimIn": "Klaim berikutnya dalam",
-      "claim": "Klaim koin toko",
-      "claimed": "Klaim berhasil. OSID Coins ditambahkan ke dompet.",
+      "claim": "Klaim poin KOIN",
+      "claimed": "Klaim berhasil. Poin KOIN ditambahkan ke ledger aplikasi.",
       "streak": "Rangkaian harian",
       "league": "Liga",
       "upgrade": "Tingkatkan toko",
       "upgradeDone": "Toko ditingkatkan ke",
-      "insufficient": "OSID Coins belum cukup untuk peningkatan ini.",
+      "insufficient": "Poin KOIN tidak cukup untuk meningkatkan toko virtual ini.",
       "coins": "KOIN poin",
       "cost": "Biaya",
       "loading": "Memuat toko…",
@@ -170,15 +170,17 @@
       "max": "Maks.",
       "upgradeButton": "Tingkatkan",
       "paused": "Fitur ini sementara tidak tersedia.",
-      "coinNote": "Saldo ini memakai ledger KOIN aplikasi yang sudah ada. Nilai ke IDR belum ditetapkan; pengganda tier hanya berlaku untuk campaign mitra yang memenuhi syarat."
+      "coinNote": "KOIN adalah ledger poin aplikasi non-tunai—bukan OSID atau IDR. KOIN tidak dapat ditarik dan aturan konversi KOIN ke OSID belum tersedia.",
+      "balanceUnavailable": "Saldo KOIN tidak tersedia",
+      "retry": "Coba lagi"
     },
     "missions": {
       "title": "Misi",
       "subtitle": "Selesaikan tugas harian di aplikasi. Misi partner berbayar dan survei belum tersedia.",
       "soon": "Misi partner berbayar belum tersedia.",
       "dailyTitle": "Misi harian",
-      "dailySubtitle": "Aksi kecil di aplikasi untuk membangun rutinitas tokomu.",
-      "rewardNote": "Reward check-in dan referral saat ini masuk ke ledger KOIN aplikasi. OSID untuk penukaran tunai harus berasal dari campaign mitra terverifikasi dan settlement yang tercatat.",
+      "dailySubtitle": "Check-in dan selesaikan aktivitas di aplikasi untuk memperoleh poin KOIN. Ini bukan reward uang tunai.",
+      "rewardNote": "Reward check-in dan referral masuk ke ledger KOIN aplikasi. KOIN bukan OSID atau IDR dan tidak otomatis dikonversi. Reward OSID bergantung pada campaign mitra yang terverifikasi, berpendanaan, dan sudah settle.",
       "progress": "Progres hari ini",
       "reset": "Reset pukul 00.00 UTC",
       "checkInTitle": "Check-in harian",
@@ -191,8 +193,8 @@
       "shareDescription": "Bagikan undangan. Misi referral tersedia setelah teman berhasil mendaftar.",
       "shareButton": "Bagikan link undangan",
       "shareSuccess": "Tautan undangan siap dibagikan.",
-      "storeTitle": "Klaim omzet toko",
-      "storeDescription": "Klaim toko regulermu dihitung sebagai progres hari ini.",
+      "storeTitle": "Klaim poin KOIN toko virtual",
+      "storeDescription": "Klaim toko rutin menambahkan poin KOIN aplikasi—bukan uang tunai atau revenue mitra.",
       "storeButton": "Buka toko saya",
       "claimButton": "Klaim reward",
       "claimed": "Sudah diklaim hari ini",
@@ -226,7 +228,7 @@
     "wallet": {
       "title": "Dompet",
       "coins": "KOIN poin",
-      "cash": "Saldo tunai (IDR)",
+      "cash": "Ledger IDR (belum bisa ditarik)",
       "usd": "Saldo USD",
       "history": "Riwayat transaksi",
       "loading": "Memuat dompet…",
@@ -237,8 +239,16 @@
       "missionEntry": "Reward misi",
       "bonusEntry": "Bonus",
       "otherEntry": "Transaksi",
-      "cashNote": "Saldo IDR hanya dapat dihitung dari pool revenue mitra yang sudah settle. Pool, kurs periode, dan payout belum aktif.",
-      "coinNote": "Saldo ini adalah ledger KOIN aplikasi saat ini. KOIN belum dikonversi menjadi OSID settlement atau IDR."
+      "cashNote": "Menampilkan saldo ledger IDR yang tercatat; ini bukan saldo payout yang tersedia. Payout belum aktif dan KOIN belum dikonversi menjadi OSID atau IDR.",
+      "coinNote": "Saldo ini adalah ledger KOIN aplikasi saat ini. KOIN belum dikonversi menjadi OSID settlement atau IDR.",
+      "osidTitle": "Ledger reward OSID",
+      "osidStatus": "Belum diterbitkan di aplikasi",
+      "osidNote": "Dompet saat ini hanya menyimpan KOIN, IDR, dan USD. Ledger OSID dan settlement mitra belum aktif.",
+      "cashMissing": "Baris ledger IDR tidak ditemukan",
+      "error": "Data dompet gagal dimuat. Saldo nol tidak ditampilkan.",
+      "sessionError": "Sesi akun tidak ditemukan. Silakan masuk kembali.",
+      "retry": "Coba lagi",
+      "coinsMissing": "Baris ledger KOIN tidak ditemukan"
     },
     "network": {
       "title": "Jaringan saya",
@@ -254,7 +264,9 @@
       "total": "total",
       "shareNote": "Siapa pun yang mendaftar melalui tautan ini akan terhubung sebagai referral langsungmu.",
       "direct": "langsung",
-      "commissionNote": "Komisi jaringan belum tersedia. Pelacakan referral saat ini tidak menghasilkan pembayaran tunai."
+      "commissionNote": "Komisi jaringan belum tersedia. Pelacakan referral saat ini tidak menghasilkan pembayaran tunai.",
+      "error": "Data jaringan gagal dimuat. Jumlah anggota disembunyikan, bukan ditampilkan sebagai nol.",
+      "retry": "Coba lagi"
     },
     "withdraw": {
       "title": "Penarikan dana",
@@ -289,7 +301,7 @@
       "retry": "Coba lagi",
       "usersMetric": "Anggota",
       "claimsMetric": "Klaim toko hari ini",
-      "coinsMetric": "Koin diklaim hari ini",
+      "coinsMetric": "Poin KOIN diklaim hari ini",
       "flagsMetric": "Flag yang perlu ditinjau",
       "recentUsers": "Anggota terbaru",
       "recentClaims": "Klaim toko terbaru",
@@ -320,19 +332,19 @@
       "featureStoreClaims": "Klaim toko",
       "featureStoreUpgrades": "Upgrade toko",
       "featureDailyMissionsDescription": "Aktifkan atau jeda check-in harian dan hadiah referral terverifikasi.",
-      "featureStoreClaimsDescription": "Aktifkan atau jeda tindakan klaim omzet toko.",
+      "featureStoreClaimsDescription": "Aktifkan atau jeda klaim poin KOIN internal.",
       "featureStoreUpgradesDescription": "Aktifkan atau jeda upgrade level toko."
     },
     "loading": "Memuat akunmu…",
     "notifications": {
-      "credit": "Koin masuk",
-      "debit": "Koin terpakai",
+      "credit": "Poin KOIN masuk",
+      "debit": "Poin KOIN terpakai",
       "dismiss": "Tutup notifikasi dompet"
     },
     "dashboard": {
-      "storeTitle": "Tokomu siap untuk langkah berikutnya",
-      "storeDescription": "Klaim koin toko di aplikasi setiap delapan jam dan lanjutkan progresmu.",
-      "storeAction": "Lihat toko",
+      "storeTitle": "Toko virtualmu siap",
+      "storeDescription": "Klaim poin KOIN aplikasi setiap delapan jam. Poin ini bukan uang tunai dan tidak dapat ditarik.",
+      "storeAction": "Lihat toko virtual",
       "storeAlt": "Pemilik usaha memeriksa ponsel di kafe",
       "missionsTitle": "Aktivitas kecil, progres harian",
       "missionsDescription": "Check-in, pantau progres misi, dan lihat aktivitas yang tersedia.",
@@ -353,19 +365,24 @@
       "feedStatus": "Detail campaign menunggu sinkronisasi."
     },
     "products": {
-      "eyebrow": "ETALASE / 05 TIER",
-      "title": "Bangun rute OSIDAC-mu.",
-      "subtitle": "Pilih tier waralaba virtual. Pengganda OSID berlaku untuk campaign mitra yang memenuhi syarat dan terverifikasi—bukan untuk semua saldo aplikasi.",
+      "eyebrow": "TIER TOKO DIGITAL / 05 PILIHAN",
+      "title": "Tier toko virtual, bukan mesin.",
+      "subtitle": "Setiap kartu menjelaskan akses digital di aplikasi OSIDAC. Tidak termasuk hardware, perangkat, atau barang yang dikirim.",
       "tier": "TIER",
-      "storeLevel": "Level awal toko",
-      "multiplier": "Pengganda OSID",
-      "perCampaign": "untuk misi mitra terverifikasi",
-      "checkoutStatus": "Integrasi checkout Midtrans belum aktif",
-      "checkoutNote": "Harga tier yang disetujui dan pengganda pilihan ditampilkan di sini. Checkout tetap tertutup sampai feed campaign, aturan OSID berbasis settlement, dan verifikasi pembayaran server-side terhubung serta teruji.",
+      "storeLevel": "Level akses toko virtual",
+      "multiplier": "Rencana pengganda OSID mitra",
+      "perCampaign": "Direncanakan untuk campaign mitra yang memenuhi syarat. Belum ada campaign mitra aktif.",
+      "checkoutStatus": "Belum tersedia untuk dibeli",
+      "checkoutNote": "Nilai yang ditampilkan adalah pratinjau produk. Halaman ini belum dapat membuat order, menerima pembayaran, atau mengkreditkan OSID. Checkout tier dan reward mitra belum aktif.",
       "browseMissions": "Buka papan misi",
       "settlementTag": "NILAI BERDASARKAN SETTLEMENT",
-      "settlementNote": "Nilai OSID ke IDR ditentukan dari revenue mitra yang terverifikasi setelah settlement. Tidak ada kurs tetap atau janji hasil tunai.",
-      "productCode": "TINGKAT WARALABA"
+      "settlementNote": "Jika kelak diluncurkan, nilai OSID ke IDR akan berubah mengikuti revenue mitra terverifikasi setelah settlement. Saat ini belum ada kurs tetap, saldo OSID, atau payout tunai.",
+      "productCode": "TIER TOKO DIGITAL",
+      "productTypeTitle": "Apa yang dibeli pengguna",
+      "productTypeDescription": "Rencana produk ini adalah tier digital di dalam aplikasi untuk toko virtual—bukan mesin atau hardware fisik. Tier ini direncanakan menetapkan level toko dan meningkatkan reward OSID yang memenuhi syarat sesuai pengganda pilihan. Jumlah OSID, campaign yang memenuhi syarat, dan waktu pemberian belum diimplementasikan; KOIN bukan OSID. Halaman ini belum menerima order atau pembayaran.",
+      "formatBadge": "DIGITAL / DI APLIKASI",
+      "purchaseStatus": "Pratinjau saja. Checkout, order, dan penerbitan OSID belum aktif; halaman ini tidak menerima pembayaran.",
+      "priceLabel": "Harga tier yang ditampilkan"
     }
   }
 }

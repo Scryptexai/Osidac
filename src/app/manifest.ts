@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "OSIDAC — Virtual Franchise & Rewards",
     short_name: "OSIDAC",
     description:
-      "A virtual storefront with daily missions and community features. OSID Coins are in-app points; cash top-ups and withdrawals are not available.",
+      "A virtual storefront with daily missions and community features. KOIN points are in-app points with no cash value; cash top-ups and withdrawals are not available.",
     start_url: "/app",
     scope: "/",
     display: "standalone",

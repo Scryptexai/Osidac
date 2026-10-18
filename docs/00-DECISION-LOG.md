@@ -23,6 +23,13 @@
 
 Keputusan ini menggantikan referensi provider ganda pada dokumen riset/arsitektur yang lebih lama. Harga publik, kanal, pajak, dan kelayakan merchant tidak dianggap sebagai tarif atau persetujuan kontrak OSIDAC.
 
+## 2026-10-18 — Definisi katalog dan saldo
+
+- **Interpretasi katalog saat ini:** lima tier adalah akses/upgrade digital untuk toko virtual di aplikasi, bukan mesin atau hardware fisik. Belum ada SKU perangkat, stok, pengiriman, atau garansi. Checkout tetap nonaktif.
+- **Manfaat tier yang ditampilkan:** level toko virtual dan multiplier campaign OSID yang direncanakan. Multiplier belum terhubung ke OSID ledger atau inventory campaign aktif; jangan tampilkan sebagai OSID yang sudah diterima atau cash return.
+- **KOIN lama:** pemilik memilih migrasi dengan formula yang disetujui, tetapi formula, tanggal efektif, cakupan saldo, sumber pendanaan, dan bukti approval belum diberikan. Sampai parameter itu terdokumentasi, jangan migrasikan atau cash-kan KOIN.
+- **Hadiah KOIN toko/misi:** tetap poin internal non-tunai; tidak sama dengan OSID atau IDR.
+
 ## Konsekuensi teknis yang langsung dieksekusi
 - Repo: Next.js 16 + Tailwind v4 skeleton dengan routing `[locale]` (en/id).
 - Vercel: project `osidac` dibuat & terhubung ke GitHub `Scryptexai/Osidac`.

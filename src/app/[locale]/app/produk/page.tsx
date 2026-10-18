@@ -28,7 +28,7 @@ export default async function ProductsPage({
         <div className="relative grid gap-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
           <div className="max-w-2xl">
             <p className="market-kicker text-[#d6f36a]">{t.eyebrow}</p>
-            <h1 className="mt-3 max-w-xl text-[2.25rem] font-black leading-[0.98] tracking-[-0.055em] sm:text-5xl">{t.title}</h1>
+            <h1 className="mt-3 max-w-xl text-[2.15rem] font-black leading-[0.98] tracking-[-0.055em] sm:text-5xl">{t.title}</h1>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-[#f6f2e8]/70 sm:text-base">{t.subtitle}</p>
           </div>
           <div className="flex items-end justify-between gap-4 sm:block sm:text-right">
@@ -38,9 +38,24 @@ export default async function ProductsPage({
         </div>
       </header>
 
+      <section className="market-panel grid gap-4 p-4 sm:grid-cols-[auto_minmax(0,1fr)] sm:items-start sm:p-5">
+        <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#d6f36a] text-[#171d19]"><Icon name="package" size={21} /></span>
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h2 className="text-lg font-black tracking-tight">{t.productTypeTitle}</h2>
+            <span className="market-stamp border-[#171d19]/15 text-[#55574e]">{t.formatBadge}</span>
+          </div>
+          <p className="mt-2 max-w-4xl text-sm leading-relaxed text-[#55574e]">{t.productTypeDescription}</p>
+          <p className="mt-3 flex items-start gap-2 rounded-lg bg-[#fff4e9] px-3 py-2 text-xs font-bold leading-relaxed text-[#75422f]">
+            <Icon name="info" size={16} className="mt-0.5 shrink-0" />
+            {t.purchaseStatus}
+          </p>
+        </div>
+      </section>
+
       <section aria-label={t.eyebrow} className="grid gap-3 sm:grid-cols-2 2xl:grid-cols-3">
         {productTiers.map((tier, index) => (
-          <article key={tier.tier} className="market-panel relative flex min-h-[276px] flex-col overflow-hidden p-4 sm:p-5">
+          <article key={tier.tier} className="market-panel relative flex min-h-[300px] flex-col overflow-hidden p-4 sm:p-5">
             <div className={`absolute inset-x-0 top-0 h-1.5 ${accents[tier.accent].split(" ")[0]}`} />
             <div className="flex items-start justify-between gap-3">
               <p className="market-kicker text-[#716f63]">{t.tier} / {String(index + 1).padStart(2, "0")}</p>
@@ -50,9 +65,10 @@ export default async function ProductsPage({
             </div>
 
             <div className="mt-4 flex items-start justify-between gap-3">
-              <div>
+              <div className="min-w-0">
                 <h2 className="text-xl font-black leading-tight tracking-[-0.04em] sm:text-2xl">{tier.name}</h2>
-                <p className="mt-2 text-2xl font-black tracking-[-0.055em] tabular-nums sm:text-3xl">{formatTierPrice(tier, locale)}</p>
+                <p className="market-kicker mt-3 text-[#716f63]">{t.priceLabel}</p>
+                <p className="mt-1 text-2xl font-black tracking-[-0.055em] tabular-nums sm:text-3xl">{formatTierPrice(tier, locale)}</p>
               </div>
               <span className={`market-stamp mt-1 shrink-0 ${accents[tier.accent]}`}>{tier.osidMultiplier.toFixed(1)}×</span>
             </div>
@@ -64,11 +80,11 @@ export default async function ProductsPage({
               </div>
               <div className="rounded-xl border border-[#171d19]/10 bg-[#f1eee3] p-3">
                 <p className="market-kicker text-[#716f63]">{t.multiplier}</p>
-                <p className="mt-1 text-lg font-black">{tier.osidMultiplier.toFixed(1)}× OSID</p>
+                <p className="mt-1 text-lg font-black">{tier.osidMultiplier.toFixed(1)}×</p>
               </div>
             </div>
-            <p className="mt-2 text-[11px] font-semibold text-[#716f63]">{t.perCampaign}</p>
-            <button type="button" disabled aria-disabled="true" className="market-lime-button mt-4 flex min-h-11 w-full items-center justify-center gap-2 rounded-xl px-4 text-sm font-black">
+            <p className="mt-2 min-h-9 text-[11px] font-semibold leading-relaxed text-[#716f63]">{t.perCampaign}</p>
+            <button type="button" disabled aria-disabled="true" className="market-lime-button mt-3 flex min-h-11 w-full items-center justify-center gap-2 rounded-xl px-4 text-sm font-black">
               {t.checkoutStatus}
               <Icon name="lock" size={16} />
             </button>

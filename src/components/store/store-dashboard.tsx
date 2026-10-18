@@ -35,6 +35,8 @@ type Labels = {
   max: string;
   upgradeButton: string;
   paused: string;
+  balanceUnavailable: string;
+  retry: string;
 };
 
 const CLAIM_INTERVAL_MS = 8 * 60 * 60 * 1000;
@@ -65,7 +67,8 @@ function leagueTone(league: string) {
 
 export default function StoreDashboard({ labels }: { labels: Labels }) {
   const [store, setStore] = useState<Store | null>(null);
-  const [balance, setBalance] = useState(0);
+  const [balance, setBalance] = useState<number | null>(null);
+  const [claimAvailableAt, setClaimAvailableAt] = useState<number | null>(null);
   const [now, setNow] = useState(0);
   const [busy, setBusy] = useState<"claim" | "upgrade" | null>(null);
   const [toast, setToast] = useState<string | null>(null);
@@ -94,7 +97,9 @@ export default function StoreDashboard({ labels }: { labels: Labels }) {
         return;
       }
       setStore(storeRes.data as Store);
-      if (walletRes.data) setBalance(Number(walletRes.data.balance));
+      const walletBalance = walletRes.data ? Number(walletRes.data.balance) : Number.NaN;
+      setBalance(walletRes.error || !Number.isFinite(walletBalance) ? null : walletBalance);
+      setClaimAvailableAt(null);
       setError(null);
     } catch {
       setError(labels.error);
@@ -117,7 +122,7 @@ export default function StoreDashboard({ labels }: { labels: Labels }) {
     };
   }, []);
 
-  const nextClaimAt = store?.last_claim_at ? new Date(store.last_claim_at).getTime() + CLAIM_INTERVAL_MS : 0;
+  const nextClaimAt = claimAvailableAt ?? (store?.last_claim_at ? new Date(store.last_claim_at).getTime() + CLAIM_INTERVAL_MS : 0);
   const remaining = nextClaimAt - now;
   const canClaim = !!store && now > 0 && remaining <= 0;
   const progress = store?.last_claim_at && now > 0
@@ -140,14 +145,12 @@ export default function StoreDashboard({ labels }: { labels: Labels }) {
         }
         return;
       }
-      const result = data as { amount: number; streak: number; balance: number };
+      const result = data as { amount: number; streak: number; balance: number; next_claim_at: string };
       setToast(`${labels.claimed} +${Number(result.amount).toLocaleString()} ${labels.coins}`);
       setBalance(Number(result.balance));
-      setStore((current) => current ? {
-        ...current,
-        last_claim_at: new Date().toISOString(),
-        streak_days: result.streak,
-      } : current);
+      const serverNextClaimAt = Date.parse(result.next_claim_at);
+      setClaimAvailableAt(Number.isFinite(serverNextClaimAt) ? serverNextClaimAt : Date.now() + CLAIM_INTERVAL_MS);
+      setStore((current) => current ? { ...current, streak_days: result.streak } : current);
       window.setTimeout(() => setToast(null), 3500);
     } catch {
       setError(labels.error);
@@ -187,8 +190,9 @@ export default function StoreDashboard({ labels }: { labels: Labels }) {
 
   if (!store) {
     return (
-      <div role="status" className="flex min-h-44 items-center justify-center text-sm text-zinc-500">
-        {error ? <span>{error}</span> : labels.loading}
+      <div className="market-panel flex min-h-44 flex-col items-center justify-center gap-3 p-5 text-center text-sm text-[#68685e]">
+        <p role={error ? "alert" : "status"}>{error ?? labels.loading}</p>
+        {error && <button type="button" onClick={() => { setError(null); void load(); }} className="market-lime-button min-h-10 rounded-xl px-4 font-black">{labels.retry}</button>}
       </div>
     );
   }
@@ -219,11 +223,17 @@ export default function StoreDashboard({ labels }: { labels: Labels }) {
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="market-kicker text-white/55">{labels.producing}</p>
-              <p className="mt-2 flex items-baseline gap-2">
-                <span className="text-4xl font-black tabular-nums tracking-tight sm:text-5xl">
-                  {balance.toLocaleString(undefined, { maximumFractionDigits: 2 })}
-                </span>
-                <span className="text-sm font-bold text-white/65">{labels.coins}</span>
+              <p className="mt-2 flex flex-wrap items-baseline gap-2">
+                {balance === null ? (
+                  <span className="text-sm font-bold text-white/70">{labels.balanceUnavailable}</span>
+                ) : (
+                  <>
+                    <span className="text-4xl font-black tabular-nums tracking-tight sm:text-5xl">
+                      {balance.toLocaleString(undefined, { maximumFractionDigits: 2 })}
+                    </span>
+                    <span className="text-sm font-bold text-white/65">{labels.coins}</span>
+                  </>
+                )}
               </p>
             </div>
             <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/15 text-white backdrop-blur">
@@ -279,7 +289,7 @@ export default function StoreDashboard({ labels }: { labels: Labels }) {
           <button
             type="button"
             onClick={() => void onUpgrade()}
-            disabled={store.level >= 10 || balance < cost || busy !== null}
+            disabled={store.level >= 10 || balance === null || balance < cost || busy !== null}
             className="market-lime-button min-h-11 shrink-0 rounded-xl px-5 text-sm font-black disabled:opacity-40"
           >
             {busy === "upgrade" ? "…" : store.level >= 10 ? labels.max : labels.upgradeButton}

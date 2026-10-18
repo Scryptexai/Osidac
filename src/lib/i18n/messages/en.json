@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "OSIDAC — Virtual stores, daily missions, and community",
-    "description": "Manage a virtual store, complete daily missions, and collect OSID Coins for in-app use. Cash top-ups and withdrawals are not available."
+    "description": "Manage a virtual store, complete daily missions, and collect KOIN points for in-app use. Cash top-ups and withdrawals are not available."
   },
   "nav": {
     "how": "How it works",
@@ -16,7 +16,7 @@
   "hero": {
     "badge": "Virtual store · daily missions · steady progress",
     "title": "Open your digital storefront. Move forward every day.",
-    "subtitle": "Manage a virtual store, complete daily missions, and collect OSID Coins for in-app use. OSID Coins are not cash and cannot be withdrawn.",
+    "subtitle": "Manage a virtual store, complete daily missions, and collect KOIN points for in-app use. KOIN points are not cash and cannot be withdrawn.",
     "ctaPrimary": "Get started free",
     "ctaSecondary": "Explore features",
     "stat1": "Free registration",
@@ -37,17 +37,17 @@
     "buyText": "Registration is free. You do not need to buy a membership to use the available virtual store and daily missions.",
     "buyAlt": "A virtual storefront on a phone with an in-app rewards balance",
     "getHook": "Build a daily routine",
-    "getText": "Collect OSID Coins through in-app activities. Coins are app points only; they have no cash value and cannot be redeemed.",
+    "getText": "Collect KOIN points through in-app activities. They are app points only; they have no cash value and cannot be redeemed.",
     "getAlt": "A person checking a daily task list on a phone",
     "wdHook": "Track your activity in one wallet",
-    "wdText": "View your OSID Coins and activity history. Cash top-ups and withdrawals are not available.",
+    "wdText": "View your KOIN point balance and activity history. Cash top-ups and withdrawals are not available.",
     "wdAlt": "Small business owner checking a phone in her shop"
   },
   "earn": {
     "title": "Explore what is available today",
     "subtitle": "Start with a virtual store, daily missions, and referral tracking. Paid partner offers, game rewards, network commissions, and cash withdrawals are not available.",
     "storeHook": "Virtual storefront",
-    "storeText": "Claim your virtual store every eight hours to collect OSID Coins. Coins are for in-app use only.",
+    "storeText": "Claim your virtual store every eight hours to collect KOIN points. These points are for in-app use only.",
     "missionHook": "Daily missions",
     "missionText": "Complete check-ins and verified referral activities. Paid partner missions are not available.",
     "playHook": "Game rewards",
@@ -100,18 +100,18 @@
   },
   "transparency": {
     "title": "Know what your balance represents",
-    "subtitle": "OSID Coins are in-app points, not money. Cash top-ups and withdrawals are not available. Full terms will be shown before any financial feature is enabled.",
-    "formula": "OSID Coins have no cash value and cannot be withdrawn.",
+    "subtitle": "KOIN points are internal app points, not money. Cash top-ups and withdrawals are not available. Full terms will be shown before any financial feature is enabled.",
+    "formula": "KOIN points have no cash value and cannot be withdrawn.",
     "disclaimer": "OSIDAC is not an investment product and does not promise income. No crypto assets are used."
   },
   "cta": {
     "title": "Start with your own virtual store.",
-    "subtitle": "Create a free account to explore available store and mission features. OSID Coins are not redeemable for cash.",
+    "subtitle": "Create a free account to explore available store and mission features. KOIN points are not redeemable for cash.",
     "button": "Open my store — free"
   },
   "footer": {
     "tagline": "Virtual store · daily missions · community",
-    "legal": "OSIDAC is not an investment product and does not promise income. OSID Coins are in-app points with no cash value. Paid memberships, partner missions, network commissions, cash top-ups, and withdrawals are not available yet.",
+    "legal": "OSIDAC is not an investment product and does not promise income. KOIN points are in-app points with no cash value. Paid tiers, partner missions, network commissions, cash top-ups, and withdrawals are not available yet.",
     "rights": "All rights reserved."
   },
   "auth": {
@@ -148,17 +148,17 @@
       "navTitle": "RUN SHEET"
     },
     "store": {
-      "title": "My Store",
+      "title": "My virtual store",
       "level": "Store level",
-      "producing": "Your store is producing",
+      "producing": "Current in-app KOIN balance",
       "claimIn": "Next claim in",
-      "claim": "Collect store coins",
-      "claimed": "Claim complete. OSID Coins were added to your wallet.",
+      "claim": "Claim KOIN points",
+      "claimed": "Claim complete. KOIN points were added to your in-app ledger.",
       "streak": "Daily streak",
       "league": "League",
       "upgrade": "Upgrade store",
       "upgradeDone": "Store upgraded to",
-      "insufficient": "You need more OSID Coins for this upgrade.",
+      "insufficient": "Not enough KOIN points to upgrade this virtual store.",
       "coins": "KOIN points",
       "cost": "Cost",
       "loading": "Loading your store…",
@@ -170,15 +170,17 @@
       "max": "Max",
       "upgradeButton": "Upgrade",
       "paused": "This feature is temporarily unavailable.",
-      "coinNote": "This is the existing in-app KOIN ledger. Its IDR value is not set; tier multipliers apply only to qualifying partner campaigns."
+      "coinNote": "KOIN is a non-cash in-app points ledger—not OSID or IDR. KOIN cannot be withdrawn, and no approved KOIN-to-OSID conversion rule is available yet.",
+      "balanceUnavailable": "KOIN balance unavailable",
+      "retry": "Retry"
     },
     "missions": {
       "title": "Missions",
       "subtitle": "Complete daily in-app tasks. Paid partner offers and surveys are not available.",
       "soon": "Paid partner missions are not available.",
       "dailyTitle": "Daily missions",
-      "dailySubtitle": "Small in-app actions to build a steady store routine.",
-      "rewardNote": "Current check-in and referral rewards go to the in-app KOIN ledger. Redeemable OSID must come from verified partner campaigns and recorded settlement.",
+      "dailySubtitle": "Check in and complete in-app actions to collect KOIN points. These are not cash rewards.",
+      "rewardNote": "Check-in and referral rewards go to the in-app KOIN ledger. KOIN is not OSID or IDR and does not convert automatically. OSID rewards depend on verified, funded partner campaigns and settlement.",
       "progress": "Today’s progress",
       "reset": "Resets at 00:00 UTC",
       "checkInTitle": "Daily check-in",
@@ -191,8 +193,8 @@
       "shareDescription": "Share an invite. The referral mission becomes available after a friend signs up.",
       "shareButton": "Share invite link",
       "shareSuccess": "Invite link is ready to share.",
-      "storeTitle": "Claim store revenue",
-      "storeDescription": "Your regular store claim counts toward today’s progress.",
+      "storeTitle": "Claim virtual-store KOIN points",
+      "storeDescription": "A regular in-app store claim adds KOIN points—not cash or partner revenue.",
       "storeButton": "Go to my store",
       "claimButton": "Claim reward",
       "claimed": "Claimed today",
@@ -226,7 +228,7 @@
     "wallet": {
       "title": "Wallet",
       "coins": "KOIN points",
-      "cash": "Cash balance (IDR)",
+      "cash": "IDR ledger (not withdrawable)",
       "usd": "USD balance",
       "history": "Transaction history",
       "loading": "Loading wallet…",
@@ -237,8 +239,16 @@
       "missionEntry": "Mission reward",
       "bonusEntry": "Bonus",
       "otherEntry": "Transaction",
-      "cashNote": "IDR value can only be calculated from a settled partner-revenue pool. The pool, period rate, and payout are not active yet.",
-      "coinNote": "This is the current in-app KOIN ledger. KOIN has not been converted into settlement OSID or IDR."
+      "cashNote": "Shows the recorded IDR ledger balance; it is not an available payout balance. Payouts are inactive, and KOIN has not been converted to OSID or IDR.",
+      "coinNote": "This is the current in-app KOIN ledger. KOIN has not been converted into settlement OSID or IDR.",
+      "osidTitle": "OSID reward ledger",
+      "osidStatus": "Not issued in this app yet",
+      "osidNote": "The current wallet stores KOIN, IDR, and USD only. No OSID ledger or partner settlement is live.",
+      "cashMissing": "No IDR ledger row",
+      "error": "Wallet data could not be loaded. No zero balance is shown.",
+      "sessionError": "Account session not found. Sign in again.",
+      "retry": "Retry",
+      "coinsMissing": "KOIN ledger row not found"
     },
     "network": {
       "title": "My network",
@@ -254,7 +264,9 @@
       "total": "total",
       "shareNote": "Anyone who signs up through this link will be connected as your direct referral.",
       "direct": "direct",
-      "commissionNote": "Network commissions are not available. Referral tracking does not currently result in a cash payment."
+      "commissionNote": "Network commissions are not available. Referral tracking does not currently result in a cash payment.",
+      "error": "Network data could not be loaded. Counts are hidden rather than shown as zero.",
+      "retry": "Retry"
     },
     "withdraw": {
       "title": "Withdraw funds",
@@ -289,7 +301,7 @@
       "retry": "Retry",
       "usersMetric": "Members",
       "claimsMetric": "Store claims today",
-      "coinsMetric": "Coins claimed today",
+      "coinsMetric": "KOIN points claimed today",
       "flagsMetric": "Open review flags",
       "recentUsers": "Recent members",
       "recentClaims": "Recent store claims",
@@ -320,19 +332,19 @@
       "featureStoreClaims": "Store claims",
       "featureStoreUpgrades": "Store upgrades",
       "featureDailyMissionsDescription": "Allow or pause daily check-in and verified referral rewards.",
-      "featureStoreClaimsDescription": "Allow or pause the store revenue claim action.",
+      "featureStoreClaimsDescription": "Allow or pause the internal KOIN-points claim action.",
       "featureStoreUpgradesDescription": "Allow or pause store level upgrades."
     },
     "loading": "Loading your account…",
     "notifications": {
-      "credit": "Coins added",
-      "debit": "Coins spent",
+      "credit": "KOIN points added",
+      "debit": "KOIN points spent",
       "dismiss": "Dismiss wallet notification"
     },
     "dashboard": {
-      "storeTitle": "Your store is ready for the next step",
-      "storeDescription": "Claim in-app store coins every eight hours and keep your progress moving.",
-      "storeAction": "View my store",
+      "storeTitle": "Your virtual store is ready",
+      "storeDescription": "Claim in-app KOIN points every eight hours. These points are not cash and cannot be withdrawn.",
+      "storeAction": "View my virtual store",
       "storeAlt": "Small business owner checking her phone in a cafe",
       "missionsTitle": "Small tasks. Daily momentum.",
       "missionsDescription": "Check in, follow your mission progress, and see available activities at a glance.",
@@ -353,19 +365,24 @@
       "feedStatus": "Campaign details are awaiting sync."
     },
     "products": {
-      "eyebrow": "THE STOREFRONT / 05 TIERS",
-      "title": "Build your OSIDAC route.",
-      "subtitle": "Choose a virtual-franchise tier. Its OSID multiplier applies to qualifying, verified partner campaigns—not to every app balance.",
+      "eyebrow": "DIGITAL STORE TIERS / 05 OPTIONS",
+      "title": "A virtual-store tier, not a machine.",
+      "subtitle": "Each card describes digital access inside the OSIDAC app. No hardware, device, or shipped item is included.",
       "tier": "TIER",
-      "storeLevel": "Store starts at",
-      "multiplier": "OSID multiplier",
-      "perCampaign": "on eligible verified missions",
-      "checkoutStatus": "Midtrans checkout is not active in the app",
-      "checkoutNote": "The approved tier prices and selected multipliers are shown here. Checkout stays closed until the campaign feed, settlement-backed OSID rules, and server-side payment verification are connected and tested.",
+      "storeLevel": "Virtual store access level",
+      "multiplier": "Planned partner OSID multiplier",
+      "perCampaign": "Planned for eligible partner campaigns. No partner campaign is active today.",
+      "checkoutStatus": "Not available to buy yet",
+      "checkoutNote": "The displayed values are a product preview. No order can be placed, payment taken, or OSID credited from this page. Tier checkout and partner rewards are not active.",
       "browseMissions": "Open mission board",
       "settlementTag": "SETTLEMENT-BASED VALUE",
-      "settlementNote": "OSID-to-IDR value is determined from verified partner revenue after settlement. No fixed exchange rate or cash return is promised.",
-      "productCode": "FRANCHISE BUILD"
+      "settlementNote": "If launched, OSID-to-IDR value will vary with verified partner revenue after settlement. No fixed rate, OSID balance, or cash payout is available today.",
+      "productCode": "DIGITAL STORE TIERS",
+      "productTypeTitle": "What you are buying",
+      "productTypeDescription": "The planned purchase is an in-app digital tier for a virtual storefront—not a physical machine or hardware. It is intended to set the store level and increase eligible OSID rewards using the selected tier multiplier. The exact OSID grant, eligible campaigns, and timing are not implemented; KOIN is not OSID. No order or payment is available from this screen.",
+      "formatBadge": "DIGITAL / IN-APP ONLY",
+      "purchaseStatus": "Preview only. Checkout, orders, and OSID issuance are not active; this page cannot take payment.",
+      "priceLabel": "Displayed tier price"
     }
   }
 }
