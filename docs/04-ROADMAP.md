@@ -1,7 +1,7 @@
 # 04 — Roadmap Eksekusi OSIDAC (v2 — Web2, Buy → Get → WD)
 
 > Status dokumen: roadmap produk v2 (revisi pivot 17 Okt 2026). Implementasi berjalan di Fase 1; belum ada fase yang dinyatakan lulus sampai exit criteria terukur terpenuhi.
-> Estimasi awal: 1–2 full-stack engineer + AI-assisted development. Tanpa blockchain/kripto; payout uang nyata tetap fase lanjutan.
+> Estimasi awal: 1–2 full-stack engineer + AI-assisted development; timeline hanya indikatif dan tidak melewati gerbang stop/go. Tanpa blockchain/kripto; payout uang nyata tetap fase lanjutan.
 
 ---
 
@@ -28,7 +28,7 @@ brand)
 | 0.4 | Supabase: aktifkan `CIF` atau buat `osidac` (**keputusan user**); Auth (email/Google/OTP), RLS baseline, seed roles | DB siap |
 | 0.5 | Vercel project `osidac` linked ke repo; preview + production | Pipeline hijau |
 | 0.6 | Spesifikasi ekonomi: model rate koin, reward_pool, skema komisi JSON + **simulator payout** (unit test) | Spec teruji |
-| 0.7 | Akun mitra: apply publisher offerwall (AdGem/RevU/Torox), playtime (adjoe), ads (AdMob/Unity), akun Midtrans/Xendit (butuh PT) | Akun mitra berjalan |
+| 0.7 | Akun mitra: apply publisher offerwall (AdGem/RevU/Torox), playtime (adjoe), ads (AdMob/Unity), dan onboarding merchant **Midtrans saja** (butuh entitas yang memenuhi syarat) | Akun mitra berjalan |
 
 **Exit criteria:** ✅ PSE berjalan & PT siap · ✅ deploy skeleton ke Vercel · ✅ skema DB v1 bermigrasi + RLS tests lulus · ✅ simulator komisi lulus.
 
@@ -55,18 +55,22 @@ brand)
 
 ## FASE 2 — Mesin Uang & WD (Minggu 11–20)
 
-**Tujuan:** uang nyata masuk (offerwall/playtime/ads/paket), WD ke e-wallet lancar — momen kepercayaan produk.
+**Tujuan:** membuktikan pendapatan bersih yang benar-benar settle, lalu menyiapkan WD yang dapat direkonsiliasi. Payout uang nyata tetap OFF sampai gerbang legal, kontrak provider, pendanaan, dan finance di bawah lolos. Strategi dan simulasi biaya: [docs/07-PHASE-2-PAYOUT-STRATEGY.md](07-PHASE-2-PAYOUT-STRATEGY.md).
 
 | Sprint | Fitur |
 |---|---|
 | S7 | **Offerwall v1** (mediation 2–3 jaringan): webview/SDK, postback idempoten + HMAC, status pending→verified→clawback |
-| S8 | **Paket Waralaba**: katalog 5 tier + checkout **Midtrans/Xendit** (QRIS/VA/e-wallet/Alfamart) · voucher wallet · fulfillment merch |
-| S9 | **Play & Earn** (adjoe/Tapjoy) + **Rewarded Ads** (energi/boost) · rate dinamis + `reward_pool_daily` (rem tangan) aktif |
-| S10 | **WD center**: koin→IDR, disbursement Xendit ke **DANA/GoPay/OVO/bank**, ambang & limit tier, KYC e-KYC untuk WD besar |
-| S11 | Commission run produksi (8/3/1 + share margin 5/2/1 + Fast-Start + rank) · holding 14 hari · cap 40% · laporan transparansi publik v1 |
-| S12 | Finance dashboard (revenue per keran, payout ratio live, rate koin) · load test · security review · **launch publik terbatas** |
+| S8 | **Paket Waralaba**: katalog 5 tier + checkout **Midtrans saja** pada kanal yang disetujui untuk OSIDAC · voucher wallet · fulfillment merch. Top-up saldo IDR tersimpan perlu definisi produk/legal terpisah. |
+| S9 | **Play & Earn** (adjoe/Tapjoy) + **Rewarded Ads** (energi/boost) · integrasi rate dinamis + `reward_pool_daily` dalam mode bayangan; produksi hanya dari settlement dan reserve tervalidasi |
+| S10 | **WD center**: pisahkan KOIN internal dari `withdrawable_idr`; sandbox payout provider, webhook/idempotensi, approval, hold, reserve & rekonsiliasi. Provider, kanal, ambang, fee, dan KYC ditetapkan setelah quote/approval; production WD hanya setelah semua gerbang stop/go lolos |
+| S11 | Commission run produksi (8/3/1 + share margin 5/2/1 + Fast-Start + rank) hanya setelah revenue/gate tervalidasi · holding sesuai risiko/kontrak (rencana awal 14 hari) · cap jaringan 40% dari pool · laporan transparansi |
+| S12 | Finance dashboard (revenue per keran, payout ratio live, rate koin) · load test · security review · **beta tertutup dulu; publik terbatas hanya setelah semua gate & exit criteria** |
 
-**Exit criteria:** ✅ GMV paket & revenue offerwall berjalan · ✅ ≥50 WD pertama sukses mulus (target < 2 hari) · ✅ distribusi/pendapatan ≤ 70% · ✅ UAT disclaimer & halaman transparansi.
+### Stop/go gates sebelum WD uang nyata
+
+Rincian dan checklist ada di [docs/07-PHASE-2-PAYOUT-STRATEGY.md](07-PHASE-2-PAYOUT-STRATEGY.md). Sebelum production WD: (A) pendapat hukum/entitas/PSE/pajak dan persetujuan tertulis provider; (B) sumber pendapatan yang sudah settle, perhitungan net eligible revenue, reserve dan kas payout disetujui finance; (C) sandbox lulus uji idempotency, timeout, webhook, kegagalan, reconciliation, approval, dan kill switch; (D) uji internal dan beta tertutup mendapat persetujuan eksplisit. Jika satu gate belum lolos, payout uang nyata dan klaim WD tetap OFF.
+
+**Exit criteria:** ✅ pendapatan offerwall/iklan/paket eligible tercatat hanya setelah settle dan net costs · ✅ ≥50 WD pertama berhasil setelah legal/provider/finance gate dan target waktu mengikuti SLA tertulis · ✅ 100% rekonsiliasi payout harian tanpa selisih tak terjelaskan · ✅ seluruh distribusi termasuk fee provider ≤70% net eligible revenue dan komisi jaringan tetap di dalam cap 40% · ✅ UAT disclaimer & halaman transparansi.
 
 ---
 
@@ -104,7 +108,7 @@ brand)
 |---|---|
 | 1 | Fase 0: PSE + PT + foundation + pipeline |
 | 2–3 | MVP toko virtual soft launch (loop terbukti retensi) |
-| 4–5 | Mesin uang live: offerwall + paket + **WD pertama ke DANA** |
+| 4–5 | Target indikatif: revenue source tervalidasi + payout sandbox; WD uang nyata hanya jika semua gerbang Phase 2 lolos (bukan berdasarkan bulan kalender) |
 | 6–8 | Growth: rank + Telegram + 10k user |
 | 9+ | Scale: mall, app store, SEA |
 
@@ -126,7 +130,7 @@ Biaya infrastruktur MVP: **~$30–80/bulan** (Supabase Pro + Vercel Pro + domain
 
 ## Guardrails Eksekusi (Tetap Berlaku)
 
-1. **Tidak ada pembayaran yang dibiayai deposit/devisa member baru.** Distribusi selalu ≤ pendapatan aktual (offerwall/playtime/iklan/margin).
+1. **Tidak ada pembayaran yang dibiayai deposit/devisa member baru.** Distribusi hanya dari pendapatan eksternal net yang sudah settle (offerwall/playtime/iklan/laba paket setelah pemenuhan); gross checkout paket tidak otomatis menjadi reward pool. Total distribusi termasuk biaya payout selalu ≤ batas pendapatan eligible dan kas nyata.
 2. Rate koin mengikuti `reward_pool` — lebih baik rate turun daripada ekonomi bohong.
 3. Setiap perubahan comp plan = versi baru + simulasi payout + review.
 4. Ledger = sumber kebenaran tunggal.

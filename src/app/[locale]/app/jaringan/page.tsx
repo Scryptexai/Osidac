@@ -15,7 +15,6 @@ export default async function NetworkPage({
       labels={{
         title: t.title,
         branches: t.branches,
-        commission: t.commission,
         rank: t.rank,
         invite: t.invite,
         copy: t.copy,
@@ -25,6 +24,7 @@ export default async function NetworkPage({
         total: t.total,
         direct: t.direct,
         shareNote: t.shareNote,
+        commissionNote: t.commissionNote,
       }}
     />
   );

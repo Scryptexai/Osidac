@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { RealtimeChannel } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/client";
+import Icon from "@/components/ui/icon";
 
 type Labels = {
   credit: string;
@@ -15,11 +16,7 @@ type LedgerInsert = {
   currency: string;
 };
 
-export default function RealtimeLedgerNotification({
-  labels,
-}: {
-  labels: Labels;
-}) {
+export default function RealtimeLedgerNotification({ labels }: { labels: Labels }) {
   const [message, setMessage] = useState<string | null>(null);
   const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -51,10 +48,9 @@ export default function RealtimeLedgerNotification({
             const label = amount >= 0 ? labels.credit : labels.debit;
             const sign = amount > 0 ? "+" : "";
             setMessage(`${label}: ${sign}${amount.toLocaleString(undefined, { maximumFractionDigits: 2 })} ${entry.currency}`);
-
             if (timeout.current) clearTimeout(timeout.current);
             timeout.current = setTimeout(() => setMessage(null), 5000);
-          }
+          },
         )
         .subscribe();
     }
@@ -77,15 +73,17 @@ export default function RealtimeLedgerNotification({
       className="fixed inset-x-3 top-16 z-50 mx-auto max-w-md rounded-2xl border border-emerald-200 bg-white px-4 py-3 shadow-xl shadow-emerald-950/10 dark:border-emerald-900 dark:bg-zinc-900"
     >
       <div className="flex items-center gap-3">
-        <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-lg dark:bg-emerald-950/50">💰</span>
+        <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
+          <Icon name="coins" size={19} />
+        </span>
         <p className="min-w-0 flex-1 text-sm font-bold text-zinc-800 dark:text-zinc-100">{message}</p>
         <button
           type="button"
           aria-label={labels.dismiss}
           onClick={() => setMessage(null)}
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-lg text-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-800"
         >
-          ×
+          <Icon name="close" size={17} />
         </button>
       </div>
     </div>

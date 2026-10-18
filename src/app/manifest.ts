@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "OSIDAC — Virtual Franchise & Rewards",
     short_name: "OSIDAC",
     description:
-      "A free virtual-store MVP with daily missions. Internal coins only; paid partner offers and cash withdrawals are planned for Phase 2.",
+      "A virtual storefront with daily missions and community features. OSID Coins are in-app points; cash top-ups and withdrawals are not available.",
     start_url: "/app",
     scope: "/",
     display: "standalone",

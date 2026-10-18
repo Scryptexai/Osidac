@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
+import Icon, { type IconName } from "@/components/ui/icon";
 
 type MissionStatus = {
   mission_day: string;
@@ -45,6 +46,7 @@ type Labels = {
   error: string;
   disabled: string;
   coins: string;
+  retry: string;
 };
 
 function MissionCard({
@@ -56,7 +58,7 @@ function MissionCard({
   done,
   doneLabel,
 }: {
-  icon: string;
+  icon: IconName;
   title: string;
   description: string;
   reward?: string;
@@ -65,18 +67,18 @@ function MissionCard({
   doneLabel: string;
 }) {
   return (
-    <article className="card-app flex min-h-48 flex-col p-4">
+    <article className="card-app flex min-h-48 flex-col p-4 sm:p-5">
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-start gap-3">
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-xl dark:bg-emerald-950/50">
-            {icon}
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
+            <Icon name={icon} size={21} />
           </span>
-          <div>
+          <div className="min-w-0">
             <h3 className="font-black leading-tight">{title}</h3>
             <p className="mt-1 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">{description}</p>
           </div>
         </div>
-        {done && <span aria-label={doneLabel} className="text-lg text-emerald-600">✓</span>}
+        {done && <span aria-label={doneLabel} className="text-emerald-600 dark:text-emerald-300"><Icon name="circleCheck" size={21} /></span>}
       </div>
       {reward && <p className="mt-3 text-sm font-black text-emerald-700 dark:text-emerald-300">{reward}</p>}
       {action && <div className="mt-auto pt-4">{action}</div>}
@@ -106,6 +108,7 @@ export default function DailyMissions({
         return;
       }
       setStatus(data as MissionStatus);
+      setError(null);
     } catch {
       setError(labels.error);
     } finally {
@@ -152,6 +155,7 @@ export default function DailyMissions({
 
   async function shareInvite() {
     setError(null);
+    setToast(null);
     try {
       const supabase = createClient();
       const { data: authData } = await supabase.auth.getUser();
@@ -186,15 +190,19 @@ export default function DailyMissions({
   }
 
   if (loading) {
-    return <div className="flex items-center justify-center py-16 text-sm text-zinc-500">{labels.loading}</div>;
+    return <div role="status" className="flex min-h-36 items-center justify-center text-sm text-zinc-500">{labels.loading}</div>;
   }
 
   if (!status) {
     return (
       <div className="card-app p-5 text-center">
-        <p role="alert" className="text-sm text-red-600">{error ?? labels.error}</p>
-        <button type="button" onClick={() => { setError(null); void load(); }} className="mt-4 min-h-11 rounded-xl bg-zinc-900 px-5 text-sm font-bold text-white dark:bg-emerald-600">
-          {labels.claimButton}
+        <p role="alert" className="text-sm text-red-600 dark:text-red-300">{error ?? labels.error}</p>
+        <button
+          type="button"
+          onClick={() => { setError(null); setLoading(true); void load(); }}
+          className="mt-4 min-h-11 rounded-xl bg-zinc-900 px-5 text-sm font-bold text-white dark:bg-emerald-600"
+        >
+          {labels.retry}
         </button>
       </div>
     );
@@ -204,20 +212,21 @@ export default function DailyMissions({
 
   return (
     <section aria-labelledby="daily-missions-title" className="space-y-4">
-      <div className="rounded-[1.75rem] bg-gradient-to-br from-emerald-600 to-teal-700 p-5 text-white shadow-lg shadow-emerald-700/15">
+      <div className="rounded-[1.75rem] bg-gradient-to-br from-emerald-600 to-teal-700 p-5 text-white shadow-lg shadow-emerald-700/15 sm:p-6">
         <div className="flex items-start justify-between gap-4">
           <div>
             <h2 id="daily-missions-title" className="text-xl font-black tracking-tight">{labels.dailyTitle}</h2>
-            <p className="mt-1 text-sm text-emerald-50/90">{labels.dailySubtitle}</p>
+            <p className="mt-1 text-sm leading-relaxed text-emerald-50/90">{labels.dailySubtitle}</p>
           </div>
-          <span className="shrink-0 rounded-2xl bg-white/15 px-3 py-2 text-xs font-black backdrop-blur">
-            {progress}/3
-          </span>
+          <span className="shrink-0 rounded-2xl bg-white/15 px-3 py-2 text-xs font-black tabular-nums backdrop-blur">{progress}/3</span>
         </div>
         <div className="mt-4 h-2 overflow-hidden rounded-full bg-white/20">
           <div className="h-full rounded-full bg-white transition-all" style={{ width: `${(progress / 3) * 100}%` }} />
         </div>
-        <p className="mt-3 text-xs font-semibold text-emerald-50/85">{labels.progress} · {labels.reset}</p>
+        <p className="mt-3 flex items-center gap-2 text-xs font-semibold text-emerald-50/85">
+          <Icon name="clock" size={14} />
+          {labels.progress} · {labels.reset}
+        </p>
         <p className="mt-3 rounded-xl bg-black/10 px-3 py-2 text-xs leading-relaxed text-emerald-50/90">{labels.rewardNote}</p>
       </div>
 
@@ -229,7 +238,7 @@ export default function DailyMissions({
 
       <div className="grid gap-3 sm:grid-cols-2">
         <MissionCard
-          icon="🎁"
+          icon="gift"
           title={labels.checkInTitle}
           description={labels.checkInDescription}
           reward={labels.checkInReward}
@@ -248,7 +257,7 @@ export default function DailyMissions({
         />
 
         <MissionCard
-          icon="🏪"
+          icon="store"
           title={labels.storeTitle}
           description={labels.storeDescription}
           done={status.store_claimed}
@@ -264,7 +273,7 @@ export default function DailyMissions({
         />
 
         <MissionCard
-          icon="🌱"
+          icon="users"
           title={labels.inviteTitle}
           description={labels.inviteDescription}
           reward={labels.inviteReward}
@@ -289,7 +298,7 @@ export default function DailyMissions({
         />
 
         <MissionCard
-          icon="📨"
+          icon="share"
           title={labels.shareTitle}
           description={labels.shareDescription}
           done={false}
@@ -298,8 +307,9 @@ export default function DailyMissions({
             <button
               type="button"
               onClick={() => void shareInvite()}
-              className="min-h-11 w-full rounded-xl border border-emerald-200 px-4 text-sm font-black text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-900 dark:text-emerald-300 dark:hover:bg-emerald-950/40"
+              className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-emerald-200 px-4 text-sm font-black text-emerald-800 transition hover:bg-emerald-50 dark:border-emerald-900 dark:text-emerald-300 dark:hover:bg-emerald-950/40"
             >
+              <Icon name="share" size={17} />
               {labels.shareButton}
             </button>
           )}
@@ -309,7 +319,9 @@ export default function DailyMissions({
       {(error || toast) && (
         <p
           role={error ? "alert" : "status"}
-          className={`rounded-xl px-4 py-3 text-sm font-semibold ${error ? "bg-red-50 text-red-600 dark:bg-red-950/40 dark:text-red-300" : "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300"}`}
+          className={`rounded-xl px-4 py-3 text-sm font-semibold ${error
+            ? "bg-red-50 text-red-700 dark:bg-red-950/40 dark:text-red-300"
+            : "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300"}`}
         >
           {error ?? toast}
         </p>

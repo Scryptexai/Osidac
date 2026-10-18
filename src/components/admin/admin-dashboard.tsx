@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
+import Icon, { type IconName } from "@/components/ui/icon";
 
 type Metrics = {
   users: number;
@@ -217,7 +218,7 @@ export default function AdminDashboard({
   if (accessDenied || !overview) {
     return (
       <section className="card-app mx-auto max-w-xl p-6 text-center">
-        <span className="text-3xl">🔒</span>
+        <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300"><Icon name="lock" size={23} /></span>
         <h1 className="mt-3 text-xl font-black">{labels.title}</h1>
         <p role="alert" className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{error ?? labels.denied}</p>
         {!accessDenied && (
@@ -229,11 +230,11 @@ export default function AdminDashboard({
     );
   }
 
-  const metricCards = [
-    { label: labels.usersMetric, value: Number(overview.metrics.users).toLocaleString(locale), icon: "👥" },
-    { label: labels.claimsMetric, value: Number(overview.metrics.claims_today).toLocaleString(locale), icon: "🏪" },
-    { label: labels.coinsMetric, value: Number(overview.metrics.coins_today).toLocaleString(locale), icon: "🪙" },
-    { label: labels.flagsMetric, value: Number(overview.metrics.open_flags).toLocaleString(locale), icon: "🚩" },
+  const metricCards: { label: string; value: string; icon: IconName }[] = [
+    { label: labels.usersMetric, value: Number(overview.metrics.users).toLocaleString(locale), icon: "users" },
+    { label: labels.claimsMetric, value: Number(overview.metrics.claims_today).toLocaleString(locale), icon: "store" },
+    { label: labels.coinsMetric, value: Number(overview.metrics.coins_today).toLocaleString(locale), icon: "coins" },
+    { label: labels.flagsMetric, value: Number(overview.metrics.open_flags).toLocaleString(locale), icon: "flag" },
   ];
   const localizedFeatures: Record<string, { title: string; description: string }> = {
     daily_missions: { title: labels.featureDailyMissions, description: labels.featureDailyMissionsDescription },
@@ -254,7 +255,7 @@ export default function AdminDashboard({
           aria-label={labels.retry}
           className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-zinc-200 text-lg hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-800"
         >
-          ↻
+          <Icon name="refresh" size={20} />
         </button>
       </header>
 
@@ -263,7 +264,7 @@ export default function AdminDashboard({
           <article key={metric.label} className="card-app min-h-28 p-4">
             <div className="flex items-center justify-between gap-2">
               <p className="text-xs font-bold text-zinc-500 dark:text-zinc-400">{metric.label}</p>
-              <span className="text-xl">{metric.icon}</span>
+              <Icon name={metric.icon} size={21} className="text-emerald-700 dark:text-emerald-300" />
             </div>
             <p className="mt-3 text-2xl font-black tabular-nums">{metric.value}</p>
           </article>
@@ -276,7 +277,7 @@ export default function AdminDashboard({
       <section className="card-app p-5">
         <div className="flex items-center justify-between gap-3">
           <h2 className="font-black">{labels.featureFlags}</h2>
-          <span className="text-xl">⚙️</span>
+          <Icon name="settings" size={20} className="text-zinc-500" />
         </div>
         <p className="mt-2 text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">{labels.featureNote}</p>
         <div className="mt-3 divide-y divide-zinc-100 dark:divide-zinc-800">

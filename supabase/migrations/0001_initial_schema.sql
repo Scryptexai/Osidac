@@ -121,7 +121,7 @@ create table public.orders (
   package_tier text not null references public.packages (tier),
   amount numeric(12,2) not null,
   currency text not null check (currency in ('IDR','USD')),
-  payment_provider text, -- 'midtrans' | 'xendit' | 'paddle' | ...
+  payment_provider text default 'midtrans' check (payment_provider is null or payment_provider = 'midtrans'), -- Midtrans only
   payment_ref text unique,
   status text not null default 'pending' check (status in ('pending','paid','failed','refunded')),
   paid_at timestamptz,
@@ -182,8 +182,9 @@ create table public.withdrawals (
   user_id uuid not null references public.profiles (id),
   amount numeric(12,2) not null check (amount > 0),
   currency text not null check (currency in ('IDR','USD')),
-  method text not null check (method in ('dana','gopay','ovo','paypal','bank_transfer')),
+  method text not null check (method in ('gopay','bank_transfer')),
   destination text not null,
+  payment_provider text not null default 'midtrans' check (payment_provider = 'midtrans'),
   status text not null default 'pending' check (status in ('pending','approved','processing','paid','rejected')),
   provider_ref text,
   created_at timestamptz not null default now(),

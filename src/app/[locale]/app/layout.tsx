@@ -1,17 +1,10 @@
 import Link from "next/link";
-import { getDictionary, type Dictionary } from "@/lib/i18n";
+import { getDictionary } from "@/lib/i18n";
 import AuthGuard from "@/components/auth-guard";
 import LogoutButton from "@/components/logout-button";
 import AppBottomNav from "@/components/app-bottom-nav";
+import AppSidebar from "@/components/app-sidebar";
 import RealtimeLedgerNotification from "@/components/wallet/realtime-ledger-notification";
-
-const navItems = (dict: Dictionary, locale: string) => [
-  { href: `/${locale}/app`, label: dict.app.sidebar.store, icon: "🏪" },
-  { href: `/${locale}/app/misi`, label: dict.app.sidebar.missions, icon: "🎯" },
-  { href: `/${locale}/app/wallet`, label: dict.app.sidebar.wallet, icon: "💰" },
-  { href: `/${locale}/app/jaringan`, label: dict.app.sidebar.network, icon: "🌐" },
-  { href: `/${locale}/app/wd`, label: dict.app.sidebar.withdraw, icon: "🏦" },
-];
 
 export default async function AppLayout({
   children,
@@ -26,13 +19,15 @@ export default async function AppLayout({
   return (
     <AuthGuard loadingLabel={dict.app.loading}>
       <RealtimeLedgerNotification labels={dict.app.notifications} />
-      {/* Mobile app top bar */}
       <div className="sticky top-0 z-30 border-b border-zinc-200/70 bg-white/90 backdrop-blur-lg dark:border-zinc-800/70 dark:bg-zinc-950/90">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5">
-          <Link href={`/${locale}/app`} className="flex items-center gap-2">
+          <Link
+            href={`/${locale}/app`}
+            aria-label="OSIDAC"
+            className="inline-flex rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500"
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/icon-192.png" alt="OSIDAC" className="h-8 w-8 rounded-xl" />
-            <span className="font-black tracking-tight">OSIDAC</span>
+            <img src="/images/osidac-logo.svg" alt="OSIDAC" className="h-8 w-auto" />
           </Link>
           <div className="md:hidden">
             <LogoutButton label="" compact />
@@ -41,29 +36,20 @@ export default async function AppLayout({
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 pb-28 pt-5 md:flex-row md:pb-10">
-        {/* Desktop sidebar */}
-        <aside className="hidden w-56 shrink-0 md:block">
-          <nav className="flex flex-col gap-1">
-            {navItems(dict, locale).map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="flex items-center gap-2.5 whitespace-nowrap rounded-xl px-4 py-2.5 text-sm font-medium text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
-              >
-                <span>{item.icon}</span>
-                {item.label}
-              </Link>
-            ))}
-            <div className="mt-2">
-              <LogoutButton label={dict.app.sidebar.logout} />
-            </div>
-          </nav>
-        </aside>
+        <AppSidebar locale={locale} labels={dict.app.sidebar} />
         <div className="min-w-0 flex-1">{children}</div>
       </div>
 
-      {/* Mobile bottom tab bar */}
-      <AppBottomNav />
+      <AppBottomNav
+        locale={locale}
+        labels={{
+          store: dict.app.sidebar.store,
+          missions: dict.app.sidebar.missions,
+          wallet: dict.app.sidebar.wallet,
+          network: dict.app.sidebar.network,
+          withdraw: dict.app.sidebar.withdraw,
+        }}
+      />
     </AuthGuard>
   );
 }

@@ -1,27 +1,32 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
+import Icon, { type IconName } from "@/components/ui/icon";
 
-const items = (locale: string) => {
-  const labels =
-    locale === "id"
-      ? ["Toko", "Misi", "Dompet", "Jaringan", "Tarik"]
-      : ["Store", "Missions", "Wallet", "Network", "Withdraw"];
-
-  return [
-    { href: `/${locale}/app`, icon: "🏪", label: labels[0] },
-    { href: `/${locale}/app/misi`, icon: "🎯", label: labels[1] },
-    { href: `/${locale}/app/wallet`, icon: "💰", label: labels[2] },
-    { href: `/${locale}/app/jaringan`, icon: "🌐", label: labels[3] },
-    { href: `/${locale}/app/wd`, icon: "🏦", label: labels[4] },
-  ];
+type Labels = {
+  store: string;
+  missions: string;
+  wallet: string;
+  network: string;
+  withdraw: string;
 };
 
-export default function AppBottomNav() {
+export default function AppBottomNav({
+  locale,
+  labels,
+}: {
+  locale: string;
+  labels: Labels;
+}) {
   const pathname = usePathname() ?? "/";
-  const params = useParams<{ locale: string }>();
-  const locale = params?.locale ?? "en";
+  const items: { href: string; icon: IconName; label: string }[] = [
+    { href: `/${locale}/app`, icon: "store", label: labels.store },
+    { href: `/${locale}/app/misi`, icon: "missions", label: labels.missions },
+    { href: `/${locale}/app/wallet`, icon: "wallet", label: labels.wallet },
+    { href: `/${locale}/app/jaringan`, icon: "network", label: labels.network },
+    { href: `/${locale}/app/wd`, icon: "bank", label: labels.withdraw },
+  ];
 
   return (
     <nav
@@ -29,27 +34,22 @@ export default function AppBottomNav() {
       aria-label={locale === "id" ? "Navigasi utama" : "Primary navigation"}
     >
       <div className="mx-auto flex max-w-md items-stretch justify-between px-2">
-        {items(locale).map((item) => {
-          const active =
-            item.href === `/${locale}/app`
-              ? pathname === item.href
-              : pathname.startsWith(item.href);
+        {items.map((item) => {
+          const active = item.href === `/${locale}/app` ? pathname === item.href : pathname.startsWith(item.href);
           return (
             <Link
               key={item.href}
               href={item.href}
               aria-current={active ? "page" : undefined}
-              className={`flex min-w-0 flex-1 flex-col items-center gap-0.5 rounded-xl px-1 pb-2 pt-2.5 text-[11px] font-semibold transition ${
+              className={`relative flex min-w-0 flex-1 flex-col items-center gap-1 rounded-xl px-1 pb-2 pt-2.5 text-[10px] font-semibold transition sm:text-[11px] ${
                 active
-                  ? "text-emerald-600 dark:text-emerald-400"
+                  ? "text-emerald-700 dark:text-emerald-300"
                   : "text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
               }`}
             >
-              <span className={`text-xl transition ${active ? "-translate-y-0.5 scale-110" : ""}`}>
-                {item.icon}
-              </span>
-              <span className="truncate">{item.label}</span>
-              {active && <span className="mt-0.5 h-1 w-1 rounded-full bg-emerald-500" />}
+              <Icon name={item.icon} size={20} className={active ? "-translate-y-0.5 transition-transform" : ""} />
+              <span className="max-w-full truncate">{item.label}</span>
+              {active && <span className="absolute bottom-1 h-1 w-1 rounded-full bg-emerald-500" />}
             </Link>
           );
         })}

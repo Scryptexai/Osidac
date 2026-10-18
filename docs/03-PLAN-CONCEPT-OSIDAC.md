@@ -1,7 +1,7 @@
 # 03 — Plan Concept: OSIDAC (v2 — Web2, Buy → Get → WD)
 
-> Fase: CONCEPT PLAN (belum koding) · Revisi besar 17 Okt 2026
-> **v2 menggantikan konsep v1 (mining bot + kripto).** Sesuai keputusan pivot: tanpa blockchain, tanpa kripto, pure web2. Bungkus baru: **Virtual Waralaba** ("punya bisnis di HP") ala loop viral Notcoin. Riset pendukung: [05-RISET-BUNGKUS-WEB2.md](05-RISET-BUNGKUS-WEB2.md).
+> Dokumen konsep historis (17 Okt 2026); belum menjadi spesifikasi launch atau bukti fitur aktif.
+> **Update 18 Okt 2026:** Midtrans dipilih sebagai satu-satunya provider top-up dan payout. Integrasi, kanal, tarif kontrak, saldo tunai, dan cashout belum aktif/terkonfirmasi. Asumsi channel atau payout lama di dokumen ini tidak berlaku kecuali dikonfirmasi ulang. Lihat [07-PHASE-2-PAYOUT-STRATEGY.md](07-PHASE-2-PAYOUT-STRATEGY.md).
 
 ---
 
@@ -10,7 +10,7 @@
 **OSIDAC — "Virtual Waralaba & Rewards Platform"**
 
 Satu kalimat:
-> Platform web2 di mana setiap orang bisa "punya bisnis kecil" di HP: beli paket waralaba digital, nikmati omzet harian + misi berbayar + jaringan cabang, lalu tarik cuannya langsung ke DANA/GoPay/OVO/bank.
+> Platform web2 dengan toko virtual, misi, dan komunitas. Pembelian paket, misi partner berbayar, dan penarikan uang bukan fitur aktif; bila payout diluncurkan, provider tunggalnya Midtrans dan kanalnya harus lebih dulu disetujui.
 
 **Kategori:** Rewards/GPT App × Idle Tycoon Game × Affiliate Commerce
 **Bukan:** aplikasi mining, bukan kripto, bukan investasi, bukan money game.
@@ -57,14 +57,13 @@ Satu kalimat:
 ┌──────────────┐     ┌──────────────────────┐     ┌─────────────────┐
 │  BUY         │     │  GET                 │     │  WD             │
 │  Paket       │ ──► │  • Omzet toko harian │ ──► │  Koin → Rupiah  │
-│  Waralaba    │     │  • Misi & playtime   │     │  → DANA/GoPay/  │
-│  Digital     │     │  • Bonus tim & rank  │     │    OVO/bank     │
+│  Waralaba    │     │  • Misi & playtime   │     │  → Midtrans-    │
+│  Digital     │     │  • Bonus tim & rank  │     │    supported    │
 └──────────────┘     └──────────────────────┘     └─────────────────┘
      │                        ▲                          │
-     └── multiplier, voucher, ┘     dibiayai: offerwall,  └─ min. Rp25rb
-         merch, hak komisi lebih     playtime, iklan,        KYC utk WD besar
-         dalam (nilai nyata!)        margin paket (bukan     proses instan–2 hari
-                                     dana member lain!)
+     └── tier/produk tunduk pada     kelak hanya dari       minimum, KYC, fee,
+         spesifikasi & review        revenue settle;        channel dan waktu
+                                     bukan dana member lain  belum ditetapkan
 ```
 
 ### 3.1 BUY — Paket Waralaba Digital (contoh tier, harga final Fase 0)
@@ -88,11 +87,10 @@ Satu kalimat:
 | 3 | Play & earn | Budget UA studio game | **50–60%** dari fee |
 | 4 | Bonus tim & rank | Margin paket + share margin misi | Sesuai skema §5 |
 
-### 3.3 WD — Penarikan
-- Kurs publik: mis. **10.000 koin = Rp10.000** (kurs bisa disetel; ditampilkan transparan).
-- Metode: **DANA, GoPay, OVO, LinkAja, transfer bank (BCA/BRI/BNI/Mandiri), pulsa, voucher belanja**.
-- Ambang: **Rp25.000** (member) / **Rp50.000** (gratis); proses instan–2 hari kerja.
-- KYC wajib untuk WD ≥ Rp1.000.000 / pola mencurigakan; holding 24–72 jam untuk koin referral; limit harian per tier.
+### 3.3 WD — Penarikan (belum aktif)
+- OSID Coins tidak memiliki kurs tunai dan tidak dapat ditarik.
+- Provider yang dipilih untuk payout mendatang adalah **Midtrans saja**; daftar bank/GoPay yang eligible harus dikonfirmasi dengan Midtrans.
+- Minimum, fee, pajak, KYC/hold, limit, dan estimasi waktu belum ditetapkan. Jangan tampilkan opsi atau janji payout sebelum kontrak, legal/finance review, dan sandbox lulus.
 
 ---
 
@@ -177,7 +175,7 @@ Margin platform = Pendapatan − Distribusi − Operasional (target ≥ 10%)
 → Coba Misi pertama (install app → +2.000 koin besar pertamanya)
 → Undang 3 kawan → "cabang" aktif → multiplier naik
 → Beli paket Starter Booth (Rp49rb, dapat voucher Rp25rb — nyaris gratis) → toko Lv.2
-→ Kumpul koin → WD pertama Rp25.000 ke DANA (momen kepercayaan puncak!) → share bukti WD
+→ Kumpulkan OSID Coins untuk penggunaan di aplikasi. Payout uang nyata hanya dapat dipertimbangkan setelah seluruh gerbang legal, Midtrans, finance, dan sandbox terpenuhi.
 → Naik rank → League Diamond → jadi Leader
 ```
 
@@ -196,8 +194,8 @@ Margin platform = Pendapatan − Distribusi − Operasional (target ≥ 10%)
 ### 7.3 Integrasi Web2 (tanpa blockchain)
 | Fungsi | Vendor |
 |---|---|
-| Pembayaran paket | **Midtrans / Xendit** (QRIS, VA, GoPay/OVO/DANA, Alfamart) |
-| Disbursement WD | Xendit Payouts / API disbursement e-wallet & bank |
+| Top-up / checkout | **Midtrans saja**; product meaning, eligibility, and enabled channels must be confirmed before integration |
+| Payout | **Midtrans saja**; supported bank/GoPay channels, fees, tax, and service terms must be confirmed |
 | Offerwall | AdGem, RevU, Torox, Notik, Pollfish, OfferToro (mediation) |
 | Playtime | adjoe Playtime, Tapjoy/Unity, ironSource |
 | Rewarded ads | AdMob, Unity Ads, AppLovin MAX |
@@ -230,7 +228,7 @@ Margin platform = Pendapatan − Distribusi − Operasional (target ≥ 10%)
 | Offerwall sepi di market ID (CPA ID lebih rendah dari US) | Revenue tipis | Mitigasi: gabungan 4 keran; prioritas game offers global; cashback commerce lokal; paket sebagai revenue dasar |
 | Fraud/sybil & VPN (user ID pura-pura US) | Fee di-reverse advertiser | Deteksi VPN/emulator, device fingerprint, KYC tier, rate limit, holding period |
 | Rate koin tidak realistis vs dana | Defisit → skema jadi Ponzi de facto | **Cap dinamis otomatis** (rate mengikuti revenue), dashboard transparansi publik, audit bulanan |
-| Biaya WD membengkak (fee e-wallet) | Margin gerus | Min WD, batch processing, negosiasi volume Xendit |
+| Biaya WD membengkak (fee kanal) | Margin tergerus | Minta tarif kontrak Midtrans, hitung fee/tax/retry, lalu tetapkan minimum dengan persetujuan finance |
 | Kompetisi besar masuk (GoTo, Shopee rewards) | Churn | Fokus niche: game loop + waralaba + komunitas leader; iterasi liveops cepat |
 
 ---
@@ -255,12 +253,12 @@ Margin platform = Pendapatan − Distribusi − Operasional (target ≥ 10%)
 
 - **OSIDAC** = nama platform/perusahaan (dari repo).
 - Nama produk/game terbuka: kandidat **Kota Cuan**, **Warung Empire**, **CuanTown**, **BisnisKu** — diputuskan di Fase 0 bersama logo & domain.
-- Badan usaha: **PT di Indonesia** (untuk PSE, Midtrans/Xendit, kepercayaan user) — opsi entity global menyusul bila ekspansi.
+- Badan usaha: **sewa badan** sesuai keputusan pemilik; eligibility PSE/provider wajib dikonfirmasi. Midtrans adalah satu-satunya provider pembayaran/payout yang dipilih.
 
 ---
 
 ## 12. Ringkasan Satu Layar
 
-> **OSIDAC = "punya bisnis di HP".** Beli paket waralaba digital (nilai nyata: voucher+merch+multiplier) → tokomu menghasilkan koin harian + kamu cuan dari misi berbayar (dibiayai advertiser & studio game, bukan member lain) → tarik rupiah ke DANA/GoPay/OVO/bank. Jaringan cabang 3 level dibayar dari margin, cap 40%. Tanpa kripto. Tanpa janji profit tetap. Legal & transparan.
+> **OSIDAC = toko virtual, misi, dan komunitas di web.** OSID Coins saat ini adalah poin aplikasi tanpa nilai tunai. Paket berbayar, partner offers, komisi jaringan, top-up tunai, dan penarikan belum aktif. Jika payout diluncurkan, Midtrans adalah satu-satunya provider yang dipilih; semua kanal dan syarat perlu persetujuan.
 
 Lanjut ke [04-ROADMAP.md](04-ROADMAP.md) untuk eksekusi.

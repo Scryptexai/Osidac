@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getDictionary, type Dictionary } from "@/lib/i18n";
+import Icon, { type IconName } from "@/components/ui/icon";
 
 export default async function LandingPage({
   params,
@@ -15,6 +16,18 @@ export default async function LandingPage({
     dict.packages.tiers.gold,
     dict.packages.tiers.elite,
     dict.packages.tiers.master,
+  ];
+  const proofItems: { icon: IconName; label: string }[] = [
+    { icon: "clock", label: dict.proof.claim },
+    { icon: "missions", label: dict.proof.engines },
+    { icon: "bank", label: dict.proof.cashout },
+    { icon: "network", label: dict.proof.langs },
+  ];
+  const earnCards: { icon: IconName; hook: string; text: string }[] = [
+    { icon: "store", hook: dict.earn.storeHook, text: dict.earn.storeText },
+    { icon: "missions", hook: dict.earn.missionHook, text: dict.earn.missionText },
+    { icon: "award", hook: dict.earn.playHook, text: dict.earn.playText },
+    { icon: "network", hook: dict.earn.teamHook, text: dict.earn.teamText },
   ];
 
   return (
@@ -71,14 +84,9 @@ export default async function LandingPage({
         {/* Proof strip */}
         <div className="border-t border-white/15 bg-emerald-700/40">
           <div className="mx-auto grid max-w-5xl grid-cols-2 gap-3 px-5 py-5 text-center sm:grid-cols-4">
-            {[
-              { icon: "⏰", label: dict.proof.claim },
-              { icon: "⚡", label: dict.proof.engines },
-              { icon: "💸", label: dict.proof.cashout },
-              { icon: "🌏", label: dict.proof.langs },
-            ].map((p) => (
+            {proofItems.map((p) => (
               <div key={p.label} className="flex items-center justify-center gap-2 text-sm font-bold">
-                <span>{p.icon}</span>
+                <Icon name={p.icon} size={17} />
                 {p.label}
               </div>
             ))}
@@ -151,15 +159,10 @@ export default async function LandingPage({
             {dict.earn.subtitle}
           </p>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {[
-              { icon: "🏪", hook: dict.earn.storeHook, text: dict.earn.storeText },
-              { icon: "🎯", hook: dict.earn.missionHook, text: dict.earn.missionText },
-              { icon: "🎮", hook: dict.earn.playHook, text: dict.earn.playText },
-              { icon: "🌐", hook: dict.earn.teamHook, text: dict.earn.teamText },
-            ].map((card) => (
+            {earnCards.map((card) => (
               <div key={card.hook} className="card-app p-6">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-2xl dark:bg-emerald-950">
-                  {card.icon}
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200">
+                  <Icon name={card.icon} size={23} />
                 </div>
                 <h3 className="mt-4 text-xl font-black">{card.hook}</h3>
                 <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{card.text}</p>
@@ -223,14 +226,10 @@ export default async function LandingPage({
           />
 
           <div className="mx-auto grid max-w-3xl grid-cols-3 gap-3">
-            {[
-              { t: dict.network.l1, p: "8%" },
-              { t: dict.network.l2, p: "3%" },
-              { t: dict.network.l3, p: "1%" },
-            ].map((level) => (
-              <div key={level.t} className="card-app p-5 text-center">
-                <p className="text-3xl font-black text-emerald-500 md:text-4xl">{level.p}</p>
-                <p className="mt-2 text-xs font-semibold text-zinc-500 md:text-sm">{level.t}</p>
+            {[dict.network.l1, dict.network.l2, dict.network.l3].map((level, index) => (
+              <div key={level} className="card-app p-4 text-center sm:p-5">
+                <p className="text-2xl font-black text-emerald-700 dark:text-emerald-300 md:text-3xl">0{index + 1}</p>
+                <p className="mt-2 text-xs font-semibold text-zinc-500 md:text-sm">{level}</p>
               </div>
             ))}
           </div>

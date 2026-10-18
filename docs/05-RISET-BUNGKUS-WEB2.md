@@ -3,6 +3,8 @@
 > Fase: RISET LANJUTAN setelah pivot · 17 Okt 2026
 > Keputusan pivot: **tinggalkan tema "mining bot" (jenuh + stigma) dan seluruh infra blockchain**. Arah baru: **pure web2 — BUY → GET → WD (withdraw ke e-wallet)**, dengan bungkus gamifikasi viral ala Notcoin.
 > Dokumen ini menjawab: apa bungkus terbaik, dari mana uangnya benar-benar datang, dan apa realitas pasar Indonesia.
+>
+> **Keputusan provider diperbarui 18 Okt 2026:** riset alternatif di dokumen historis ini tidak mengubah keputusan OSIDAC saat ini: Midtrans saja untuk top-up dan payout; belum ada integrasi live.
 
 ---
 
@@ -142,7 +144,7 @@ Unilevel 3 level + rank (detail lengkap di [03-PLAN-CONCEPT-OSIDAC.md](03-PLAN-C
 |---|---|
 | **Legalitas** | Reward app = wajib **PSE Kominfo (PSE Lingkup Privat)**. **Bukan** izin OJK — OJK berkali-kali menegaskan tidak pernah menerbitkan "daftar aplikasi penghasil uang resmi"; klaim "diawasi OJK" justru ciri scam |
 | **Larangan** | Jangan menghimpun dana masyarakat; jangan janji imbal hasil tetap; jangan wajibkan deposit untuk mendaftar; jual paket = produk digital bernilai, bukan "simpanan" |
-| **Pembayaran** | Midtrans/Xendit: QRIS, VA (BCA/BRI/BNI/Mandiri), e-wallet (GoPay/OVO/DANA/LinkAja), Alfamart/Indomaret. Disbursement: Xendit Payouts / API disbursement e-wallet |
+| **Pembayaran OSIDAC** | Midtrans saja dipilih untuk top-up dan payout. Kanal, fee, eligibility, dan endpoint harus dikonfirmasi; daftar metode di riset kompetitor bukan janji kanal OSIDAC. Belum terintegrasi/live. |
 | **Ekspektasi user** | Penghasilan realistis app legit: Rp15.000–100.000/hari aktif; min WD Rp10.000–50.000; cair instan–2 hari — kita tampilkan ekspektasi ini apa adanya |
 | **Pajak** | Siapkan mekanisme pajak penghasilan user (potensi PPh) & badan usaha PT untuk operasi ID |
 

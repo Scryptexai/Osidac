@@ -57,10 +57,10 @@ Game = bungkus retensi & viral. GPT/ads = mesin uang. Paket = revenue dasar + ik
 │  │ Commission engine │ Payout queue │   └──────────────────────────┘
 │  │ Mission log │ Audit │ Flags      │   ┌──────────────────────────┐
 │  │ pg_cron jobs                    │   │  PAYMENT RAILS (fiat)    │
-└─────────────────────────────────────┘   │  Midtrans/Xendit: QRIS,  │
-                                          │  VA, e-wallet, retail   │
-                                          │  Xendit Payouts: WD ke   │
-                                          │  DANA/GoPay/OVO/bank     │
+└─────────────────────────────────────┘   │  Midtrans only: payment │
+                                          │  methods by approval    │
+                                          │  Midtrans payout to     │
+                                          │  supported bank/GoPay   │
                                           │  KYC vendor (e-KYC ID)   │
                                           └──────────────────────────┘
 ```
@@ -94,7 +94,7 @@ Game = bungkus retensi & viral. GPT/ads = mesin uang. Paket = revenue dasar + ik
 
 ### 4.4 Produk & Pendapatan
 - `products` / `packages` (Paket Waralaba): tier, harga, isi (voucher, merch, multiplier, hak), versi harga.
-- `orders` + `order_items` + pembayaran (Midtrans/Xendit webhook) → ledger.
+- `orders` + `order_items` + pembayaran (Midtrans webhook only) → ledger; no production checkout until the product/top-up meaning is approved.
 - `voucher_wallet` (e-voucher isi paket), `merch_fulfillment` (pengiriman merch).
 - `mission_completions`: log offerwall/playtime (postback idempoten, status pending→verified→reversed).
 
@@ -127,7 +127,7 @@ Game = bungkus retensi & viral. GPT/ads = mesin uang. Paket = revenue dasar + ik
 
 [Settle harian via pg_cron] → pending → payable →
 [User request WD] → payout_queue → approval (auto < ambang / manual > ambang) →
-Xendit/E-wallet disbursement → status paid → ledger final
+Midtrans payout/disbursement → status paid → ledger final
 ```
 
 Sifat wajib: **idempoten** (unique key per event), **replayable** (rekonstruksi dari ledger), **holding period** (komisi 14 hari; reward offerwall mengikuti jendela reversi advertiser), **clawback** otomatis bila advertiser mereverse.
@@ -183,6 +183,6 @@ rate_dinamis(t)      = omzet_toko_total(t) / Σ (base_rate × multiplier semua u
 | ADR-7 | Unilevel 3 level; tanpa binary di v2 | Stabilitas & risiko regulasi rendah |
 | ADR-8 | Postback idempoten + clawback untuk reward advertiser | Menyesuaikan jendela reversi CPA |
 | ADR-9 | Next.js PWA dulu → Telegram Mini App | Validasi cepat, kanal viral menyusul |
-| ADR-10 | Midtrans/Xendit untuk buy & WD (QRIS/VA/e-wallet) | Standar pembayaran Indonesia, termasuk disbursement |
+| ADR-10 | Midtrans saja untuk top-up dan payout | Keputusan pemilik produk 18 Okt 2026; eligibility, kanal, dan tarif harus dikonfirmasi; belum live |
 
 Lanjut ke [03-PLAN-CONCEPT-OSIDAC.md](03-PLAN-CONCEPT-OSIDAC.md) (konsep produk) dan [04-ROADMAP.md](04-ROADMAP.md).
