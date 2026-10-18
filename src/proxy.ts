@@ -1,6 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { defaultLocale, isLocale, locales } from "@/lib/i18n/config";
-import { updateSession } from "@/lib/supabase/middleware";
 
 function detectLocale(request: NextRequest): string {
   const cookie = request.cookies.get("osidac_locale")?.value;
@@ -14,30 +13,18 @@ function detectLocale(request: NextRequest): string {
   return defaultLocale;
 }
 
-export async function proxy(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
-
   const pathnameHasLocale = locales.some(
     (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
   );
 
-  let response: NextResponse;
+  if (pathnameHasLocale) return NextResponse.next();
 
-  if (!pathnameHasLocale) {
-    const locale = detectLocale(request);
-    const url = request.nextUrl.clone();
-    url.pathname = pathname === "/" ? `/${locale}` : `/${locale}${pathname}`;
-    response = NextResponse.redirect(url);
-  } else {
-    response = NextResponse.next();
-  }
-
-  try {
-    return await updateSession(request, response);
-  } catch {
-    // Supabase unreachable (offline/dev) — serve the page without session refresh.
-    return response;
-  }
+  const locale = detectLocale(request);
+  const url = request.nextUrl.clone();
+  url.pathname = pathname === "/" ? `/${locale}` : `/${locale}${pathname}`;
+  return NextResponse.redirect(url);
 }
 
 export const config = {
