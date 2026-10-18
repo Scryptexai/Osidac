@@ -1,94 +1,140 @@
 {
   "meta": {
-    "title": "OSIDAC — Own a business that runs 24/7 from your phone",
-    "description": "OSIDAC is a virtual franchise & rewards platform. Buy a digital franchise package, earn from your store, paid missions and your network, then withdraw to e-wallet or bank."
+    "title": "OSIDAC — Your store never sleeps. Neither should your income.",
+    "description": "A free virtual-store MVP: claim internal OSID Coins every 8 hours and try daily missions. Partner offers and cash withdrawals are planned for Phase 2. No crypto or guaranteed earnings."
   },
   "nav": {
     "how": "How it works",
     "packages": "Packages",
     "earn": "Earn",
     "network": "Network",
-    "transparency": "Transparency",
+    "transparency": "Money map",
     "login": "Log in",
     "register": "Get started",
     "language": "Language"
   },
   "hero": {
-    "badge": "Virtual Franchise · Rewards · Real withdrawals",
-    "title": "Own a business that runs 24/7 — right from your phone.",
-    "subtitle": "OSIDAC turns your phone into a little business: claim daily store revenue, complete paid missions, grow your branches, and cash out to e-wallet or bank. No crypto. No empty promises.",
-    "ctaPrimary": "Start free — open your store",
-    "ctaSecondary": "See how it works",
+    "badge": "Open · claim · grow — free to start",
+    "title": "Your store never sleeps. Neither should your income.",
+    "subtitle": "Start a free virtual store, claim internal OSID Coins every 8 hours, and complete daily in-app missions. Paid partner offers and cash withdrawals are not live yet; both are planned for Phase 2. No crypto. No guaranteed income.",
+    "ctaPrimary": "Open my store — it's free",
+    "ctaSecondary": "Show me the money map",
     "stat1": "Free to start",
-    "stat2": "Withdraw from $2.50",
-    "stat3": "Payouts funded by real ad & game budgets"
+    "stat2": "Cash payouts planned for Phase 2",
+    "stat3": "Coins stay in-app in Phase 1",
+    "imageAlt": "Happy member holding a phone with her mini store and floating coins"
+  },
+  "proof": {
+    "claim": "Claim every 8h",
+    "engines": "Store + daily missions live",
+    "cashout": "Cash withdrawals in Phase 2",
+    "langs": "EN & ID"
   },
   "how": {
-    "title": "Simple: Buy → Get → Withdraw",
-    "subtitle": "Every coin in your wallet comes from real revenue — advertiser budgets, game studio budgets and package margin. Never from other members' money.",
-    "buyTitle": "1. Buy",
-    "buyText": "Get a Digital Franchise package (from $3.49) with real value: store level-up, earning multipliers, vouchers and merch.",
-    "getTitle": "2. Get",
-    "getText": "Your store produces coins around the clock. Add paid missions, playtime games and team bonuses to earn more.",
-    "wdTitle": "3. Withdraw",
-    "wdText": "Convert coins to cash and withdraw to e-wallet or bank — fast, with a low minimum threshold."
-  },
-  "packages": {
-    "title": "Franchise packages",
-    "subtitle": "The package price already pays for itself through vouchers, merch and multipliers. Any coins you earn are a bonus — never a promised return.",
-    "mostPopular": "Most popular",
-    "buy": "Choose package",
-    "tiers": {
-      "starter": { "name": "Starter Booth", "price": "$3.49", "desc": "Store Lv.2 · 1.2× mission multiplier · 30-day check-in bonus · $2.50 voucher" },
-      "kios": { "name": "Kios Pro", "price": "$9.99", "desc": "Store Lv.4 · 1.4× multiplier · higher withdraw limit · $7.50 voucher · exclusive skin" },
-      "gold": { "name": "Warung Gold", "price": "$34.99", "desc": "Store Lv.6 · 1.6× multiplier · physical merch · $25 voucher" },
-      "elite": { "name": "Franchise Elite", "price": "$99.99", "desc": "Store Lv.8 · 1.8× multiplier · deeper network commissions · premium merch · priority withdrawals" },
-      "master": { "name": "Empire Master", "price": "$349.99", "desc": "Store Lv.10 · 2.0× multiplier · Leader status · full merch bundle · community coaching" }
-    }
+    "title": "Open. Claim. Cash out.",
+    "subtitle": "Phase 1 is a free app loop with internal coins only. Paid partner offers, franchise checkout and cash withdrawals are not live yet.",
+    "buyHook": "Start free. Upgrade options come later.",
+    "buyText": "No package is available to purchase in this MVP. The five price tiers and voucher/merch benefits shown below are indicative plans and may change after partner and legal review.",
+    "buyAlt": "Mini store on a phone with coins flowing into a wallet",
+    "getHook": "Keep your store moving every 8 hours",
+    "getText": "Claim OSID Coins and finish daily in-app actions. Coins have no cash value and cannot be withdrawn in Phase 1; paid partner missions and playtime are planned for Phase 2.",
+    "getAlt": "Hands playing a mobile game with gifts and coins bursting out",
+    "wdHook": "Cashout is planned — not live yet",
+    "wdText": "DANA, GoPay, OVO, PayPal and bank payouts are planned for Phase 2 after payout and compliance reviews. Today, coins stay in your in-app wallet and cannot be withdrawn.",
+    "wdAlt": "Happy man cashing out to his e-wallet in a cafe"
   },
   "earn": {
-    "title": "Four real earning engines",
-    "subtitle": "OSIDAC pays you from revenue it actually earns. Here is where the money comes from.",
-    "storeTitle": "Store revenue",
-    "storeText": "Claim your store's coins every 8 hours. Rate follows real revenue — published transparently.",
-    "missionTitle": "Paid missions",
-    "missionText": "Install apps, reach game levels, complete surveys. Advertisers pay — you keep 60–70%.",
-    "playTitle": "Play & earn",
-    "playText": "Play partner games and earn per minute & milestone, funded by game studios.",
-    "teamTitle": "Team & rank bonuses",
-    "teamText": "Build branches and earn from package margin and mission margin share — capped and sustainable."
+    "title": "Start with your store. More engines are next.",
+    "subtitle": "The Phase 1 MVP offers free store claims and daily in-app missions in internal coins. Partner offers, playtime and network commissions are planned—not active yet.",
+    "storeHook": "Store revenue",
+    "storeText": "Your virtual store can be claimed every 8 hours. Rewards are internal OSID Coins only, with no cash value or withdrawal in Phase 1.",
+    "missionHook": "Paid missions",
+    "missionText": "The partner offerwall is not live in this MVP. Paid app installs, surveys and partner missions are planned for Phase 2.",
+    "playHook": "Play & earn",
+    "playText": "Game-studio integrations and playtime rewards are planned for Phase 2; no partner-game payouts are active yet.",
+    "teamHook": "Referral tracking — commissions later",
+    "teamText": "Invite links and referral attribution work now. Network commissions are not paid in Phase 1; proposed rates require revenue and legal review before launch."
+  },
+  "packages": {
+    "title": "Planned franchise tiers",
+    "subtitle": "Indicative pricing only—not for sale in this MVP. Checkout, vouchers and merch will be confirmed before any package launches.",
+    "mostPopular": "Planned tier",
+    "buy": "Join free",
+    "swipe": "Swipe to see all packages →",
+    "tiers": {
+      "starter": {
+        "name": "Starter Booth",
+        "price": "$3.49",
+        "desc": "Planned: Store Lv.2 · 1.2× mission multiplier · proposed $2.50 e-voucher. Not for sale yet."
+      },
+      "kios": {
+        "name": "Kios Pro",
+        "price": "$9.99",
+        "desc": "Planned: Store Lv.4 · 1.4× multiplier · proposed $7.50 e-voucher and skin. Not for sale yet."
+      },
+      "gold": {
+        "name": "Warung Gold",
+        "price": "$34.99",
+        "desc": "Planned: Store Lv.6 · 1.6× multiplier · proposed merch and $25 e-voucher. Not for sale yet."
+      },
+      "elite": {
+        "name": "Franchise Elite",
+        "price": "$99.99",
+        "desc": "Planned: Store Lv.8 · 1.8× multiplier · proposed premium merch. Not for sale yet."
+      },
+      "master": {
+        "name": "Empire Master",
+        "price": "$349.99",
+        "desc": "Planned: Store Lv.10 · 2.0× multiplier · proposed community coaching. Not for sale yet."
+      }
+    }
   },
   "network": {
-    "title": "Build branches, earn together",
-    "subtitle": "Invite friends to open their own stores. You earn 3 levels deep from real margins — your team keeps 100% of what they earn.",
+    "title": "Invite now. Network payouts later.",
+    "subtitle": "Referral tracking is available, but no network commission is paid in Phase 1. The 3-level rates below are proposals for a future, revenue-funded program.",
     "l1": "Level 1 — direct branch",
     "l2": "Level 2",
     "l3": "Level 3",
-    "note": "Total network payouts are hard-capped at 40%. Free members can earn too — buying a package is never required to join."
+    "note": "Proposed plan only—not active. Any future network payout is subject to verified revenue, compliance review and the 40% cap. Joining or buying a package will not be required.",
+    "imageAlt": "Group of friends holding phones connected by glowing network lines"
   },
   "transparency": {
-    "title": "How we can pay you (no secrets)",
-    "subtitle": "Every month we publish our revenue sources and distribution ratio. When revenue dips, rates dip — we never pay old members with new members' money.",
-    "formula": "Distribution to members ≤ 70% of actual revenue (ads + playtime + missions + package margin)",
-    "disclaimer": "OSIDAC is a rewards platform, not an investment. Earnings are not guaranteed and depend on your activity. No crypto is involved."
+    "title": "Where the money actually comes from",
+    "subtitle": "Before real-money payouts launch, OSIDAC will publish verified revenue and distribution reporting. Until then, all coins shown in the MVP are internal only; no member receives cash withdrawals.",
+    "formula": "Future policy target: member payouts ≤ 70% of verified revenue",
+    "disclaimer": "OSIDAC is a product-and-rewards MVP, not an investment. Earnings are not guaranteed. OSID Coins have no cash value and cannot be withdrawn in Phase 1. No crypto is used."
+  },
+  "cta": {
+    "title": "Your first store claim is 8 hours away.",
+    "subtitle": "Open a free store and start with internal coins. Cash withdrawals are planned for Phase 2.",
+    "button": "Open my store — free"
   },
   "footer": {
     "tagline": "Virtual franchise & rewards platform",
-    "legal": "OSIDAC is not an investment product. There are no fixed returns. Purchases are digital franchise products with real benefits (vouchers, merch, multipliers).",
+    "legal": "OSIDAC is not an investment product and does not promise returns. Phase 1 OSID Coins are internal only and cannot be withdrawn. Package tiers and paid partner features shown on this site are plans, not live checkout or earning offers.",
     "rights": "All rights reserved."
   },
   "auth": {
     "loginTitle": "Welcome back",
-    "loginSubtitle": "Log in to your store",
+    "loginSubtitle": "Your store missed you.",
     "registerTitle": "Open your store",
-    "registerSubtitle": "Free to join. No package required.",
+    "registerSubtitle": "Free to join. No package required. First claim in 8 hours.",
     "email": "Email",
     "password": "Password",
     "loginButton": "Log in",
     "registerButton": "Create free account",
     "haveAccount": "Already have an account?",
     "noAccount": "No account yet?",
-    "referral": "Referral code (optional)"
+    "referral": "Referral code (optional)",
+    "confirmNotice": "Check your email to confirm your account.",
+    "loading": "Loading…"
+  },
+  "pwa": {
+    "title": "Take OSIDAC with you",
+    "subtitle": "Install the app for a faster, full-screen experience.",
+    "install": "Install app",
+    "dismiss": "Dismiss install prompt",
+    "iosHint": "In Safari, tap Share, then Add to Home Screen."
   },
   "app": {
     "sidebar": {
@@ -115,12 +161,49 @@
       "cost": "Cost",
       "loading": "Loading your store…",
       "error": "Error",
-      "soon": "Coming soon — Fase 1"
+      "soon": "Coming soon",
+      "ready": "Ready to claim",
+      "boost": "Boost",
+      "maxLevel": "Maximum level reached 🎉",
+      "max": "Max",
+      "upgradeButton": "Upgrade",
+      "paused": "This action is temporarily paused by platform operations."
     },
     "missions": {
-      "title": "Paid missions",
-      "subtitle": "Complete offers from our partners. Advertisers pay, you earn.",
-      "soon": "Offerwall integration arrives in Fase 2"
+      "title": "Missions",
+      "subtitle": "Complete daily in-app tasks. Paid partner offers are planned for Phase 2 and are not available yet.",
+      "soon": "Offerwall integration arrives in Fase 2",
+      "dailyTitle": "Daily missions",
+      "dailySubtitle": "Small in-app actions to build a steady store routine.",
+      "rewardNote": "Rewards are OSID Coins for in-app use only in this MVP. Cash withdrawals are not active yet.",
+      "progress": "Today’s progress",
+      "reset": "Resets at 00:00 UTC",
+      "checkInTitle": "Daily check-in",
+      "checkInDescription": "Claim today’s check-in bonus.",
+      "checkInReward": "+25 OSID Coins",
+      "inviteTitle": "Welcome a new branch",
+      "inviteDescription": "A friend signs up with your invite link today.",
+      "inviteReward": "+50 OSID Coins",
+      "shareTitle": "Share your store link",
+      "shareDescription": "A referral bonus is available only after a new friend signs up.",
+      "shareButton": "Share invite link",
+      "shareSuccess": "Invite link ready to share.",
+      "storeTitle": "Claim store revenue",
+      "storeDescription": "Your regular store claim counts toward today’s progress.",
+      "storeButton": "Go to my store",
+      "claimButton": "Claim bonus",
+      "claimed": "Claimed today",
+      "completed": "Completed",
+      "notReady": "No new referral has joined today yet.",
+      "loading": "Loading daily missions…",
+      "error": "Could not load missions.",
+      "offersTitle": "Paid partner offers",
+      "offersSubtitle": "Offerwall, surveys and playtime rewards are not live yet.",
+      "offersSoon": "Partner integrations are planned for Phase 2. No paid offers are available in this MVP.",
+      "coins": "OSID Coins",
+      "shareError": "Could not create the invite link. Please try again.",
+      "linkMissing": "Sign in again to create your invite link.",
+      "disabled": "Daily missions are temporarily paused by the platform team."
     },
     "wallet": {
       "title": "Wallet",
@@ -130,7 +213,12 @@
       "history": "Transaction history",
       "loading": "Loading wallet…",
       "empty": "No transactions yet — claim your first store revenue!",
-      "soon": "Ledger UI arrives in Fase 1"
+      "soon": "Coming soon",
+      "claimEntry": "Store claim",
+      "upgradeEntry": "Store upgrade",
+      "missionEntry": "Mission reward",
+      "bonusEntry": "Bonus",
+      "otherEntry": "Transaction"
     },
     "network": {
       "title": "My Network",
@@ -142,14 +230,61 @@
       "copied": "Copied!",
       "loading": "Loading network…",
       "level": "Level",
-      "soon": "Genealogy tree arrives in Fase 1"
+      "soon": "Coming soon",
+      "total": "total",
+      "shareNote": "Share this link — anyone who signs up with it becomes your direct branch.",
+      "direct": "direct"
     },
     "withdraw": {
       "title": "Withdraw",
-      "subtitle": "Cash out to e-wallet or bank",
-      "methods": "DANA · GoPay · OVO · PayPal · Bank transfer",
-      "min": "Minimum withdrawal: $2.50 (member) / $5 (free)",
+      "subtitle": "Cash withdrawals are not available in Phase 1; the payout pipeline is planned for Phase 2.",
+      "methods": "Planned: DANA · GoPay · OVO · PayPal · bank transfer (not active)",
+      "min": "Minimums and processing times will be confirmed before payout launch.",
       "soon": "Withdrawal pipeline arrives in Fase 2"
-    }
+    },
+    "admin": {
+      "title": "Admin console",
+      "subtitle": "Operations overview for the OSIDAC MVP.",
+      "loading": "Loading admin data…",
+      "denied": "This page is restricted to accounts with the admin or owner role.",
+      "error": "Unable to load the admin overview.",
+      "retry": "Retry",
+      "usersMetric": "Members",
+      "claimsMetric": "Store claims today",
+      "coinsMetric": "Coins claimed today",
+      "flagsMetric": "Open review flags",
+      "recentUsers": "Recent members",
+      "recentClaims": "Recent store claims",
+      "openFlags": "Users flagged for review",
+      "featureFlags": "Operational switches",
+      "flagUser": "Flag for review",
+      "flagReason": "Reason for review",
+      "reasonPlaceholder": "Describe the signal to review (5–500 characters).",
+      "submitFlag": "Create review flag",
+      "resolve": "Resolve flag",
+      "cancel": "Cancel",
+      "noUsers": "No members to show.",
+      "noClaims": "No store claims yet.",
+      "noFlags": "No open review flags.",
+      "email": "Email",
+      "country": "Country",
+      "rank": "Rank",
+      "balance": "KOIN balance",
+      "openCount": "Open flags",
+      "enabled": "Enabled",
+      "paused": "Paused",
+      "flagSuccess": "Review flag created.",
+      "resolveSuccess": "Review flag resolved.",
+      "featureSuccess": "Feature switch updated.",
+      "flagNotice": "Flags send accounts for human review only; they do not automatically block a member.",
+      "featureNote": "These switches affect store claims, store upgrades, and daily mission rewards immediately.",
+      "featureDailyMissions": "Daily missions",
+      "featureStoreClaims": "Store claims",
+      "featureStoreUpgrades": "Store upgrades",
+      "featureDailyMissionsDescription": "Allow or pause daily check-in and verified referral rewards.",
+      "featureStoreClaimsDescription": "Allow or pause the store revenue claim action.",
+      "featureStoreUpgradesDescription": "Allow or pause store level upgrades."
+    },
+    "loading": "Loading your account…"
   }
 }

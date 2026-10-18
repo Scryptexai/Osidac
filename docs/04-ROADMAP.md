@@ -1,7 +1,7 @@
 # 04 — Roadmap Eksekusi OSIDAC (v2 — Web2, Buy → Get → WD)
 
-> Fase: ROADMAP (belum koding) · Revisi besar 17 Okt 2026 — menyesuaikan pivot: **Virtual Waralaba + offerwall/playtime/ads + WD e-wallet**, tanpa blockchain.
-> Estimasi: 1–2 full-stack engineer + AI-assisted development. Tiap fase punya *exit criteria* terukur.
+> Status dokumen: roadmap produk v2 (revisi pivot 17 Okt 2026). Implementasi berjalan di Fase 1; belum ada fase yang dinyatakan lulus sampai exit criteria terukur terpenuhi.
+> Estimasi awal: 1–2 full-stack engineer + AI-assisted development. Tanpa blockchain/kripto; payout uang nyata tetap fase lanjutan.
 
 ---
 
@@ -37,6 +37,8 @@ brand)
 ## FASE 1 — MVP Loop: Toko Virtual (Minggu 4–10)
 
 **Tujuan:** loop "buka → claim → upgrade → streak" terasa adiktif; referral terlacak; koin masih internal (belum bisa WD).
+
+> **Status implementasi 18 Okt 2026:** fondasi S1–S3, wallet/ledger dan PWA S4, serta sebagian admin v1 S5 sudah masuk MVP. Daily mission rewards adalah OSID Coins internal; tidak ada checkout paket, offerwall berbayar, payout komisi, atau WD uang nyata yang aktif. Notifikasi realtime, commission engine dari order, anti-sybil, beta cohort, dan seluruh exit criteria masih belum selesai. Fase 1 **belum dinyatakan lulus**.
 
 | Sprint | Fitur |
 |---|---|

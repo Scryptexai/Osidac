@@ -22,6 +22,9 @@ export default async function NetworkPage({
         copied: t.copied,
         loading: t.loading,
         level: t.level,
+        total: t.total,
+        direct: t.direct,
+        shareNote: t.shareNote,
       }}
     />
   );

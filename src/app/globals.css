@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brand: #059669;
+  --brand-dark: #047857;
+  --brand-light: #d1fae5;
 }
 
 @theme inline {
@@ -12,15 +15,45 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overscroll-behavior-y: none;
+}
+
+/* Hide horizontal scrollbar but keep functionality (package carousel) */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* App-like card surface */
+.card-app {
+  border-radius: 1.5rem;
+  border: 1px solid rgb(228 228 231 / 1);
+  background: white;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.04), 0 8px 24px -12px rgb(0 0 0 / 0.08);
+}
+.dark .card-app {
+  border-color: rgb(39 39 42 / 1);
+  background: rgb(24 24 27 / 1);
+}
+
+/* Safe area helpers for app shell */
+.pb-safe {
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #09090b;
+    --foreground: #ededed;
+    --brand-light: #064e3b;
+  }
 }

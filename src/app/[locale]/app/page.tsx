@@ -28,6 +28,12 @@ export default async function StorePage({
         cost: t.cost,
         loading: t.loading,
         error: t.error,
+        ready: t.ready,
+        boost: t.boost,
+        maxLevel: t.maxLevel,
+        max: t.max,
+        upgradeButton: t.upgradeButton,
+        paused: t.paused,
       }}
     />
   );

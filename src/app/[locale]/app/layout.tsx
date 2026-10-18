@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getDictionary, type Dictionary } from "@/lib/i18n";
 import AuthGuard from "@/components/auth-guard";
 import LogoutButton from "@/components/logout-button";
+import AppBottomNav from "@/components/app-bottom-nav";
 
 const navItems = (dict: Dictionary, locale: string) => [
   { href: `/${locale}/app`, label: dict.app.sidebar.store, icon: "🏪" },
@@ -22,10 +23,25 @@ export default async function AppLayout({
   const dict = await getDictionary(locale);
 
   return (
-    <AuthGuard>
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 md:flex-row">
-        <aside className="w-full shrink-0 md:w-56">
-          <nav className="flex gap-2 overflow-x-auto md:flex-col">
+    <AuthGuard loadingLabel={dict.app.loading}>
+      {/* Mobile app top bar */}
+      <div className="sticky top-0 z-30 border-b border-zinc-200/70 bg-white/90 backdrop-blur-lg dark:border-zinc-800/70 dark:bg-zinc-950/90">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5">
+          <Link href={`/${locale}/app`} className="flex items-center gap-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/icon-192.png" alt="OSIDAC" className="h-8 w-8 rounded-xl" />
+            <span className="font-black tracking-tight">OSIDAC</span>
+          </Link>
+          <div className="md:hidden">
+            <LogoutButton label="" compact />
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 pb-28 pt-5 md:flex-row md:pb-10">
+        {/* Desktop sidebar */}
+        <aside className="hidden w-56 shrink-0 md:block">
+          <nav className="flex flex-col gap-1">
             {navItems(dict, locale).map((item) => (
               <Link
                 key={item.href}
@@ -36,13 +52,16 @@ export default async function AppLayout({
                 {item.label}
               </Link>
             ))}
-            <div className="mt-2 hidden md:block">
+            <div className="mt-2">
               <LogoutButton label={dict.app.sidebar.logout} />
             </div>
           </nav>
         </aside>
         <div className="min-w-0 flex-1">{children}</div>
       </div>
+
+      {/* Mobile bottom tab bar */}
+      <AppBottomNav />
     </AuthGuard>
   );
 }

@@ -20,6 +20,12 @@ export default async function WalletPage({
         history: t.history,
         loading: t.loading,
         empty: t.empty,
+        locale,
+        claimEntry: t.claimEntry,
+        upgradeEntry: t.upgradeEntry,
+        missionEntry: t.missionEntry,
+        bonusEntry: t.bonusEntry,
+        otherEntry: t.otherEntry,
       }}
     />
   );
