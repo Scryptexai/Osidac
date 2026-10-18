@@ -90,7 +90,7 @@ Satu kalimat:
 | 4 | Bonus tim & rank | Margin paket + share margin misi | Sesuai skema §5 |
 
 ### 3.3 WD — Penarikan (belum aktif)
-- OSID Coins tidak memiliki kurs tunai dan tidak dapat ditarik.
+- Saldo KOIN saat ini adalah poin internal tanpa nilai tunai dan tidak dapat ditarik. Belum ada OSID ledger atau ketentuan konversi.
 - Provider yang dipilih untuk payout mendatang adalah **Midtrans saja**; daftar bank/GoPay yang eligible harus dikonfirmasi dengan Midtrans.
 - Minimum, fee, pajak, KYC/hold, limit, dan estimasi waktu belum ditetapkan. Jangan tampilkan opsi atau janji payout sebelum kontrak, legal/finance review, dan sandbox lulus.
 
@@ -177,7 +177,7 @@ Margin platform = Pendapatan − Distribusi − Operasional (target ≥ 10%)
 → Coba Misi pertama (install app → +2.000 koin besar pertamanya)
 → Undang 3 kawan → "cabang" aktif → multiplier naik
 → Beli paket Starter Booth (Rp49rb, dapat voucher Rp25rb — nyaris gratis) → toko Lv.2
-→ Kumpulkan OSID Coins untuk penggunaan di aplikasi. Payout uang nyata hanya dapat dipertimbangkan setelah seluruh gerbang legal, Midtrans, finance, dan sandbox terpenuhi.
+→ Kumpulkan poin KOIN internal. OSID belum diterbitkan; payout uang nyata hanya dapat dipertimbangkan setelah seluruh gerbang legal, Midtrans, finance, dan sandbox terpenuhi.
 → Naik rank → League Diamond → jadi Leader
 ```
 
@@ -261,6 +261,6 @@ Margin platform = Pendapatan − Distribusi − Operasional (target ≥ 10%)
 
 ## 12. Ringkasan Satu Layar
 
-> **OSIDAC = toko virtual, misi, dan komunitas di web.** OSID Coins saat ini adalah poin aplikasi tanpa nilai tunai. Paket berbayar, partner offers, komisi jaringan, top-up tunai, dan penarikan belum aktif. Jika payout diluncurkan, Midtrans adalah satu-satunya provider yang dipilih; semua kanal dan syarat perlu persetujuan.
+> **OSIDAC = toko virtual, misi, dan komunitas di web.** KOIN saat ini adalah poin aplikasi tanpa nilai tunai; OSID belum diterbitkan. Paket berbayar, partner offers, komisi jaringan, top-up tunai, dan penarikan belum aktif. Jika payout diluncurkan, Midtrans adalah satu-satunya provider yang dipilih; semua kanal dan syarat perlu persetujuan.
 
 Lanjut ke [04-ROADMAP.md](04-ROADMAP.md) untuk eksekusi.

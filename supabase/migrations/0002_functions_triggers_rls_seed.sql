@@ -124,7 +124,7 @@ begin
   select id into wl_id from public.wallets where user_id = uid and currency = 'KOIN';
   update public.wallets set balance = balance + amount where id = wl_id;
   insert into public.ledger_entries (wallet_id, user_id, amount, currency, reference_type, reference_id, memo)
-  values (wl_id, uid, amount, 'KOIN', 'claim_omzet', claim_id, 'Store revenue claim');
+  values (wl_id, uid, amount, 'KOIN', 'claim_omzet', claim_id, 'Virtual-store KOIN points claim');
 
   return jsonb_build_object(
     'amount', amount,

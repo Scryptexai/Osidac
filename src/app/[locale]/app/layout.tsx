@@ -22,7 +22,7 @@ export default async function AppLayout({
     <AuthGuard loadingLabel={app.loading}>
       <div className="market-shell">
         <RealtimeLedgerNotification labels={app.notifications} />
-        <header className="market-topbar sticky top-0 z-30">
+        <header className="market-topbar sticky top-0 z-30 pt-[env(safe-area-inset-top,0px)]">
           <div className="mx-auto flex min-h-[4.4rem] max-w-[1480px] items-center justify-between gap-3 px-3 py-2 sm:px-5 lg:px-6">
             <Link
               href={`/${locale}/app`}

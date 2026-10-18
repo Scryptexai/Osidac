@@ -29,7 +29,7 @@
 3. `profiles.package_tier` ditulis hanya melalui proses server-side tepercaya; klien tidak boleh menaikkan tier sendiri. Migration `0006_midtrans_only_tier_integrity.sql` menutup update tier langsung dari role authenticated.
 4. Katalog misi memiliki tier minimum, sumber dana, batas frekuensi, masa berlaku, validasi partner, dan status inventory. Klaim misi baru diverifikasi di RPC/server; menyembunyikan kartu di browser bukan enforcement.
 5. RPC status mengembalikan hanya misi yang eligible; RPC claim memeriksa tier current, jumlah klaim harian, validasi offer, idempotency, dan ledger secara atomik. Tier downgrade/refund/chargeback harus mengubah hak akses di server.
-6. Reward misi partner baru dikreditkan setelah konfirmasi/settlement sesuai kontrak. OSID Coins tetap non-tunai sampai produk dan aliran payout yang sah tersedia.
+6. Reward misi partner hanya boleh dikreditkan setelah konfirmasi/settlement sesuai kontrak. Reward KOIN saat ini tetap non-tunai; OSID belum diterbitkan dan tidak boleh dianggap saldo tunai.
 
 ## Kondisi kode saat ini
 

@@ -27,4 +27,4 @@ Do not add a public RPC, client-side key, or browser flow that writes to `user_r
 - Provides database-enforced switches for daily missions, store claims, and store upgrades. Switching one off prevents the corresponding RPC/ledger action even if a client tries to bypass the UI. Keep these enabled unless operations needs a pause.
 - Writes flag and feature-switch changes to `public.audit_log`.
 
-Daily mission rewards are internal OSID Coins only. They are not cash, not withdrawable in Phase 1, and do not represent guaranteed income. The invite mission is awarded only after a referred profile is created that UTC day; share itself is not rewarded because it cannot be verified securely in a browser.
+Daily mission rewards are internal KOIN points only. They are not cash, are not withdrawable in Phase 1, and do not represent guaranteed income; OSID has not been issued in the app. The invite mission is awarded only after a referred profile is created that UTC day; share itself is not rewarded because it cannot be verified securely in a browser.

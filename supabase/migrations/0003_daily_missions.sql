@@ -1,5 +1,5 @@
 -- Fase 1 daily missions: fixed, auditable internal-coin rewards.
--- Day boundaries use UTC; all rewards are non-cash OSID Coins in this MVP.
+-- Day boundaries use UTC; all rewards are non-cash KOIN points for in-app use only.
 
 create table public.daily_mission_claims (
   id uuid primary key default gen_random_uuid(),

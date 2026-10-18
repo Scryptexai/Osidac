@@ -29,7 +29,7 @@ revoke all on public.feature_flags from public, anon, authenticated;
 
 insert into public.feature_flags (key, enabled, description) values
   ('daily_missions', true, 'Daily check-in and verified referral mission claims'),
-  ('store_claims', true, 'Virtual store revenue claim action'),
+  ('store_claims', true, 'Internal KOIN-points claim from a virtual store; not partner revenue or cash'),
   ('store_upgrades', true, 'Virtual store upgrade action')
 on conflict (key) do nothing;
 
