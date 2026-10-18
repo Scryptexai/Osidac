@@ -4,6 +4,8 @@
 
 **Pure web2: BUY → GET → WD.** No blockchain, no crypto, no fixed returns. Member payouts are funded by **real advertiser budgets (offerwall), game-studio budgets (playtime), ads and package margin** — the model proven by Swagbucks, Freecash and Mistplay.
 
+> **Status — Fase 1 (MVP internal) LIVE:** sign up → virtual store → claim 8-hour revenue → upgrade → wallet ledger → referral network, all working end-to-end on Supabase. Coins are internal for now (withdrawals arrive in Fase 2).
+
 ---
 
 ## 🚀 Getting started (development)
