@@ -30,7 +30,11 @@ type IconName =
   | "arrowRight"
   | "info"
   | "circleCheck"
-  | "close";
+  | "close"
+  | "package"
+  | "phone"
+  | "cursor"
+  | "atSign";
 
 type IconProps = {
   name: IconName;
@@ -40,6 +44,26 @@ type IconProps = {
 };
 
 const drawings: Record<IconName, ReactNode> = {
+  package: (
+    <>
+      <path d="m4 7 8-4 8 4v10l-8 4-8-4V7Z" />
+      <path d="m4.5 7.2 7.5 4 7.5-4M12 11.2V21M8 5l8 4" />
+    </>
+  ),
+  phone: (
+    <>
+      <rect x="6" y="2.5" width="12" height="19" rx="2.2" />
+      <path d="M10 5.5h4m-3 12.5h2" />
+    </>
+  ),
+  cursor: <path d="m5 3 14 10-6.3 1.2-3.2 6L5 3Z" />,
+  atSign: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="3.3" />
+      <path d="M15.3 12v2.1a2.1 2.1 0 0 0 4.2 0V12a7.5 7.5 0 1 0-2.2 5.3" />
+    </>
+  ),
   store: (
     <>
       <path d="M3.5 10.5 5.3 4h13.4l1.8 6.5" />

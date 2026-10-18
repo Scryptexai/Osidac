@@ -35,7 +35,7 @@ src/
   components/            # mobile UI, PWA install, store, wallet, mission, admin components
   lib/i18n/              # EN/ID dictionaries and client/server helpers
   lib/supabase/          # browser/server/middleware clients
-  proxy.ts               # locale routing + auth session refresh
+  proxy.ts               # locale redirects only; browser Supabase client manages auth refresh
 public/images/           # OSIDAC product and PWA visuals
 public/sw.js             # minimal network-only PWA service worker
 scripts/                  # local economy and payout-cost simulator; no provider calls

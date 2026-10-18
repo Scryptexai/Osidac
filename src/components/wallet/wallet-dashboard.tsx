@@ -85,16 +85,16 @@ export default function WalletDashboard({ labels }: { labels: Labels }) {
   return (
     <div className="space-y-5 pb-2">
       <header className="flex items-center gap-3">
-        <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
+        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#d6f36a] text-[#171d19]">
           <Icon name="wallet" size={21} />
         </span>
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700 dark:text-emerald-300">OSIDAC</p>
+          <p className="market-kicker text-[#716f63]">OSIDAC / SETTLEMENT LEDGER</p>
           <h1 className="text-2xl font-black tracking-tight">{labels.title}</h1>
         </div>
       </header>
 
-      <section className="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-zinc-900 to-zinc-800 p-5 text-white shadow-xl dark:from-zinc-800 dark:to-zinc-900 sm:p-6">
+      <section className="market-ink-panel relative overflow-hidden rounded-[1.35rem] border border-[#171d19]/20 p-5 text-white sm:p-6">
         <div className="pointer-events-none absolute -right-6 -top-12 h-40 w-40 rounded-full border-[24px] border-white/5" />
         <div className="relative flex items-start justify-between gap-4">
           <div>

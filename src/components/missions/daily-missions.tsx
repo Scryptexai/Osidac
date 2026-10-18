@@ -70,7 +70,7 @@ function MissionCard({
     <article className="card-app flex min-h-48 flex-col p-4 sm:p-5">
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-start gap-3">
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e9e5d8] text-[#171d19] dark:bg-[#252a22] dark:text-[#d6f36a]">
             <Icon name={icon} size={21} />
           </span>
           <div className="min-w-0">
@@ -80,7 +80,7 @@ function MissionCard({
         </div>
         {done && <span aria-label={doneLabel} className="text-emerald-600 dark:text-emerald-300"><Icon name="circleCheck" size={21} /></span>}
       </div>
-      {reward && <p className="mt-3 text-sm font-black text-emerald-700 dark:text-emerald-300">{reward}</p>}
+      {reward && <p className="market-kicker mt-3 text-[#616b2d] dark:text-[#d6f36a]">{reward}</p>}
       {action && <div className="mt-auto pt-4">{action}</div>}
     </article>
   );
@@ -212,22 +212,22 @@ export default function DailyMissions({
 
   return (
     <section aria-labelledby="daily-missions-title" className="space-y-4">
-      <div className="rounded-[1.75rem] bg-gradient-to-br from-emerald-600 to-teal-700 p-5 text-white shadow-lg shadow-emerald-700/15 sm:p-6">
+      <div className="market-ink-panel rounded-[1.35rem] border border-[#171d19]/20 p-5 text-white sm:p-6">
         <div className="flex items-start justify-between gap-4">
           <div>
             <h2 id="daily-missions-title" className="text-xl font-black tracking-tight">{labels.dailyTitle}</h2>
             <p className="mt-1 text-sm leading-relaxed text-emerald-50/90">{labels.dailySubtitle}</p>
           </div>
-          <span className="shrink-0 rounded-2xl bg-white/15 px-3 py-2 text-xs font-black tabular-nums backdrop-blur">{progress}/3</span>
+          <span className="market-kicker shrink-0 rounded-lg bg-[#d6f36a] px-3 py-2 text-[#171d19]">{progress}/3</span>
         </div>
-        <div className="mt-4 h-2 overflow-hidden rounded-full bg-white/20">
-          <div className="h-full rounded-full bg-white transition-all" style={{ width: `${(progress / 3) * 100}%` }} />
+        <div className="mt-4 h-2 overflow-hidden rounded-full bg-white/10">
+          <div className="h-full rounded-full bg-[#d6f36a] transition-all" style={{ width: `${(progress / 3) * 100}%` }} />
         </div>
-        <p className="mt-3 flex items-center gap-2 text-xs font-semibold text-emerald-50/85">
+        <p className="mt-3 flex items-center gap-2 text-xs font-semibold text-white/60">
           <Icon name="clock" size={14} />
           {labels.progress} · {labels.reset}
         </p>
-        <p className="mt-3 rounded-xl bg-black/10 px-3 py-2 text-xs leading-relaxed text-emerald-50/90">{labels.rewardNote}</p>
+        <p className="mt-3 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2 text-xs leading-relaxed text-white/65">{labels.rewardNote}</p>
       </div>
 
       {!status.enabled && (
@@ -249,7 +249,7 @@ export default function DailyMissions({
               type="button"
               onClick={() => void claim("check_in")}
               disabled={!status.enabled || status.check_in_claimed || busy !== null}
-              className="min-h-11 w-full rounded-xl bg-emerald-600 px-4 text-sm font-black text-white transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:bg-zinc-200 disabled:text-zinc-500 dark:disabled:bg-zinc-800 dark:disabled:text-zinc-400"
+              className="market-lime-button min-h-11 w-full rounded-xl px-4 text-sm font-black"
             >
               {busy === "check_in" ? "…" : status.check_in_claimed ? labels.claimed : labels.claimButton}
             </button>
@@ -265,7 +265,7 @@ export default function DailyMissions({
           action={(
             <Link
               href={`/${locale}/app`}
-              className="flex min-h-11 items-center justify-center rounded-xl border border-zinc-200 px-4 text-sm font-black text-zinc-700 transition hover:bg-zinc-50 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
+              className="flex min-h-11 items-center justify-center rounded-xl border border-[#171d19]/15 px-4 text-sm font-black text-[#171d19] transition hover:bg-[#f1eee3]"
             >
               {status.store_claimed ? labels.completed : labels.storeButton}
             </Link>
@@ -284,7 +284,7 @@ export default function DailyMissions({
               type="button"
               onClick={() => void claim("invite_friend")}
               disabled={!status.enabled || status.invite_claimed || !status.invite_available || busy !== null}
-              className="min-h-11 w-full rounded-xl bg-emerald-600 px-4 text-sm font-black text-white transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:bg-zinc-200 disabled:text-zinc-500 dark:disabled:bg-zinc-800 dark:disabled:text-zinc-400"
+              className="market-lime-button min-h-11 w-full rounded-xl px-4 text-sm font-black"
             >
               {busy === "invite_friend"
                 ? "…"
@@ -307,7 +307,7 @@ export default function DailyMissions({
             <button
               type="button"
               onClick={() => void shareInvite()}
-              className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-emerald-200 px-4 text-sm font-black text-emerald-800 transition hover:bg-emerald-50 dark:border-emerald-900 dark:text-emerald-300 dark:hover:bg-emerald-950/40"
+              className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-[#171d19]/15 px-4 text-sm font-black text-[#171d19] transition hover:bg-[#f1eee3]"
             >
               <Icon name="share" size={17} />
               {labels.shareButton}

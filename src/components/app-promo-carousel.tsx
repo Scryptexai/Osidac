@@ -97,7 +97,7 @@ export default function AppPromoCarousel({
             key={slide.image}
             aria-roledescription="slide"
             aria-label={`${index + 1} / ${slides.length}`}
-            className="relative min-h-[250px] min-w-full snap-center overflow-hidden rounded-[1.75rem] bg-zinc-900 sm:min-h-[280px]"
+            className="market-ink-panel relative min-h-[250px] min-w-full snap-center overflow-hidden rounded-[1.5rem] border border-[#171d19]/20 sm:min-h-[280px]"
           >
             <Image
               src={slide.image}
@@ -107,9 +107,9 @@ export default function AppPromoCarousel({
               sizes="(max-width: 768px) 100vw, 900px"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/85 via-zinc-950/50 to-zinc-950/10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#171d19]/95 via-[#171d19]/65 to-[#171d19]/10" />
             <div className="relative z-10 flex min-h-[250px] max-w-xl flex-col justify-center p-6 text-white sm:min-h-[280px] sm:p-8">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-200">OSIDAC</p>
+              <p className="market-kicker text-[#d6f36a]">OSIDAC / FEATURED ROUTE</p>
               <h2 className="mt-2 max-w-lg text-2xl font-black leading-tight tracking-tight sm:text-3xl">
                 {slide.title}
               </h2>
@@ -118,7 +118,7 @@ export default function AppPromoCarousel({
               </p>
               <Link
                 href={slide.href}
-                className="mt-5 inline-flex min-h-11 w-fit items-center gap-2 rounded-xl bg-white px-4 text-sm font-bold text-emerald-800 shadow-lg transition hover:bg-emerald-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="market-lime-button mt-5 inline-flex min-h-11 w-fit items-center gap-2 rounded-xl px-4 text-sm font-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d6f36a]"
               >
                 {slide.action}
                 <Icon name="arrowRight" size={17} />

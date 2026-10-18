@@ -143,7 +143,9 @@
       "wallet": "Dompet",
       "network": "Jaringan",
       "withdraw": "Penarikan",
-      "logout": "Keluar"
+      "logout": "Keluar",
+      "products": "Produk",
+      "navTitle": "PETA OPERASI"
     },
     "store": {
       "title": "Toko Saya",
@@ -157,7 +159,7 @@
       "upgrade": "Tingkatkan toko",
       "upgradeDone": "Toko ditingkatkan ke",
       "insufficient": "OSID Coins belum cukup untuk peningkatan ini.",
-      "coins": "OSID Coins",
+      "coins": "KOIN poin",
       "cost": "Biaya",
       "loading": "Memuat toko…",
       "error": "Aksi gagal. Coba lagi.",
@@ -168,7 +170,7 @@
       "max": "Maks.",
       "upgradeButton": "Tingkatkan",
       "paused": "Fitur ini sementara tidak tersedia.",
-      "coinNote": "Poin khusus di aplikasi; tidak memiliki nilai tunai dan tidak dapat ditarik."
+      "coinNote": "Saldo ini memakai ledger KOIN aplikasi yang sudah ada. Nilai ke IDR belum ditetapkan; pengganda tier hanya berlaku untuk campaign mitra yang memenuhi syarat."
     },
     "missions": {
       "title": "Misi",
@@ -176,15 +178,15 @@
       "soon": "Misi partner berbayar belum tersedia.",
       "dailyTitle": "Misi harian",
       "dailySubtitle": "Aksi kecil di aplikasi untuk membangun rutinitas tokomu.",
-      "rewardNote": "OSID Coins hanya untuk penggunaan di aplikasi. Koin tidak memiliki nilai tunai dan tidak dapat ditarik.",
+      "rewardNote": "Reward check-in dan referral saat ini masuk ke ledger KOIN aplikasi. OSID untuk penukaran tunai harus berasal dari campaign mitra terverifikasi dan settlement yang tercatat.",
       "progress": "Progres hari ini",
       "reset": "Reset pukul 00.00 UTC",
       "checkInTitle": "Check-in harian",
       "checkInDescription": "Ambil reward check-in hari ini.",
-      "checkInReward": "+25 OSID Coins",
+      "checkInReward": "+25 KOIN poin",
       "inviteTitle": "Sambut cabang baru",
       "inviteDescription": "Teman daftar memakai link undanganmu hari ini.",
-      "inviteReward": "+50 OSID Coins",
+      "inviteReward": "+50 KOIN poin",
       "shareTitle": "Bagikan link tokomu",
       "shareDescription": "Bagikan undangan. Misi referral tersedia setelah teman berhasil mendaftar.",
       "shareButton": "Bagikan link undangan",
@@ -201,15 +203,29 @@
       "offersTitle": "Misi partner",
       "offersSubtitle": "Penawaran berbayar, survei, dan misi playtime belum tersedia.",
       "offersSoon": "Belum ada misi partner yang dapat dikerjakan saat ini. Misi akan ditampilkan di sini jika tersedia.",
-      "coins": "OSID Coins",
+      "coins": "KOIN poin",
       "shareError": "Tautan undangan tidak dapat dibuat. Coba lagi.",
       "linkMissing": "Masuk kembali untuk membuat tautan undangan.",
       "disabled": "Misi harian sementara tidak tersedia.",
-      "retry": "Coba lagi"
+      "retry": "Coba lagi",
+      "partnerBoardTitle": "Rute misi mitra",
+      "partnerBoardSubtitle": "Jenis campaign akan muncul di sini setelah feed advertiser tersambung.",
+      "partnerFeedStatus": "FEED MENUNGGU",
+      "partnerFeedDescription": "Detail provider dan verifikasi campaign belum dikonfigurasi. Pratinjau rute ini tidak memiliki reward.",
+      "installTitle": "Install & coba",
+      "installDescription": "Pasang aplikasi advertiser, selesaikan aksi di dalam aplikasi, lalu tunggu callback partner terverifikasi.",
+      "ptcTitle": "PTC / lihat & baca",
+      "ptcDescription": "Kunjungi halaman sponsor dan penuhi durasi lihat atau baca. Hanya aktivitas yang diverifikasi partner yang dapat dihitung.",
+      "followTitle": "Follow di X",
+      "followDescription": "Ikuti akun campaign. Verifikasi harus melalui alur partner yang disetujui—jangan pernah membagikan kata sandi X.",
+      "surveyTitle": "Survei & main",
+      "surveyDescription": "Isi survei tervalidasi atau coba game mitra saat campaign dengan dana tersedia.",
+      "waiting": "MENUNGGU SINKRONISASI",
+      "inventoryNotice": "Belum ada campaign partner berbayar yang bisa diklaim sebelum inventory, dana reward, verifikasi, dan aturan settlement tersambung."
     },
     "wallet": {
       "title": "Dompet",
-      "coins": "OSID Coins",
+      "coins": "KOIN poin",
       "cash": "Saldo tunai (IDR)",
       "usd": "Saldo USD",
       "history": "Riwayat transaksi",
@@ -221,8 +237,8 @@
       "missionEntry": "Reward misi",
       "bonusEntry": "Bonus",
       "otherEntry": "Transaksi",
-      "cashNote": "Top-up tunai dan penarikan belum tersedia. Saldo ini terpisah dari OSID Coins.",
-      "coinNote": "OSID Coins adalah poin aplikasi tanpa nilai tunai dan tidak dapat ditarik."
+      "cashNote": "Saldo IDR hanya dapat dihitung dari pool revenue mitra yang sudah settle. Pool, kurs periode, dan payout belum aktif.",
+      "coinNote": "Saldo ini adalah ledger KOIN aplikasi saat ini. KOIN belum dikonversi menjadi OSID settlement atau IDR."
     },
     "network": {
       "title": "Jaringan saya",
@@ -242,15 +258,27 @@
     },
     "withdraw": {
       "title": "Penarikan dana",
-      "subtitle": "Penarikan tunai belum tersedia. OSID Coins tidak dapat dikonversi menjadi uang.",
+      "subtitle": "Rencana cash-out memakai pool revenue mitra yang sudah settle. Feed campaign, nilai periode, dan pengajuan payout belum aktif.",
       "methods": "Jika payout dibuka, hanya kanal yang didukung Midtrans yang akan ditampilkan di sini.",
       "min": "Batas minimum, biaya, dan perkiraan waktu proses akan ditampilkan sebelum permintaan dapat diajukan.",
-      "soon": "Payout Midtrans belum tersedia.",
-      "status": "Belum tersedia",
+      "soon": "Payout Midtrans belum dapat diajukan sampai dana settlement dan rekonsiliasi siap.",
+      "status": "MENUNGGU SETTLEMENT",
       "providerTitle": "Provider payout",
       "bankMethod": "Rekening bank",
       "walletMethod": "GoPay",
-      "coinNote": "OSID Coins adalah poin aplikasi dan tidak dapat ditarik."
+      "coinNote": "Saldo KOIN yang sudah ada tidak otomatis menjadi saldo IDR. Konversi hanya boleh memakai aturan pool settlement yang disetujui.",
+      "sourceTitle": "Pool nilai OSID",
+      "sourceDescription": "Payout hanya dapat berasal dari dana partner yang sudah settle dan masuk ke pool periode. Feed campaign dan rekonsiliasi belum tersambung.",
+      "variableRate": "Nilai berubah per periode",
+      "flowTitle": "Alur nilai",
+      "stepRevenue": "Revenue partner settle",
+      "stepRevenueNote": "Callback terverifikasi, settlement diterima, reversal dicatat.",
+      "stepValue": "Pool periode ditutup",
+      "stepValueNote": "Finance menetapkan OSID eligible dan nilai IDR setelah reserve.",
+      "stepReview": "Payout diperiksa",
+      "stepReviewNote": "Biaya Midtrans, batas, pemeriksaan risiko, dan rekonsiliasi sebelum kirim.",
+      "feeTitle": "Biaya payout ditanggung penerima",
+      "feeDescription": "Sesuai pilihan produk, fee dan pajak akan ditampilkan lalu dipotong dari payout sebelum konfirmasi. Tarif kontrak dan minimum belum ditetapkan."
     },
     "admin": {
       "title": "Konsol admin",
@@ -317,6 +345,27 @@
       "previous": "Slide sebelumnya",
       "next": "Slide berikutnya",
       "goToSlide": "Buka slide"
+    },
+    "chrome": {
+      "subbrand": "REWARD WEB2",
+      "workspace": "OPERASI WARALABA / NIGHT MARKET 01",
+      "feedTitle": "FEED CAMPAIGN MITRA",
+      "feedStatus": "Detail campaign menunggu sinkronisasi."
+    },
+    "products": {
+      "eyebrow": "ETALASE / 05 TIER",
+      "title": "Bangun rute OSIDAC-mu.",
+      "subtitle": "Pilih tier waralaba virtual. Pengganda OSID berlaku untuk campaign mitra yang memenuhi syarat dan terverifikasi—bukan untuk semua saldo aplikasi.",
+      "tier": "TIER",
+      "storeLevel": "Level awal toko",
+      "multiplier": "Pengganda OSID",
+      "perCampaign": "untuk misi mitra terverifikasi",
+      "checkoutStatus": "Integrasi checkout Midtrans belum aktif",
+      "checkoutNote": "Harga tier yang disetujui dan pengganda pilihan ditampilkan di sini. Checkout tetap tertutup sampai feed campaign, aturan OSID berbasis settlement, dan verifikasi pembayaran server-side terhubung serta teruji.",
+      "browseMissions": "Buka papan misi",
+      "settlementTag": "NILAI BERDASARKAN SETTLEMENT",
+      "settlementNote": "Nilai OSID ke IDR ditentukan dari revenue mitra yang terverifikasi setelah settlement. Tidak ada kurs tetap atau janji hasil tunai.",
+      "productCode": "TINGKAT WARALABA"
     }
   }
 }

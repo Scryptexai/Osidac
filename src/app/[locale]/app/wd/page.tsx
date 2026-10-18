@@ -1,5 +1,5 @@
 import { getDictionary } from "@/lib/i18n";
-import Icon from "@/components/ui/icon";
+import Icon, { type IconName } from "@/components/ui/icon";
 
 export default async function WithdrawPage({
   params,
@@ -9,56 +9,74 @@ export default async function WithdrawPage({
   const { locale } = await params;
   const dict = await getDictionary(locale);
   const t = dict.app.withdraw;
+  const stages: { icon: IconName; title: string; text: string }[] = [
+    { icon: "receipt", title: t.stepRevenue, text: t.stepRevenueNote },
+    { icon: "coins", title: t.stepValue, text: t.stepValueNote },
+    { icon: "shield", title: t.stepReview, text: t.stepReviewNote },
+  ];
 
   return (
-    <div className="space-y-5 pb-2">
+    <div className="space-y-5">
       <header>
-        <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700 dark:text-emerald-300">OSIDAC</p>
-        <h1 className="mt-1 text-2xl font-black tracking-tight">{t.title}</h1>
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{t.subtitle}</p>
+        <p className="market-kicker text-[#716f63]">OSIDAC / SETTLEMENT DESK</p>
+        <h1 className="mt-2 text-3xl font-black tracking-[-0.05em] sm:text-4xl">{t.title}</h1>
+        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[#5e6057]">{t.subtitle}</p>
       </header>
 
-      <section className="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-slate-900 to-slate-800 p-5 text-white shadow-xl sm:p-6">
-        <div className="pointer-events-none absolute -right-8 -top-10 h-40 w-40 rounded-full border-[24px] border-white/5" />
-        <div className="relative flex items-start gap-4">
-          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-emerald-200">
-            <Icon name="shield" size={24} />
-          </span>
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-amber-200/30 bg-amber-300/10 px-3 py-1 text-xs font-bold text-amber-100">
-              <span className="h-1.5 w-1.5 rounded-full bg-amber-300" />
+      <section className="market-ink-panel relative overflow-hidden rounded-[1.4rem] border border-[#171d19]/20 p-5 sm:p-7">
+        <div aria-hidden="true" className="pointer-events-none absolute -right-10 -top-12 h-48 w-48 rounded-full border-[28px] border-white/[0.07]" />
+        <div className="relative grid gap-6 sm:grid-cols-[1fr_auto] sm:items-center">
+          <div className="max-w-2xl">
+            <span className="market-stamp border-[#f37959]/45 text-[#ffab91]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#f37959]" />
               {t.status}
             </span>
-            <p className="mt-3 max-w-xl text-base font-bold leading-relaxed">{t.soon}</p>
+            <h2 className="mt-4 text-2xl font-black tracking-[-0.045em] sm:text-3xl">{t.soon}</h2>
+            <p className="mt-2 text-sm leading-relaxed text-white/60">{t.sourceDescription}</p>
+          </div>
+          <div className="relative rounded-xl border border-white/10 bg-white/[0.05] p-4 sm:min-w-48">
+            <p className="market-kicker text-white/45">{t.sourceTitle}</p>
+            <p className="mt-2 text-2xl font-black tracking-tight text-[#d6f36a]">OSID → IDR</p>
+            <p className="mt-1 text-xs text-white/45">{t.variableRate}</p>
           </div>
         </div>
       </section>
 
-      <section className="card-app p-5 sm:p-6">
-        <div className="flex items-start gap-4">
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-50 text-sky-700 dark:bg-sky-950/50 dark:text-sky-300">
-            <Icon name="bank" size={21} />
-          </span>
+      <section aria-label={t.flowTitle} className="grid gap-3 md:grid-cols-3">
+        {stages.map((stage, index) => (
+          <article key={stage.title} className="market-panel relative overflow-hidden p-4 sm:p-5">
+            <p className="market-kicker text-[#8b8a7d]">0{index + 1} / {t.flowTitle}</p>
+            <span className="mt-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#e9e5d8] text-[#171d19]"><Icon name={stage.icon} size={20} /></span>
+            <h3 className="mt-4 text-lg font-black tracking-tight">{stage.title}</h3>
+            <p className="mt-1 text-sm leading-relaxed text-[#68685e]">{stage.text}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="market-panel p-4 sm:p-5">
+        <div className="flex items-start gap-3">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#f3c45b] text-[#171d19]"><Icon name="bank" size={19} /></span>
           <div>
             <h2 className="font-black">{t.providerTitle}</h2>
-            <p className="mt-1 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{t.methods}</p>
+            <p className="mt-1 text-sm leading-relaxed text-[#68685e]">{t.methods}</p>
           </div>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
-          <span className="rounded-full border border-zinc-200 px-3 py-1.5 text-xs font-semibold text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">{t.bankMethod}</span>
-          <span className="rounded-full border border-zinc-200 px-3 py-1.5 text-xs font-semibold text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">{t.walletMethod}</span>
+          <span className="market-stamp border-[#171d19]/15 text-[#55574e]">{t.bankMethod}</span>
+          <span className="market-stamp border-[#171d19]/15 text-[#55574e]">{t.walletMethod}</span>
         </div>
       </section>
 
-      <p className="flex items-start gap-3 rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3.5 text-sm leading-relaxed text-zinc-600 dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-300">
-        <Icon name="info" size={18} className="mt-0.5 shrink-0 text-emerald-700 dark:text-emerald-300" />
-        {t.min}
-      </p>
-
-      <p className="flex items-start gap-3 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3.5 text-sm leading-relaxed text-emerald-900 dark:border-emerald-900/70 dark:bg-emerald-950/30 dark:text-emerald-100">
-        <Icon name="coins" size={18} className="mt-0.5 shrink-0" />
-        {t.coinNote}
-      </p>
+      <section className="grid gap-3 sm:grid-cols-2">
+        <article className="market-panel p-4 sm:p-5">
+          <p className="market-kicker text-[#716f63]">{t.feeTitle}</p>
+          <p className="mt-2 text-sm leading-relaxed text-[#55574e]">{t.feeDescription}</p>
+        </article>
+        <p className="flex items-start gap-3 rounded-[1.2rem] border border-[#f37959]/30 bg-[#fff6ef] px-4 py-4 text-sm leading-relaxed text-[#613c30]">
+          <Icon name="info" size={18} className="mt-0.5 shrink-0" />
+          {t.coinNote}
+        </p>
+      </section>
     </div>
   );
 }

@@ -204,7 +204,7 @@ export default function StoreDashboard({ labels }: { labels: Labels }) {
     <div className="space-y-5 pb-2">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700 dark:text-emerald-300">OSIDAC</p>
+          <p className="market-kicker text-[#716f63]">OSIDAC</p>
           <h1 className="mt-1 text-2xl font-black tracking-tight">{labels.title}</h1>
         </div>
         <span className="inline-flex min-h-9 items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 text-xs font-bold text-zinc-700 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200">
@@ -213,29 +213,29 @@ export default function StoreDashboard({ labels }: { labels: Labels }) {
         </span>
       </div>
 
-      <section aria-label={labels.coins} className="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-emerald-600 via-emerald-600 to-teal-700 p-5 text-white shadow-xl shadow-emerald-700/15 sm:p-6">
+      <section aria-label={labels.coins} className="market-ink-panel relative overflow-hidden rounded-[1.35rem] border border-[#171d19]/20 p-5 text-white sm:p-6">
         <div className="pointer-events-none absolute -right-8 -top-12 h-44 w-44 rounded-full border-[26px] border-white/10" />
         <div className="relative">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <p className="text-sm font-semibold text-emerald-50/90">{labels.producing}</p>
+              <p className="market-kicker text-white/55">{labels.producing}</p>
               <p className="mt-2 flex items-baseline gap-2">
                 <span className="text-4xl font-black tabular-nums tracking-tight sm:text-5xl">
                   {balance.toLocaleString(undefined, { maximumFractionDigits: 2 })}
                 </span>
-                <span className="text-sm font-bold text-emerald-50/85">{labels.coins}</span>
+                <span className="text-sm font-bold text-white/65">{labels.coins}</span>
               </p>
             </div>
             <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/15 text-white backdrop-blur">
               <Icon name="coins" size={25} />
             </span>
           </div>
-          <p className="mt-2 text-xs leading-relaxed text-emerald-50/80">{labels.coinNote}</p>
+          <p className="mt-2 text-xs leading-relaxed text-white/55">{labels.coinNote}</p>
 
-          <div className="mt-5 h-2 overflow-hidden rounded-full bg-white/20">
-            <div className="h-full rounded-full bg-white transition-all duration-1000" style={{ width: `${progress * 100}%` }} />
+          <div className="mt-5 h-2 overflow-hidden rounded-full bg-white/10">
+            <div className="h-full rounded-full bg-[#d6f36a] transition-all duration-1000" style={{ width: `${progress * 100}%` }} />
           </div>
-          <p className="mt-2 flex items-center gap-2 text-xs font-semibold text-emerald-50/90">
+          <p className="mt-2 flex items-center gap-2 text-xs font-semibold text-white/65">
             <Icon name={canClaim ? "circleCheck" : "clock"} size={15} />
             {canClaim ? labels.ready : `${labels.claimIn} ${formatCountdown(remaining)}`}
           </p>
@@ -244,7 +244,7 @@ export default function StoreDashboard({ labels }: { labels: Labels }) {
             type="button"
             onClick={() => void onClaim()}
             disabled={!canClaim || busy !== null}
-            className="mt-5 flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-white px-4 text-base font-black text-emerald-800 shadow-lg transition hover:bg-emerald-50 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-55"
+            className="market-lime-button mt-5 flex min-h-12 w-full items-center justify-center gap-2 rounded-xl px-4 text-base font-black disabled:opacity-55"
           >
             <Icon name="coins" size={19} />
             {busy === "claim" ? "…" : labels.claim}
@@ -280,7 +280,7 @@ export default function StoreDashboard({ labels }: { labels: Labels }) {
             type="button"
             onClick={() => void onUpgrade()}
             disabled={store.level >= 10 || balance < cost || busy !== null}
-            className="min-h-11 shrink-0 rounded-full bg-zinc-900 px-5 text-sm font-bold text-white transition hover:bg-zinc-700 disabled:cursor-not-allowed disabled:opacity-40 dark:bg-emerald-500 dark:text-zinc-950 dark:hover:bg-emerald-400"
+            className="market-lime-button min-h-11 shrink-0 rounded-xl px-5 text-sm font-black disabled:opacity-40"
           >
             {busy === "upgrade" ? "…" : store.level >= 10 ? labels.max : labels.upgradeButton}
           </button>

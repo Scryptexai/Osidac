@@ -143,7 +143,9 @@
       "wallet": "Wallet",
       "network": "My Network",
       "withdraw": "Withdraw",
-      "logout": "Log out"
+      "logout": "Log out",
+      "products": "Products",
+      "navTitle": "RUN SHEET"
     },
     "store": {
       "title": "My Store",
@@ -157,7 +159,7 @@
       "upgrade": "Upgrade store",
       "upgradeDone": "Store upgraded to",
       "insufficient": "You need more OSID Coins for this upgrade.",
-      "coins": "OSID Coins",
+      "coins": "KOIN points",
       "cost": "Cost",
       "loading": "Loading your store…",
       "error": "Action failed. Please try again.",
@@ -168,7 +170,7 @@
       "max": "Max",
       "upgradeButton": "Upgrade",
       "paused": "This feature is temporarily unavailable.",
-      "coinNote": "In-app points only; no cash value and not withdrawable."
+      "coinNote": "This is the existing in-app KOIN ledger. Its IDR value is not set; tier multipliers apply only to qualifying partner campaigns."
     },
     "missions": {
       "title": "Missions",
@@ -176,15 +178,15 @@
       "soon": "Paid partner missions are not available.",
       "dailyTitle": "Daily missions",
       "dailySubtitle": "Small in-app actions to build a steady store routine.",
-      "rewardNote": "OSID Coins are for in-app use only. They have no cash value and cannot be withdrawn.",
+      "rewardNote": "Current check-in and referral rewards go to the in-app KOIN ledger. Redeemable OSID must come from verified partner campaigns and recorded settlement.",
       "progress": "Today’s progress",
       "reset": "Resets at 00:00 UTC",
       "checkInTitle": "Daily check-in",
       "checkInDescription": "Claim today’s check-in reward.",
-      "checkInReward": "+25 OSID Coins",
+      "checkInReward": "+25 KOIN points",
       "inviteTitle": "Welcome a new branch",
       "inviteDescription": "A friend signs up with your invite link today.",
-      "inviteReward": "+50 OSID Coins",
+      "inviteReward": "+50 KOIN points",
       "shareTitle": "Share your store link",
       "shareDescription": "Share an invite. The referral mission becomes available after a friend signs up.",
       "shareButton": "Share invite link",
@@ -201,15 +203,29 @@
       "offersTitle": "Partner missions",
       "offersSubtitle": "Paid offers, surveys, and playtime missions are not available.",
       "offersSoon": "There are no partner missions to complete right now. Missions will appear here when available.",
-      "coins": "OSID Coins",
+      "coins": "KOIN points",
       "shareError": "Could not create your invite link. Please try again.",
       "linkMissing": "Sign in again to create your invite link.",
       "disabled": "Daily missions are temporarily unavailable.",
-      "retry": "Try again"
+      "retry": "Try again",
+      "partnerBoardTitle": "Partner mission routes",
+      "partnerBoardSubtitle": "Campaign types will appear here after the advertiser feed is connected.",
+      "partnerFeedStatus": "FEED PENDING",
+      "partnerFeedDescription": "Provider and campaign verification details are not configured yet. These route previews do not carry rewards.",
+      "installTitle": "Install & try",
+      "installDescription": "Install an advertiser app, complete its required in-app action, and wait for a verified partner callback.",
+      "ptcTitle": "PTC / view & read",
+      "ptcDescription": "Visit a sponsored page and complete its minimum view or reading time. Only partner-verified activity can qualify.",
+      "followTitle": "Follow on X",
+      "followDescription": "Follow a campaign account. Verification must come from an approved partner flow—never share an X password.",
+      "surveyTitle": "Survey & play",
+      "surveyDescription": "Take a validated survey or try a partner game when a funded campaign is available.",
+      "waiting": "AWAITING SYNC",
+      "inventoryNotice": "No paid partner campaign is claimable until inventory, reward funding, verification, and settlement rules are connected."
     },
     "wallet": {
       "title": "Wallet",
-      "coins": "OSID Coins",
+      "coins": "KOIN points",
       "cash": "Cash balance (IDR)",
       "usd": "USD balance",
       "history": "Transaction history",
@@ -221,8 +237,8 @@
       "missionEntry": "Mission reward",
       "bonusEntry": "Bonus",
       "otherEntry": "Transaction",
-      "cashNote": "Cash top-ups and withdrawals are not available. This balance is separate from OSID Coins.",
-      "coinNote": "OSID Coins are in-app points with no cash value and cannot be withdrawn."
+      "cashNote": "IDR value can only be calculated from a settled partner-revenue pool. The pool, period rate, and payout are not active yet.",
+      "coinNote": "This is the current in-app KOIN ledger. KOIN has not been converted into settlement OSID or IDR."
     },
     "network": {
       "title": "My network",
@@ -242,15 +258,27 @@
     },
     "withdraw": {
       "title": "Withdraw funds",
-      "subtitle": "Cash withdrawals are not available. OSID Coins cannot be converted into money.",
+      "subtitle": "Cash-out is designed around settled partner revenue. Campaign sync, period valuation, and payout requests are not active yet.",
       "methods": "If payouts are enabled, only channels supported through Midtrans will be shown here.",
       "min": "Minimum amounts, fees, and estimated processing times will be shown before a request can be submitted.",
-      "soon": "Midtrans payouts are not available yet.",
-      "status": "Not available",
+      "soon": "Midtrans payouts cannot be requested until settled funds and reconciliation are ready.",
+      "status": "SETTLEMENT PENDING",
       "providerTitle": "Payout provider",
       "bankMethod": "Bank account",
       "walletMethod": "GoPay",
-      "coinNote": "OSID Coins are in-app points and cannot be withdrawn."
+      "coinNote": "Existing KOIN does not automatically become an IDR balance. Conversion must follow an approved settlement-pool rule.",
+      "sourceTitle": "OSID value pool",
+      "sourceDescription": "Payouts can only use partner funds that have settled into a period pool. Campaign sync and reconciliation are not connected yet.",
+      "variableRate": "Variable by period",
+      "flowTitle": "Value flow",
+      "stepRevenue": "Partner revenue settles",
+      "stepRevenueNote": "Verified callbacks, received settlement, recorded reversals.",
+      "stepValue": "Period pool closes",
+      "stepValueNote": "Finance locks eligible OSID and IDR value after reserves.",
+      "stepReview": "Payout is reviewed",
+      "stepReviewNote": "Midtrans fees, limits, risk checks, and reconciliation before sending.",
+      "feeTitle": "Recipient pays payout fee",
+      "feeDescription": "Per the selected product rule, fee and tax will be shown and deducted from the payout before confirmation. Contract rate and minimum are not set yet."
     },
     "admin": {
       "title": "Admin console",
@@ -317,6 +345,27 @@
       "previous": "Previous slide",
       "next": "Next slide",
       "goToSlide": "Go to slide"
+    },
+    "chrome": {
+      "subbrand": "WEB2 REWARDS",
+      "workspace": "FRANCHISE OPERATIONS / NIGHT MARKET 01",
+      "feedTitle": "PARTNER CAMPAIGN FEED",
+      "feedStatus": "Campaign details are awaiting sync."
+    },
+    "products": {
+      "eyebrow": "THE STOREFRONT / 05 TIERS",
+      "title": "Build your OSIDAC route.",
+      "subtitle": "Choose a virtual-franchise tier. Its OSID multiplier applies to qualifying, verified partner campaigns—not to every app balance.",
+      "tier": "TIER",
+      "storeLevel": "Store starts at",
+      "multiplier": "OSID multiplier",
+      "perCampaign": "on eligible verified missions",
+      "checkoutStatus": "Midtrans checkout is not active in the app",
+      "checkoutNote": "The approved tier prices and selected multipliers are shown here. Checkout stays closed until the campaign feed, settlement-backed OSID rules, and server-side payment verification are connected and tested.",
+      "browseMissions": "Open mission board",
+      "settlementTag": "SETTLEMENT-BASED VALUE",
+      "settlementNote": "OSID-to-IDR value is determined from verified partner revenue after settlement. No fixed exchange rate or cash return is promised.",
+      "productCode": "FRANCHISE BUILD"
     }
   }
 }
