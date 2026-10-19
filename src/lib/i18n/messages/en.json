@@ -47,7 +47,7 @@
     "title": "Explore what is available today",
     "subtitle": "Start with a virtual store, daily missions, and referral tracking. Paid partner offers, game rewards, network commissions, and cash withdrawals are not available.",
     "storeHook": "Virtual storefront",
-    "storeText": "Claim your virtual store every eight hours to collect KOIN points. These points are for in-app use only.",
+    "storeText": "Claim KOIN points from the virtual store every eight hours. KOIN points are for in-app use only and have no cash value.",
     "missionHook": "Daily missions",
     "missionText": "Complete check-ins and verified referral activities. Paid partner missions are not available.",
     "playHook": "Game rewards",
@@ -56,38 +56,39 @@
     "teamText": "Share an invite link and track your network. Network commissions are not available."
   },
   "packages": {
-    "title": "Membership tiers",
-    "subtitle": "Tier purchases are not available yet. Prices are shown for reference; mission access and tier benefits will be explained before checkout opens.",
-    "mostPopular": "Membership tier",
-    "buy": "Create a free account",
+    "title": "Planned virtual-store tiers",
+    "subtitle": "No paid package is for sale today. These are planned digital virtual-store tiers inside the app—not machines or hardware. Prices are for reference only, and checkout is disabled.",
     "swipe": "Swipe to view all tiers",
     "tiers": {
       "starter": {
         "name": "Starter Booth",
         "price": "$3.49",
-        "desc": "An entry tier for starting a virtual storefront."
+        "desc": "Planned store start at level 2, with a future 1.2× multiplier for eligible partner-mission OSID rewards. Neither benefit is active yet."
       },
       "kios": {
         "name": "Kios Pro",
         "price": "$9.99",
-        "desc": "A tier for a virtual storefront that is growing."
+        "desc": "Planned store start at level 4, with a future 1.4× multiplier for eligible partner-mission OSID rewards. Neither benefit is active yet."
       },
       "gold": {
         "name": "Warung Gold",
         "price": "$34.99",
-        "desc": "An advanced tier in the OSIDAC membership catalog."
+        "desc": "Planned store start at level 6, with a future 1.6× multiplier for eligible partner-mission OSID rewards. Neither benefit is active yet."
       },
       "elite": {
         "name": "Franchise Elite",
         "price": "$99.99",
-        "desc": "An advanced membership tier in the OSIDAC catalog."
+        "desc": "Planned store start at level 8, with a future 1.8× multiplier for eligible partner-mission OSID rewards. Neither benefit is active yet."
       },
       "master": {
         "name": "Empire Master",
         "price": "$349.99",
-        "desc": "The highest tier in the OSIDAC membership catalog."
+        "desc": "Planned store start at level 10, with a future 2.0× multiplier for eligible partner-mission OSID rewards. Neither benefit is active yet."
       }
-    }
+    },
+    "accessNote": "No tier unlocks extra missions today. Mission access rules and partner inventory must be approved and connected first.",
+    "notForSale": "Not for sale",
+    "priceLabel": "Planned price — not payable"
   },
   "network": {
     "title": "Grow with the OSIDAC community",
@@ -365,24 +366,32 @@
       "feedStatus": "Campaign details are awaiting sync."
     },
     "products": {
-      "eyebrow": "DIGITAL STORE TIERS / 05 OPTIONS",
+      "eyebrow": "DIGITAL STORE TIERS / PREVIEW",
       "title": "A virtual-store tier, not a machine.",
-      "subtitle": "Each card describes digital access inside the OSIDAC app. No hardware, device, or shipped item is included.",
+      "subtitle": "See what a tier is intended to change—and which parts of OSIDAC are actually live.",
       "tier": "TIER",
-      "storeLevel": "Virtual store access level",
-      "multiplier": "Planned partner OSID multiplier",
-      "perCampaign": "Planned for eligible partner campaigns. No partner campaign is active today.",
-      "checkoutStatus": "Not available to buy yet",
-      "checkoutNote": "The displayed values are a product preview. No order can be placed, payment taken, or OSID credited from this page. Tier checkout and partner rewards are not active.",
-      "browseMissions": "Open mission board",
+      "storeLevel": "Planned starting store level",
+      "multiplier": "Planned partner-mission OSID multiplier",
+      "perCampaign": "Future eligible, verified partner campaigns only. No campaign is active; this does not affect KOIN.",
+      "checkoutStatus": "Not for sale",
+      "checkoutNote": "No purchase, payment, or OSID credit can be made here. Prices and tier effects are a plan, not an offer for sale.",
       "settlementTag": "SETTLEMENT-BASED VALUE",
-      "settlementNote": "If launched, OSID-to-IDR value will vary with verified partner revenue after settlement. No fixed rate, OSID balance, or cash payout is available today.",
-      "productCode": "DIGITAL STORE TIERS",
-      "productTypeTitle": "What you are buying",
-      "productTypeDescription": "The planned purchase is an in-app digital tier for a virtual storefront—not a physical machine or hardware. It is intended to set the store level and increase eligible OSID rewards using the selected tier multiplier. The exact OSID grant, eligible campaigns, and timing are not implemented; KOIN is not OSID. No order or payment is available from this screen.",
-      "formatBadge": "DIGITAL / IN-APP ONLY",
-      "purchaseStatus": "Preview only. Checkout, orders, and OSID issuance are not active; this page cannot take payment.",
-      "priceLabel": "Displayed tier price"
+      "settlementNote": "If launched, OSID-to-IDR value would vary with verified partner revenue after settlement. No fixed rate, OSID balance, or payout is active today.",
+      "productCode": "DIGITAL / IN-APP ONLY",
+      "purchaseStatus": "This is a catalog preview, not a working checkout. No payment or order can be made; no tier entitlement, extra mission access, or OSID reward is active.",
+      "priceLabel": "Planned price — not payable",
+      "purchaseStatusTitle": "No tier package is for sale today",
+      "tierEffectTitle": "What each tier is meant to change",
+      "tierStoreTitle": "Start at a higher virtual-store level",
+      "tierStoreBody": "The live virtual store uses its level to determine the amount of internal KOIN points earned on an eight-hour claim. A tier is planned to set a starting level, but tier purchases are not wired to the store yet.",
+      "tierOsidTitle": "Future partner-mission multiplier",
+      "tierOsidBody": "The 1.2×–2.0× multiplier is planned for eligible, verified, partner-funded OSID rewards from partner missions after settlement. No partner mission or OSID ledger is live; this does not multiply current KOIN points.",
+      "tierAccessTitle": "Mission access is unchanged",
+      "tierAccessBody": "No additional missions or features unlock with these tiers today. The mission-access matrix and partner inventory have not been approved or connected.",
+      "currentServiceTitle": "What is actually active today",
+      "currentServiceBody": "The current free virtual store supports an in-app KOIN claim every eight hours and level upgrades paid in KOIN. KOIN is non-cash and not withdrawable; the tier cards do not change this live service.",
+      "currentServiceCta": "Open the active store",
+      "tierOptionsTitle": "Five planned tier options"
     }
   }
 }

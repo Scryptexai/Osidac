@@ -47,7 +47,7 @@
     "title": "Jelajahi fitur yang tersedia",
     "subtitle": "Mulai dari toko virtual, misi harian, dan pelacakan referral. Misi partner berbayar, reward game, komisi jaringan, dan penarikan tunai belum tersedia.",
     "storeHook": "Toko virtual",
-    "storeText": "Klaim toko virtual setiap delapan jam untuk memperoleh poin KOIN. Poin ini hanya digunakan di aplikasi.",
+    "storeText": "Klaim poin KOIN dari toko virtual setiap delapan jam. Poin KOIN hanya digunakan di aplikasi dan tidak memiliki nilai tunai.",
     "missionHook": "Misi harian",
     "missionText": "Selesaikan check-in dan aktivitas referral terverifikasi. Misi partner berbayar belum tersedia.",
     "playHook": "Reward game",
@@ -56,38 +56,39 @@
     "teamText": "Bagikan tautan undangan dan pantau jaringanmu. Komisi jaringan belum tersedia."
   },
   "packages": {
-    "title": "Tier keanggotaan",
-    "subtitle": "Pembelian tier belum tersedia. Harga ditampilkan sebagai referensi; akses misi dan manfaat setiap tier akan dijelaskan sebelum checkout dibuka.",
-    "mostPopular": "Tier keanggotaan",
-    "buy": "Buat akun gratis",
+    "title": "Rencana tier toko virtual",
+    "subtitle": "Saat ini belum ada paket berbayar yang dijual. Kartu ini adalah rencana tier toko virtual digital di dalam aplikasi—bukan mesin atau hardware. Harga hanya referensi dan checkout nonaktif.",
     "swipe": "Geser untuk melihat semua tier",
     "tiers": {
       "starter": {
         "name": "Starter Booth",
         "price": "Rp49.000",
-        "desc": "Tier awal untuk mulai membangun toko virtual."
+        "desc": "Rencana level awal toko 2, dengan pengganda 1,2× untuk reward OSID dari misi mitra pada masa depan. Keduanya belum aktif."
       },
       "kios": {
         "name": "Kios Pro",
         "price": "Rp149.000",
-        "desc": "Tier untuk toko virtual yang terus berkembang."
+        "desc": "Rencana level awal toko 4, dengan pengganda 1,4× untuk reward OSID dari misi mitra pada masa depan. Keduanya belum aktif."
       },
       "gold": {
         "name": "Warung Gold",
         "price": "Rp499.000",
-        "desc": "Tier lanjutan dalam katalog keanggotaan OSIDAC."
+        "desc": "Rencana level awal toko 6, dengan pengganda 1,6× untuk reward OSID dari misi mitra pada masa depan. Keduanya belum aktif."
       },
       "elite": {
         "name": "Franchise Elite",
         "price": "Rp1.490.000",
-        "desc": "Tier tingkat lanjut dalam katalog keanggotaan OSIDAC."
+        "desc": "Rencana level awal toko 8, dengan pengganda 1,8× untuk reward OSID dari misi mitra pada masa depan. Keduanya belum aktif."
       },
       "master": {
         "name": "Empire Master",
         "price": "Rp4.900.000",
-        "desc": "Tier tertinggi dalam katalog keanggotaan OSIDAC."
+        "desc": "Rencana level awal toko 10, dengan pengganda 2,0× untuk reward OSID dari misi mitra pada masa depan. Keduanya belum aktif."
       }
-    }
+    },
+    "accessNote": "Saat ini tidak ada tier yang membuka misi tambahan. Aturan akses misi dan inventori mitra perlu disetujui serta dihubungkan terlebih dahulu.",
+    "notForSale": "Belum dijual",
+    "priceLabel": "Harga rencana — belum dapat dibayar"
   },
   "network": {
     "title": "Tumbuh bersama komunitas OSIDAC",
@@ -365,24 +366,32 @@
       "feedStatus": "Detail campaign menunggu sinkronisasi."
     },
     "products": {
-      "eyebrow": "TIER TOKO DIGITAL / 05 PILIHAN",
+      "eyebrow": "TIER TOKO VIRTUAL / PRATINJAU",
       "title": "Tier toko virtual, bukan mesin.",
-      "subtitle": "Setiap kartu menjelaskan akses digital di aplikasi OSIDAC. Tidak termasuk hardware, perangkat, atau barang yang dikirim.",
+      "subtitle": "Lihat perubahan yang direncanakan dan fitur OSIDAC yang benar-benar aktif.",
       "tier": "TIER",
-      "storeLevel": "Level akses toko virtual",
-      "multiplier": "Rencana pengganda OSID mitra",
-      "perCampaign": "Direncanakan untuk campaign mitra yang memenuhi syarat. Belum ada campaign mitra aktif.",
-      "checkoutStatus": "Belum tersedia untuk dibeli",
-      "checkoutNote": "Nilai yang ditampilkan adalah pratinjau produk. Halaman ini belum dapat membuat order, menerima pembayaran, atau mengkreditkan OSID. Checkout tier dan reward mitra belum aktif.",
-      "browseMissions": "Buka papan misi",
+      "storeLevel": "Level awal toko yang direncanakan",
+      "multiplier": "Rencana pengganda OSID misi mitra",
+      "perCampaign": "Hanya untuk campaign mitra yang memenuhi syarat, terverifikasi, dan didanai. Belum aktif; tidak memengaruhi KOIN.",
+      "checkoutStatus": "Belum dijual",
+      "checkoutNote": "Belum ada pembelian, pembayaran, atau kredit OSID di halaman ini. Harga dan efek tier masih berupa rencana, bukan penawaran jual.",
       "settlementTag": "NILAI BERDASARKAN SETTLEMENT",
-      "settlementNote": "Jika kelak diluncurkan, nilai OSID ke IDR akan berubah mengikuti revenue mitra terverifikasi setelah settlement. Saat ini belum ada kurs tetap, saldo OSID, atau payout tunai.",
-      "productCode": "TIER TOKO DIGITAL",
-      "productTypeTitle": "Apa yang dibeli pengguna",
-      "productTypeDescription": "Rencana produk ini adalah tier digital di dalam aplikasi untuk toko virtual—bukan mesin atau hardware fisik. Tier ini direncanakan menetapkan level toko dan meningkatkan reward OSID yang memenuhi syarat sesuai pengganda pilihan. Jumlah OSID, campaign yang memenuhi syarat, dan waktu pemberian belum diimplementasikan; KOIN bukan OSID. Halaman ini belum menerima order atau pembayaran.",
-      "formatBadge": "DIGITAL / DI APLIKASI",
-      "purchaseStatus": "Pratinjau saja. Checkout, order, dan penerbitan OSID belum aktif; halaman ini tidak menerima pembayaran.",
-      "priceLabel": "Harga tier yang ditampilkan"
+      "settlementNote": "Jika diluncurkan, nilai OSID ke IDR akan berubah mengikuti revenue mitra terverifikasi setelah settlement. Saat ini belum ada kurs tetap, saldo OSID, atau payout.",
+      "productCode": "DIGITAL / DI DALAM APLIKASI",
+      "purchaseStatus": "Ini hanya pratinjau katalog, bukan checkout aktif. Belum ada order atau pembayaran; belum ada entitlement tier, akses misi tambahan, atau reward OSID yang aktif.",
+      "priceLabel": "Harga rencana — belum dapat dibayar",
+      "purchaseStatusTitle": "Saat ini belum ada paket tier yang dijual",
+      "tierEffectTitle": "Fungsi tier yang direncanakan",
+      "tierStoreTitle": "Mulai dari level toko virtual yang lebih tinggi",
+      "tierStoreBody": "Toko virtual yang saat ini aktif memakai level untuk menentukan jumlah poin KOIN internal pada klaim delapan jam. Tier direncanakan menetapkan level awal, tetapi pembelian tier belum terhubung ke toko.",
+      "tierOsidTitle": "Pengganda misi mitra di masa depan",
+      "tierOsidBody": "Pengganda 1,2×–2,0× direncanakan untuk reward OSID dari misi mitra yang memenuhi syarat, terverifikasi, dan didanai setelah settlement. Belum ada misi mitra atau ledger OSID aktif; pengganda ini tidak menambah KOIN saat ini.",
+      "tierAccessTitle": "Akses misi belum berubah",
+      "tierAccessBody": "Saat ini tier belum membuka misi atau fitur tambahan. Matriks akses misi dan inventori mitra belum disetujui atau terhubung.",
+      "currentServiceTitle": "Yang benar-benar aktif saat ini",
+      "currentServiceBody": "Toko virtual gratis saat ini mendukung klaim poin KOIN internal setiap delapan jam dan upgrade level menggunakan KOIN. KOIN bukan uang tunai dan tidak dapat ditarik; kartu tier belum mengubah layanan aktif ini.",
+      "currentServiceCta": "Buka toko yang aktif",
+      "tierOptionsTitle": "Lima pilihan tier yang direncanakan"
     }
   }
 }

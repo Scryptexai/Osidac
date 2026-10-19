@@ -23,27 +23,18 @@ export default async function AppLayout({
       <div className="market-shell">
         <RealtimeLedgerNotification labels={app.notifications} />
         <header className="market-topbar sticky top-0 z-30 pt-[env(safe-area-inset-top,0px)]">
-          <div className="mx-auto flex min-h-[4.4rem] max-w-[1480px] items-center justify-between gap-3 px-3 py-2 sm:px-5 lg:px-6">
+          <div className="mx-auto grid min-h-[4.4rem] max-w-[1480px] grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-3 py-2 sm:gap-3 sm:px-5 lg:px-6">
             <Link
               href={`/${locale}/app`}
               aria-label="OSIDAC"
-              className="inline-flex min-w-0 items-center gap-2.5 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#5e7b22]"
+              className="flex min-w-0 items-center gap-2 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#5e7b22] sm:gap-2.5"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/osidac-mark.svg" alt="" className="h-9 w-9 shrink-0" />
-              <span className="flex min-w-0 flex-col leading-none">
-                <span className="text-[1.1rem] font-black tracking-[-0.075em]">OSIDAC</span>
-                <span className="market-kicker mt-1 max-w-[8rem] truncate whitespace-nowrap text-[0.48rem] text-[#716f63]">{app.chrome.subbrand}</span>
-              </span>
+              <span className="min-w-0 truncate whitespace-nowrap text-[1.05rem] font-black tracking-[-0.075em] sm:text-[1.1rem]">OSIDAC</span>
             </Link>
 
-            <p className="market-kicker hidden text-[#716f63] xl:block">{app.chrome.workspace}</p>
-
-            <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-              <span className="market-stamp hidden whitespace-nowrap border-[#c8c3b5] text-[#716f63] md:inline-flex">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#f37959]" />
-                {app.chrome.feedStatus}
-              </span>
+            <div className="flex shrink-0 items-center gap-1 sm:gap-2">
               <LanguageSwitcher current={locale} />
               <div className="lg:hidden">
                 <LogoutButton label={app.sidebar.logout} compact />

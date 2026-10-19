@@ -25,8 +25,9 @@ Keputusan ini menggantikan referensi provider ganda pada dokumen riset/arsitektu
 
 ## 2026-10-18 — Definisi katalog dan saldo
 
-- **Interpretasi katalog saat ini:** lima tier adalah akses/upgrade digital untuk toko virtual di aplikasi, bukan mesin atau hardware fisik. Belum ada SKU perangkat, stok, pengiriman, atau garansi. Checkout tetap nonaktif.
-- **Manfaat tier yang ditampilkan:** level toko virtual dan multiplier campaign OSID yang direncanakan. Multiplier belum terhubung ke OSID ledger atau inventory campaign aktif; jangan tampilkan sebagai OSID yang sudah diterima atau cash return.
+- **Interpretasi katalog saat ini:** lima tier adalah rencana level digital untuk toko virtual di aplikasi, bukan mesin atau hardware fisik. Belum ada SKU perangkat, stok, pengiriman, atau garansi. Saat ini tidak ada tier yang dijual.
+- **Manfaat tier yang direncanakan:** memulai pengguna pada level toko tertentu dan menambahkan multiplier pada reward OSID dari misi mitra eligible. Keduanya belum terhubung ke pembelian/entitlement; misi tambahan tetap tidak terkunci sampai matriks akses disetujui dan inventori mitra tersedia.
+- **Layanan yang benar-benar aktif:** toko virtual gratis mendukung klaim KOIN tiap 8 jam dan upgrade level menggunakan KOIN; KOIN hanya poin aplikasi non-tunai. Kartu tier belum mengubah toko, saldo, akses misi, atau reward apa pun.
 - **KOIN lama:** pemilik memilih migrasi dengan formula yang disetujui, tetapi formula, tanggal efektif, cakupan saldo, sumber pendanaan, dan bukti approval belum diberikan. Sampai parameter itu terdokumentasi, jangan migrasikan atau cash-kan KOIN.
 - **Hadiah KOIN toko/misi:** tetap poin internal non-tunai; tidak sama dengan OSID atau IDR.
 

@@ -181,6 +181,9 @@ export default async function LandingPage({
           <p className="mx-auto mt-4 max-w-2xl text-center text-zinc-600 dark:text-zinc-400">
             {dict.packages.subtitle}
           </p>
+          <p className="mx-auto mt-3 max-w-2xl rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-center text-xs font-semibold leading-relaxed text-amber-900 dark:border-amber-900 dark:bg-amber-950/30 dark:text-amber-200">
+            {dict.packages.accessNote}
+          </p>
           <p className="mt-2 text-center text-sm font-semibold text-emerald-600 md:hidden">
             {dict.packages.swipe}
           </p>
@@ -193,14 +196,17 @@ export default async function LandingPage({
               className="card-app relative flex w-64 shrink-0 snap-center flex-col p-6 md:w-auto"
             >
               <h3 className="font-black">{tier.name}</h3>
-              <p className="mt-2 text-3xl font-black">{tier.price}</p>
-              <p className="mt-3 flex-1 text-sm text-zinc-600 dark:text-zinc-400">{tier.desc}</p>
-              <Link
-                href={`/${locale}/register`}
-                className="mt-5 rounded-full border-2 border-zinc-200 py-3 text-center text-sm font-bold hover:border-emerald-400 hover:text-emerald-600 dark:border-zinc-700"
+              <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-zinc-500">{dict.packages.priceLabel}</p>
+              <p className="mt-1 text-3xl font-black">{tier.price}</p>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{tier.desc}</p>
+              <button
+                type="button"
+                disabled
+                aria-disabled="true"
+                className="mt-5 min-h-11 cursor-not-allowed rounded-full border-2 border-zinc-200 py-3 text-center text-sm font-bold text-zinc-500 opacity-75 dark:border-zinc-700"
               >
-                {dict.packages.buy}
-              </Link>
+                {dict.packages.notForSale}
+              </button>
             </div>
           ))}
         </div>
